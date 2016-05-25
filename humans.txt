@@ -11,5 +11,5 @@
 
 # TECHNOLOGY COLOPHON
 
-    JavaScript, HTML5, CSS3
-    React, Babel, Material Design Lite (MDL)
+    ES2015, HTML5, CSS3
+    React, Normalize.css
