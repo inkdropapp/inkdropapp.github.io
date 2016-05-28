@@ -332,11 +332,15 @@ module.exports =
               'div',
               { className: 'ui stackable grid' },
               _react2['default'].createElement(
-                'a',
-                { href: 'http://odoruinu.net/',
-                  target: '_blank',
-                  onClick: this.handleOutboundLinkClick },
-                '© Takuya Matsuyama'
+                'div',
+                { className: 'three wide column text-left' },
+                _react2['default'].createElement(
+                  'a',
+                  { href: 'http://odoruinu.net/',
+                    target: '_blank',
+                    onClick: this.handleOutboundLinkClick },
+                  '© Takuya Matsuyama'
+                )
               ),
               _react2['default'].createElement(
                 'div',
