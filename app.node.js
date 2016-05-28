@@ -65,7 +65,7 @@ module.exports =
 
   var _react2 = _interopRequireDefault(_react);
 
-  var _reactDom = __webpack_require__(23);
+  var _reactDom = __webpack_require__(26);
 
   var _reactDom2 = _interopRequireDefault(_reactDom);
 
@@ -88,8 +88,12 @@ module.exports =
       return __webpack_require__(11);
     }, '/': function _() {
       return __webpack_require__(12);
-    }, '/terms': function terms() {
+    }, '/privacy': function privacy() {
       return __webpack_require__(13);
+    }, '/security': function security() {
+      return __webpack_require__(14);
+    }, '/terms': function terms() {
+      return __webpack_require__(15);
     } }; // Auto-generated on build. See tools/lib/routes-loader.js
 
   var route = function route(path, callback) {
@@ -234,15 +238,15 @@ module.exports =
 
   var _fbjsLibExecutionEnvironment = __webpack_require__(4);
 
-  var _historyLibCreateBrowserHistory = __webpack_require__(20);
+  var _historyLibCreateBrowserHistory = __webpack_require__(23);
 
   var _historyLibCreateBrowserHistory2 = _interopRequireDefault(_historyLibCreateBrowserHistory);
 
-  var _historyLibCreateMemoryHistory = __webpack_require__(21);
+  var _historyLibCreateMemoryHistory = __webpack_require__(24);
 
   var _historyLibCreateMemoryHistory2 = _interopRequireDefault(_historyLibCreateMemoryHistory);
 
-  var _historyLibUseQueries = __webpack_require__(22);
+  var _historyLibUseQueries = __webpack_require__(25);
 
   var _historyLibUseQueries2 = _interopRequireDefault(_historyLibUseQueries);
 
@@ -287,7 +291,7 @@ module.exports =
 
   var _react2 = _interopRequireDefault(_react);
 
-  __webpack_require__(14);
+  __webpack_require__(16);
 
   var _Link = __webpack_require__(7);
 
@@ -306,6 +310,16 @@ module.exports =
       key: 'componentDidMount',
       value: function componentDidMount() {}
     }, {
+      key: 'handleOutboundLinkClick',
+      value: function handleOutboundLinkClick(event) {
+        var target = event.currentTarget;
+        window.ga('send', 'event', {
+          eventCategory: 'Outbound Link',
+          eventAction: 'click',
+          eventLabel: target.href
+        });
+      }
+    }, {
       key: 'render',
       value: function render() {
         return _react2['default'].createElement(
@@ -318,8 +332,10 @@ module.exports =
               'div',
               { className: 'ui stackable grid' },
               _react2['default'].createElement(
-                'div',
-                { className: 'three wide column text-left' },
+                'a',
+                { href: 'http://odoruinu.net/',
+                  target: '_blank',
+                  onClick: this.handleOutboundLinkClick },
                 '© Takuya Matsuyama'
               ),
               _react2['default'].createElement(
@@ -335,6 +351,15 @@ module.exports =
                       'a',
                       { href: '/terms', onClick: _Link2['default'].handleClick },
                       'Terms of Use'
+                    )
+                  ),
+                  _react2['default'].createElement(
+                    'li',
+                    null,
+                    _react2['default'].createElement(
+                      'a',
+                      { href: '/privacy', onClick: _Link2['default'].handleClick },
+                      'Privacy Policy'
                     )
                   ),
                   _react2['default'].createElement(
@@ -387,19 +412,6 @@ module.exports =
                       },
                       'Blog'
                     )
-                  ),
-                  _react2['default'].createElement(
-                    'li',
-                    null,
-                    _react2['default'].createElement(
-                      'a',
-                      {
-                        href: 'http://odoruinu.net/',
-                        target: '_blank',
-                        onClick: this.handleOutboundLinkClick
-                      },
-                      'About Author'
-                    )
                   )
                 )
               )
@@ -437,7 +449,7 @@ module.exports =
 
   var _react2 = _interopRequireDefault(_react);
 
-  __webpack_require__(15);
+  __webpack_require__(17);
 
   var _Navigation = __webpack_require__(8);
 
@@ -512,7 +524,7 @@ module.exports =
 
   var _react2 = _interopRequireDefault(_react);
 
-  __webpack_require__(16);
+  __webpack_require__(18);
 
   var _coreLocation = __webpack_require__(3);
 
@@ -615,7 +627,7 @@ module.exports =
 
   var _react2 = _interopRequireDefault(_react);
 
-  __webpack_require__(17);
+  __webpack_require__(19);
 
   // import Link from '../Link';
 
@@ -666,21 +678,21 @@ module.exports =
    * Copyright (c) Konstantin Tarkus (@koistya) | MIT license
    */
 
-  'use strict';
+  "use strict";
 
-  Object.defineProperty(exports, '__esModule', {
+  Object.defineProperty(exports, "__esModule", {
     value: true
   });
 
-  var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+  var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
 
-  var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
+  var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
 
-  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
-  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-  function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+  function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
   var _react = __webpack_require__(1);
 
@@ -692,24 +704,24 @@ module.exports =
     function _default() {
       _classCallCheck(this, _default);
 
-      _get(Object.getPrototypeOf(_default.prototype), 'constructor', this).apply(this, arguments);
+      _get(Object.getPrototypeOf(_default.prototype), "constructor", this).apply(this, arguments);
     }
 
     _createClass(_default, [{
-      key: 'render',
+      key: "render",
       value: function render() {
-        return _react2['default'].createElement(
-          'div',
-          null,
-          _react2['default'].createElement(
-            'h1',
+        return _react2["default"].createElement(
+          "div",
+          { className: "ui container main-content" },
+          _react2["default"].createElement(
+            "h1",
             null,
-            'Not Found'
+            "Not Found"
           ),
-          _react2['default'].createElement(
-            'p',
+          _react2["default"].createElement(
+            "p",
             null,
-            'The page you\'re looking for was not found.'
+            "The page you're looking for was not found."
           )
         );
       }
@@ -718,8 +730,8 @@ module.exports =
     return _default;
   })(_react.Component);
 
-  exports['default'] = _default;
-  module.exports = exports['default'];
+  exports["default"] = _default;
+  module.exports = exports["default"];
 
 /***/ },
 /* 10 */
@@ -765,7 +777,7 @@ module.exports =
       value: function render() {
         return _react2['default'].createElement(
           'div',
-          null,
+          { className: 'ui container main-content' },
           _react2['default'].createElement(
             'h1',
             null,
@@ -822,7 +834,7 @@ module.exports =
 
   var _react2 = _interopRequireDefault(_react);
 
-  __webpack_require__(18);
+  __webpack_require__(20);
 
   var _default = (function (_Component) {
     _inherits(_default, _Component);
@@ -996,7 +1008,7 @@ module.exports =
 
   function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-  __webpack_require__(19);
+  __webpack_require__(21);
 
   var _react = __webpack_require__(1);
 
@@ -1086,6 +1098,160 @@ module.exports =
     _createClass(_default, [{
       key: 'render',
       value: function render() {
+        var md = __webpack_require__(22);
+        return _react2['default'].createElement(
+          'div',
+          { className: 'ui container main-content' },
+          _react2['default'].createElement(
+            'h1',
+            null,
+            'Privacy Policy'
+          ),
+          _react2['default'].createElement('div', { dangerouslySetInnerHTML: { __html: md } })
+        );
+      }
+    }], [{
+      key: 'title',
+      value: 'Privacy Policy',
+      enumerable: true
+    }]);
+
+    return _default;
+  })(_react.Component);
+
+  exports['default'] = _default;
+  module.exports = exports['default'];
+
+/***/ },
+/* 14 */
+/***/ function(module, exports, __webpack_require__) {
+
+  'use strict';
+
+  Object.defineProperty(exports, '__esModule', {
+    value: true
+  });
+
+  var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+
+  var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
+
+  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+
+  function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+  var _react = __webpack_require__(1);
+
+  var _react2 = _interopRequireDefault(_react);
+
+  var _default = (function (_Component) {
+    _inherits(_default, _Component);
+
+    function _default() {
+      _classCallCheck(this, _default);
+
+      _get(Object.getPrototypeOf(_default.prototype), 'constructor', this).apply(this, arguments);
+    }
+
+    _createClass(_default, [{
+      key: 'render',
+      value: function render() {
+        return _react2['default'].createElement(
+          'div',
+          { className: 'ui container main-content' },
+          _react2['default'].createElement(
+            'h1',
+            null,
+            'Security'
+          ),
+          _react2['default'].createElement(
+            'h2',
+            null,
+            'Transport Encryption'
+          ),
+          _react2['default'].createElement(
+            'p',
+            null,
+            'Inkdrop uses industry standard encryption to protect your data in transit. This is commonly referred to as transport layer security (“TLS”) or secure socket layer (“SSL”) technology.'
+          ),
+          _react2['default'].createElement(
+            'h2',
+            null,
+            'Encrypted Note with Password'
+          ),
+          _react2['default'].createElement(
+            'p',
+            null,
+            'You can encrypt a note to add an extra level of protection to private information. Evernote uses AES (Advanced Encryption Standard) with a 256-bit key to encrypt your note content.'
+          ),
+          _react2['default'].createElement(
+            'p',
+            null,
+            'When you encrypt note, we prompt you for a passphrase. We take your passphrase along with a unique salt and use PBKDF2 with 90,510 rounds of SHA-512 to derive a 256-bit AES key. We use this key, along with an initialization vector, to encrypt your data in GCM (Galois/Counter Mode).'
+          ),
+          _react2['default'].createElement(
+            'p',
+            null,
+            'We never receive a copy of this key or your passphrase and don’t use any escrow mechanism to recover your encrypted data. This means that if you forget your passphrase, we cannot recover your data.'
+          )
+        );
+      }
+    }], [{
+      key: 'title',
+      value: 'Security',
+      enumerable: true
+    }]);
+
+    return _default;
+  })(_react.Component);
+
+  exports['default'] = _default;
+  module.exports = exports['default'];
+
+/***/ },
+/* 15 */
+/***/ function(module, exports, __webpack_require__) {
+
+  /**
+   * React Static Boilerplate
+   * https://github.com/koistya/react-static-boilerplate
+   * Copyright (c) Konstantin Tarkus (@koistya) | MIT license
+   */
+
+  'use strict';
+
+  Object.defineProperty(exports, '__esModule', {
+    value: true
+  });
+
+  var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+
+  var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
+
+  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+
+  function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+  var _react = __webpack_require__(1);
+
+  var _react2 = _interopRequireDefault(_react);
+
+  var _default = (function (_Component) {
+    _inherits(_default, _Component);
+
+    function _default() {
+      _classCallCheck(this, _default);
+
+      _get(Object.getPrototypeOf(_default.prototype), 'constructor', this).apply(this, arguments);
+    }
+
+    _createClass(_default, [{
+      key: 'render',
+      value: function render() {
         return _react2['default'].createElement(
           'div',
           { className: 'ui container main-content' },
@@ -1097,7 +1263,12 @@ module.exports =
           _react2['default'].createElement(
             'p',
             null,
-            'The beta version of this service is free of charge to beta users during the beta stage. The \'beta version\' or \'closed beta\' is the trial period of this service until its official release which may include a change in the service name and the features it includes. A beta user is someone who is interested in examining and evaluating the beta version of this service for personal or business reasons. This terms of use are subject to change with or without notice after the initial beta sign up stage. In addition, there is no guarantee that the features and functionalities of the beta version will be included in the official release - the official version may include different features and functionalities than the beta version. Inkdrop is not responsible for any damage, inconvenience, or loss experienced during the beta trial period, when available, by any beta user.'
+            'The beta version of this service is free of charge to beta users during the beta stage. The \'beta version\' or \'private beta\' is the trial period of this service until its official release which may include a change in the service name and the features it includes. A beta user is someone who is interested in examining and evaluating the beta version of this service for personal or business reasons. This terms of use are subject to change with or without notice after the initial beta sign up stage.'
+          ),
+          _react2['default'].createElement(
+            'p',
+            null,
+            'In addition, there is no guarantee that the features and functionalities of the beta version will be included in the official release - the official version may include different features and functionalities than the beta version. Inkdrop is not responsible for any damage, inconvenience, or loss experienced during the beta trial period, when available, by any beta user.'
           )
         );
       }
@@ -1114,7 +1285,7 @@ module.exports =
   module.exports = exports['default'];
 
 /***/ },
-/* 14 */
+/* 16 */
 /***/ function(module, exports, __webpack_require__) {
 
   exports = module.exports = __webpack_require__(2)();
@@ -1128,7 +1299,7 @@ module.exports =
 
 
 /***/ },
-/* 15 */
+/* 17 */
 /***/ function(module, exports, __webpack_require__) {
 
   exports = module.exports = __webpack_require__(2)();
@@ -1142,7 +1313,7 @@ module.exports =
 
 
 /***/ },
-/* 16 */
+/* 18 */
 /***/ function(module, exports, __webpack_require__) {
 
   exports = module.exports = __webpack_require__(2)();
@@ -1156,7 +1327,7 @@ module.exports =
 
 
 /***/ },
-/* 17 */
+/* 19 */
 /***/ function(module, exports, __webpack_require__) {
 
   exports = module.exports = __webpack_require__(2)();
@@ -1170,7 +1341,7 @@ module.exports =
 
 
 /***/ },
-/* 18 */
+/* 20 */
 /***/ function(module, exports, __webpack_require__) {
 
   exports = module.exports = __webpack_require__(2)();
@@ -1184,7 +1355,7 @@ module.exports =
 
 
 /***/ },
-/* 19 */
+/* 21 */
 /***/ function(module, exports, __webpack_require__) {
 
   exports = module.exports = __webpack_require__(2)();
@@ -1198,25 +1369,31 @@ module.exports =
 
 
 /***/ },
-/* 20 */
+/* 22 */
+/***/ function(module, exports) {
+
+  module.exports = "<h2 id=\"definitions\">Definitions</h2>\n<p>Inkdrop is owned by Takuya Matsuyama, Tokyo - Japan. (referred to as &quot;I&quot;, &quot;Me&quot;, &quot;Our&quot; or &quot;We&quot;).\nAs a customer of this service you&#39;re a &quot;User&quot; or &quot;You&quot; according to this agreement.\nThe App or any services offered by us will be referred to as &quot;Inkdrop&quot; or &quot;Service&quot;.</p>\n<h2 id=\"introduction\">Introduction</h2>\n<p>We realize that personal information is the important property of an individual, and have stated the following policies on treatment of personal information to appropriately collect and use personal information, to comply with laws and ordinances related to personal information and to prevent and cure leakage of personal information, and will take the best care in control and use of personal information. \nPlease note that any collection of personal information by linked sites or any other entities is not covered by this Privacy Policy.</p>\n<h2 id=\"appropriate-collection-and-purpose-of-use\">Appropriate Collection and Purpose of Use</h2>\n<p>We will collect personal information through appropriate methods for the following purposes:</p>\n<ul>\n<li>to provide our services;</li>\n<li>to provide notices and send questionnaires regarding our services that are currently provided or under consideration for future releases;</li>\n<li>to help improve the services and develop new services;</li>\n<li>to make contact with you;</li>\n<li>to verify your identity and otherwise respond to inquiries;</li>\n<li>to select in drawings and deliver prizes or products;</li>\n<li>to transmit advertisement information sponsored by us or any other third party;</li>\n<li>to create statistical data regarding the use of our services;</li>\n<li>to prevent any use in breach of the Terms of Service.</li>\n</ul>\n<h2 id=\"appropriate-control-and-protection\">Appropriate Control and Protection</h2>\n<p>Personal information will be strictly controlled, and appropriate measures will be taken to prevent and cure unauthorized access, loss, destruction, falsification, and leakage of personal information.</p>\n<h2 id=\"entrustment\">Entrustment</h2>\n<p>We may entrust the whole or part of the personal information it collected to outsourcing entities to the extent required to achieve the purpose of use. In such case, we will fully examine the eligibility of such outsourcing entities, state confidentiality provisions in the contracts with them, and provide any necessary and appropriate supervision to them.</p>\n<h2 id=\"provision-to-third-party\">Provision to Third Party</h2>\n<p>We will not disclose or provide any data to any third party except when a prior consent is given by you;\nit is based on laws and ordinances;\nany breach of the Terms of Service for Inkdrop or other our services should occur, and there are sufficient reasons for determining the disclosure of the personal information is necessary to protect our rights, property and services;\nit is necessary for the protection of the life, body or property of an individual and is difficult to obtain your consent;\nit is specially necessary for improving public health or promoting the sound growth of children and is difficult to obtain your consent;\nit is necessary for cooperating with a national or local authority or an entity entrusted by it in executing the affairs prescribed by laws and ordinances, and obtaining your consent is likely to impede the execution of such affairs; or\nany succession of our business including the provision of personal information is made due to any merger, company split, transfer of operations or other reasons.</p>\n<h2 id=\"joint-use\">Joint Use</h2>\n<p>We may jointly use any personal information with our business cooperators in providing our services.\nIn such case, we will, in advance, publish the items of the personal information used jointly, the scope of the joint users, the purpose for which the personal information is used jointly and the name of person responsible for the management of the personal information is used jointly.</p>\n<h2 id=\"use-by-minors-under-18\">Use by minors under 18</h2>\n<p>If you are under 18, please use our service and input the personal information upon the consent of your custodian.</p>\n<h2 id=\"procedures-for-disclosure\">Procedures for Disclosure</h2>\n<p>We will respond without delay to your request for notice of the purpose of use, disclosure, correction, addition or deletion of contents, discontinuance of the use, erasure, and discontinuance of provision to a third party (hereinafter referred to as “Disclosure, etc.”) of (your) personal information.\nProvided, however, you are required to take the procedures prescribed by us in requesting Disclosure, etc.</p>\n<h2 id=\"disclaimer\">Disclaimer</h2>\n<p>We shall assume no liability whatsoever if you reveal the personal information to third parties using any feature of our services or any other means and you become identifiable by such information you disclosed on our services.</p>\n<h2 id=\"creation-and-use-of-statistical-data\">Creation and Use of Statistical Data</h2>\n<p>We may crate, based on the personal information collected, statistical data processed so that no individual is identifiable.\nWith regard to such creation and use of the personally unidentifiable statistical data, we may conduct without any restriction.</p>\n<h2 id=\"collection-and-use-of-attribute-information-activity-history\">Collection and Use of Attribute Information/Activity History</h2>\n<p>We may collect and/or use the following personally unidentifiable information to personalize our services or contents of advertisements and may provide such information to sponsors, information providers, or service providers: cookies, logs, activity histories for accessed URLs, contents or reference orders, individual terminal identification information and other device information, and attribute information on gender, occupation, or age.</p>\n<h2 id=\"amendment\">Amendment</h2>\n<p>We reserves the right to make amendments to this Privacy Policy.</p>\n";
+
+/***/ },
+/* 23 */
 /***/ function(module, exports) {
 
   module.exports = require("history/lib/createBrowserHistory");
 
 /***/ },
-/* 21 */
+/* 24 */
 /***/ function(module, exports) {
 
   module.exports = require("history/lib/createMemoryHistory");
 
 /***/ },
-/* 22 */
+/* 25 */
 /***/ function(module, exports) {
 
   module.exports = require("history/lib/useQueries");
 
 /***/ },
-/* 23 */
+/* 26 */
 /***/ function(module, exports) {
 
   module.exports = require("react-dom");
