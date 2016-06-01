@@ -1188,7 +1188,7 @@ module.exports =
           _react2['default'].createElement(
             'p',
             null,
-            'You can encrypt a note to add an extra level of protection to private information. Evernote uses AES (Advanced Encryption Standard) with a 256-bit key to encrypt your note content.'
+            'You can encrypt a note to add an extra level of protection to private information. Inkdrop uses AES (Advanced Encryption Standard) with a 256-bit key to encrypt your note content.'
           ),
           _react2['default'].createElement(
             'p',
