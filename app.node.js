@@ -1049,6 +1049,11 @@ module.exports =
             'p',
             null,
             'Available soon'
+          ),
+          _react2['default'].createElement(
+            'a',
+            { href: 'https://mixpanel.com/f/partner', rel: 'nofollow' },
+            _react2['default'].createElement('img', { src: '//cdn.mxpnl.com/site_media/images/partner/badge_light.png', alt: 'Mobile Analytics' })
           )
         );
       }
