@@ -65,49 +65,59 @@ module.exports =
 
   var _react2 = _interopRequireDefault(_react);
 
-  var _reactDom = __webpack_require__(43);
+  var _reactDom = __webpack_require__(54);
 
   var _reactDom2 = _interopRequireDefault(_reactDom);
 
-  var _fbjsLibExecutionEnvironment = __webpack_require__(7);
+  var _fbjsLibExecutionEnvironment = __webpack_require__(10);
 
-  var _coreLocation = __webpack_require__(6);
+  var _coreLocation = __webpack_require__(9);
 
   var _coreLocation2 = _interopRequireDefault(_coreLocation);
 
-  var _componentsLayout = __webpack_require__(9);
+  var _componentsLayout = __webpack_require__(12);
 
   var _componentsLayout2 = _interopRequireDefault(_componentsLayout);
 
   var routes = {
     '/404': function _() {
-      return __webpack_require__(12);
-    }, '/500': function _() {
-      return __webpack_require__(13);
-    }, '/about': function about() {
       return __webpack_require__(14);
-    }, '/': function _() {
+    }, '/500': function _() {
       return __webpack_require__(15);
-    }, '/manual/basic-usage': function manualBasicUsage() {
+    }, '/about': function about() {
       return __webpack_require__(16);
-    }, '/manual/extend-inkdrop-with-plugins': function manualExtendInkdropWithPlugins() {
+    }, '/': function _() {
       return __webpack_require__(17);
-    }, '/manual/': function manual() {
+    }, '/manual/accessing-data-in-the-cloud': function manualAccessingDataInTheCloud() {
       return __webpack_require__(18);
-    }, '/manual/quick-start-guide': function manualQuickStartGuide() {
+    }, '/manual/basic-usage': function manualBasicUsage() {
       return __webpack_require__(19);
-    }, '/manual/searching-notes': function manualSearchingNotes() {
+    }, '/manual/extend-inkdrop-with-plugins': function manualExtendInkdropWithPlugins() {
       return __webpack_require__(20);
-    }, '/manual/synchronizing-in-the-cloud': function manualSynchronizingInTheCloud() {
+    }, '/manual/': function manual() {
       return __webpack_require__(21);
-    }, '/manual/writing-note': function manualWritingNote() {
+    }, '/manual/quick-start-guide': function manualQuickStartGuide() {
       return __webpack_require__(22);
-    }, '/privacy': function privacy() {
+    }, '/manual/searching-notes': function manualSearchingNotes() {
       return __webpack_require__(23);
-    }, '/security': function security() {
+    }, '/manual/synchronizing-in-the-cloud': function manualSynchronizingInTheCloud() {
       return __webpack_require__(24);
-    }, '/terms': function terms() {
+    }, '/manual/writing-note': function manualWritingNote() {
       return __webpack_require__(25);
+    }, '/privacy': function privacy() {
+      return __webpack_require__(26);
+    }, '/reference/book': function referenceBook() {
+      return __webpack_require__(27);
+    }, '/reference/': function reference() {
+      return __webpack_require__(28);
+    }, '/reference/note': function referenceNote() {
+      return __webpack_require__(29);
+    }, '/reference/tag': function referenceTag() {
+      return __webpack_require__(30);
+    }, '/security': function security() {
+      return __webpack_require__(31);
+    }, '/terms': function terms() {
+      return __webpack_require__(32);
     } }; // Auto-generated on build. See tools/lib/routes-loader.js
 
   var route = function route(path, callback) {
@@ -178,62 +188,6 @@ module.exports =
 
 /***/ },
 /* 2 */
-/***/ function(module, exports) {
-
-  /*
-  	MIT License http://www.opensource.org/licenses/mit-license.php
-  	Author Tobias Koppers @sokra
-  */
-  // css base code, injected by the css-loader
-  module.exports = function() {
-  	var list = [];
-
-  	// return the list of modules as css string
-  	list.toString = function toString() {
-  		var result = [];
-  		for(var i = 0; i < this.length; i++) {
-  			var item = this[i];
-  			if(item[2]) {
-  				result.push("@media " + item[2] + "{" + item[1] + "}");
-  			} else {
-  				result.push(item[1]);
-  			}
-  		}
-  		return result.join("");
-  	};
-
-  	// import a list of modules into the list
-  	list.i = function(modules, mediaQuery) {
-  		if(typeof modules === "string")
-  			modules = [[null, modules, ""]];
-  		var alreadyImportedModules = {};
-  		for(var i = 0; i < this.length; i++) {
-  			var id = this[i][0];
-  			if(typeof id === "number")
-  				alreadyImportedModules[id] = true;
-  		}
-  		for(i = 0; i < modules.length; i++) {
-  			var item = modules[i];
-  			// skip already imported module
-  			// this implementation is not 100% perfect for weird media query combinations
-  			//  when a module is imported multiple times with different media queries.
-  			//  I hope this will never occur (Hey this way we have smaller bundles)
-  			if(typeof item[0] !== "number" || !alreadyImportedModules[item[0]]) {
-  				if(mediaQuery && !item[2]) {
-  					item[2] = mediaQuery;
-  				} else if(mediaQuery) {
-  					item[2] = "(" + item[2] + ") and (" + mediaQuery + ")";
-  				}
-  				list.push(item);
-  			}
-  		}
-  	};
-  	return list;
-  };
-
-
-/***/ },
-/* 3 */
 /***/ function(module, exports, __webpack_require__) {
 
   /**
@@ -338,6 +292,62 @@ module.exports =
   module.exports = exports['default'];
 
 /***/ },
+/* 3 */
+/***/ function(module, exports) {
+
+  /*
+  	MIT License http://www.opensource.org/licenses/mit-license.php
+  	Author Tobias Koppers @sokra
+  */
+  // css base code, injected by the css-loader
+  module.exports = function() {
+  	var list = [];
+
+  	// return the list of modules as css string
+  	list.toString = function toString() {
+  		var result = [];
+  		for(var i = 0; i < this.length; i++) {
+  			var item = this[i];
+  			if(item[2]) {
+  				result.push("@media " + item[2] + "{" + item[1] + "}");
+  			} else {
+  				result.push(item[1]);
+  			}
+  		}
+  		return result.join("");
+  	};
+
+  	// import a list of modules into the list
+  	list.i = function(modules, mediaQuery) {
+  		if(typeof modules === "string")
+  			modules = [[null, modules, ""]];
+  		var alreadyImportedModules = {};
+  		for(var i = 0; i < this.length; i++) {
+  			var id = this[i][0];
+  			if(typeof id === "number")
+  				alreadyImportedModules[id] = true;
+  		}
+  		for(i = 0; i < modules.length; i++) {
+  			var item = modules[i];
+  			// skip already imported module
+  			// this implementation is not 100% perfect for weird media query combinations
+  			//  when a module is imported multiple times with different media queries.
+  			//  I hope this will never occur (Hey this way we have smaller bundles)
+  			if(typeof item[0] !== "number" || !alreadyImportedModules[item[0]]) {
+  				if(mediaQuery && !item[2]) {
+  					item[2] = mediaQuery;
+  				} else if(mediaQuery) {
+  					item[2] = "(" + item[2] + ") and (" + mediaQuery + ")";
+  				}
+  				list.push(item);
+  			}
+  		}
+  	};
+  	return list;
+  };
+
+
+/***/ },
 /* 4 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -373,9 +383,9 @@ module.exports =
 
   var _react2 = _interopRequireDefault(_react);
 
-  __webpack_require__(28);
+  __webpack_require__(35);
 
-  var _coreLocation = __webpack_require__(6);
+  var _coreLocation = __webpack_require__(9);
 
   var _coreLocation2 = _interopRequireDefault(_coreLocation);
 
@@ -484,7 +494,7 @@ module.exports =
 
   var _react2 = _interopRequireDefault(_react);
 
-  var _menuLink = __webpack_require__(11);
+  var _menuLink = __webpack_require__(8);
 
   var _menuLink2 = _interopRequireDefault(_menuLink);
 
@@ -501,60 +511,87 @@ module.exports =
       key: 'render',
       value: function render() {
         return _react2['default'].createElement(
-          'ul',
-          { className: 'article-list' },
+          'div',
+          null,
           _react2['default'].createElement(
-            'li',
-            null,
+            'h3',
+            { className: 'ui header' },
+            'Using Inkdrop'
+          ),
+          _react2['default'].createElement(
+            'ul',
+            { className: 'article-list' },
             _react2['default'].createElement(
-              _menuLink2['default'],
-              { to: '/manual/quick-start-guide' },
-              'Quick start guide'
+              'li',
+              null,
+              _react2['default'].createElement(
+                _menuLink2['default'],
+                { to: '/manual/quick-start-guide' },
+                'Quick start guide'
+              )
+            ),
+            _react2['default'].createElement(
+              'li',
+              null,
+              _react2['default'].createElement(
+                _menuLink2['default'],
+                { to: '/manual/basic-usage' },
+                'Basic usage'
+              )
+            ),
+            _react2['default'].createElement(
+              'li',
+              null,
+              _react2['default'].createElement(
+                _menuLink2['default'],
+                { to: '/manual/writing-note' },
+                'Writing note'
+              )
+            ),
+            _react2['default'].createElement(
+              'li',
+              null,
+              _react2['default'].createElement(
+                _menuLink2['default'],
+                { to: '/manual/searching-notes' },
+                'Searching notes'
+              )
+            ),
+            _react2['default'].createElement(
+              'li',
+              null,
+              _react2['default'].createElement(
+                _menuLink2['default'],
+                { to: '/manual/synchronizing-in-the-cloud' },
+                'Synchronizing in the cloud'
+              )
+            ),
+            _react2['default'].createElement(
+              'li',
+              null,
+              _react2['default'].createElement(
+                _menuLink2['default'],
+                { to: '/manual/extend-inkdrop-with-plugins' },
+                'Extend Inkdrop with plugins'
+              )
             )
           ),
           _react2['default'].createElement(
-            'li',
-            null,
-            _react2['default'].createElement(
-              _menuLink2['default'],
-              { to: '/manual/basic-usage' },
-              'Basic usage'
-            )
+            'h3',
+            { className: 'ui header' },
+            'Hacking Inkdrop'
           ),
           _react2['default'].createElement(
-            'li',
-            null,
+            'ul',
+            { className: 'article-list' },
             _react2['default'].createElement(
-              _menuLink2['default'],
-              { to: '/manual/writing-note' },
-              'Writing note'
-            )
-          ),
-          _react2['default'].createElement(
-            'li',
-            null,
-            _react2['default'].createElement(
-              _menuLink2['default'],
-              { to: '/manual/searching-notes' },
-              'Searching notes'
-            )
-          ),
-          _react2['default'].createElement(
-            'li',
-            null,
-            _react2['default'].createElement(
-              _menuLink2['default'],
-              { to: '/manual/synchronizing-in-the-cloud' },
-              'Synchronizing in the cloud'
-            )
-          ),
-          _react2['default'].createElement(
-            'li',
-            null,
-            _react2['default'].createElement(
-              _menuLink2['default'],
-              { to: '/manual/extend-inkdrop-with-plugins' },
-              'Extend Inkdrop with plugins'
+              'li',
+              null,
+              _react2['default'].createElement(
+                _menuLink2['default'],
+                { to: '/manual/accessing-data-in-the-cloud' },
+                'Accessing Data in the Cloud'
+              )
             )
           )
         );
@@ -583,35 +620,97 @@ module.exports =
     value: true
   });
 
+  var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+
+  var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
+
   function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-  var _fbjsLibExecutionEnvironment = __webpack_require__(7);
+  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
 
-  var _historyLibCreateBrowserHistory = __webpack_require__(40);
+  function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-  var _historyLibCreateBrowserHistory2 = _interopRequireDefault(_historyLibCreateBrowserHistory);
+  var _react = __webpack_require__(1);
 
-  var _historyLibCreateMemoryHistory = __webpack_require__(41);
+  var _react2 = _interopRequireDefault(_react);
 
-  var _historyLibCreateMemoryHistory2 = _interopRequireDefault(_historyLibCreateMemoryHistory);
+  var _referenceMenu = __webpack_require__(7);
 
-  var _historyLibUseQueries = __webpack_require__(42);
+  var _referenceMenu2 = _interopRequireDefault(_referenceMenu);
 
-  var _historyLibUseQueries2 = _interopRequireDefault(_historyLibUseQueries);
+  var _Link = __webpack_require__(4);
 
-  var location = (0, _historyLibUseQueries2['default'])(_fbjsLibExecutionEnvironment.canUseDOM ? _historyLibCreateBrowserHistory2['default'] : _historyLibCreateMemoryHistory2['default'])();
+  var _Link2 = _interopRequireDefault(_Link);
 
-  exports['default'] = location;
+  var _default = (function (_Component) {
+    _inherits(_default, _Component);
+
+    function _default() {
+      _classCallCheck(this, _default);
+
+      _get(Object.getPrototypeOf(_default.prototype), 'constructor', this).apply(this, arguments);
+    }
+
+    _createClass(_default, [{
+      key: 'render',
+      value: function render() {
+        return _react2['default'].createElement(
+          'div',
+          { className: 'ui container main-content' },
+          _react2['default'].createElement(
+            'div',
+            { className: 'ui stackable grid' },
+            _react2['default'].createElement(
+              'div',
+              { className: 'four wide column' },
+              _react2['default'].createElement(_referenceMenu2['default'], null)
+            ),
+            _react2['default'].createElement(
+              'div',
+              { className: 'twelve wide column doc-content' },
+              _react2['default'].createElement(
+                'div',
+                { className: 'ui breadcrumb' },
+                _react2['default'].createElement(
+                  _Link2['default'],
+                  { to: '/', className: 'section' },
+                  'Top'
+                ),
+                _react2['default'].createElement('i', { className: 'right chevron icon divider' }),
+                _react2['default'].createElement(
+                  _Link2['default'],
+                  { to: '/reference/', className: 'section' },
+                  'API Reference'
+                ),
+                _react2['default'].createElement('i', { className: 'right chevron icon divider' }),
+                _react2['default'].createElement(
+                  'div',
+                  { className: 'active section' },
+                  this.props.currentPageTitle
+                )
+              ),
+              this.props.children
+            )
+          )
+        );
+      }
+    }], [{
+      key: 'propTypes',
+      value: {
+        children: _react.PropTypes.node.isRequired,
+        currentPageTitle: _react.PropTypes.string.isRequired
+      },
+      enumerable: true
+    }]);
+
+    return _default;
+  })(_react.Component);
+
+  exports['default'] = _default;
   module.exports = exports['default'];
 
 /***/ },
 /* 7 */
-/***/ function(module, exports) {
-
-  module.exports = require("fbjs/lib/ExecutionEnvironment");
-
-/***/ },
-/* 8 */
 /***/ function(module, exports, __webpack_require__) {
 
   /**
@@ -640,7 +739,226 @@ module.exports =
 
   var _react2 = _interopRequireDefault(_react);
 
-  __webpack_require__(26);
+  var _menuLink = __webpack_require__(8);
+
+  var _menuLink2 = _interopRequireDefault(_menuLink);
+
+  var _default = (function (_Component) {
+    _inherits(_default, _Component);
+
+    function _default() {
+      _classCallCheck(this, _default);
+
+      _get(Object.getPrototypeOf(_default.prototype), 'constructor', this).apply(this, arguments);
+    }
+
+    _createClass(_default, [{
+      key: 'render',
+      value: function render() {
+        return _react2['default'].createElement(
+          'div',
+          null,
+          _react2['default'].createElement(
+            'h3',
+            { className: 'ui header' },
+            'Data Models'
+          ),
+          _react2['default'].createElement(
+            'ul',
+            { className: 'article-list' },
+            _react2['default'].createElement(
+              'li',
+              null,
+              _react2['default'].createElement(
+                _menuLink2['default'],
+                { to: '/reference/note' },
+                'Note'
+              )
+            ),
+            _react2['default'].createElement(
+              'li',
+              null,
+              _react2['default'].createElement(
+                _menuLink2['default'],
+                { to: '/reference/book' },
+                'Book'
+              )
+            ),
+            _react2['default'].createElement(
+              'li',
+              null,
+              _react2['default'].createElement(
+                _menuLink2['default'],
+                { to: '/reference/tag' },
+                'Tag'
+              )
+            )
+          )
+        );
+      }
+    }]);
+
+    return _default;
+  })(_react.Component);
+
+  exports['default'] = _default;
+  module.exports = exports['default'];
+
+/***/ },
+/* 8 */
+/***/ function(module, exports, __webpack_require__) {
+
+  'use strict';
+
+  Object.defineProperty(exports, '__esModule', {
+    value: true
+  });
+
+  var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+  var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+
+  var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
+
+  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+  function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+
+  function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+  var _react = __webpack_require__(1);
+
+  var _react2 = _interopRequireDefault(_react);
+
+  var _Link2 = __webpack_require__(4);
+
+  var _Link3 = _interopRequireDefault(_Link2);
+
+  __webpack_require__(37);
+
+  var _default = (function (_Link) {
+    _inherits(_default, _Link);
+
+    function _default() {
+      _classCallCheck(this, _default);
+
+      _get(Object.getPrototypeOf(_default.prototype), 'constructor', this).apply(this, arguments);
+    }
+
+    _createClass(_default, [{
+      key: 'render',
+      value: function render() {
+        var _props = this.props;
+        var to = _props.to;
+        var children = _props.children;
+
+        var props = _objectWithoutProperties(_props, ['to', 'children']);
+
+        var _ref = global.window && global.window.location || {};
+
+        var pathname = _ref.pathname;
+
+        var isActive = pathname === to ? 'current-active' : '';
+        var className = (props.className || '') + ' ' + isActive;
+        return _react2['default'].createElement(
+          'a',
+          _extends({ href: to, className: className }, props, { onClick: _Link3['default'].handleClick.bind(this) }),
+          children
+        );
+      }
+    }], [{
+      key: 'propTypes',
+      value: {
+        to: _react.PropTypes.string.isRequired,
+        children: _react.PropTypes.node.isRequired,
+        state: _react.PropTypes.object,
+        onClick: _react.PropTypes.func
+      },
+      enumerable: true
+    }]);
+
+    return _default;
+  })(_Link3['default']);
+
+  exports['default'] = _default;
+  module.exports = exports['default'];
+
+/***/ },
+/* 9 */
+/***/ function(module, exports, __webpack_require__) {
+
+  /**
+   * React Static Boilerplate
+   * https://github.com/koistya/react-static-boilerplate
+   * Copyright (c) Konstantin Tarkus (@koistya) | MIT license
+   */
+
+  'use strict';
+
+  Object.defineProperty(exports, '__esModule', {
+    value: true
+  });
+
+  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+  var _fbjsLibExecutionEnvironment = __webpack_require__(10);
+
+  var _historyLibCreateBrowserHistory = __webpack_require__(51);
+
+  var _historyLibCreateBrowserHistory2 = _interopRequireDefault(_historyLibCreateBrowserHistory);
+
+  var _historyLibCreateMemoryHistory = __webpack_require__(52);
+
+  var _historyLibCreateMemoryHistory2 = _interopRequireDefault(_historyLibCreateMemoryHistory);
+
+  var _historyLibUseQueries = __webpack_require__(53);
+
+  var _historyLibUseQueries2 = _interopRequireDefault(_historyLibUseQueries);
+
+  var location = (0, _historyLibUseQueries2['default'])(_fbjsLibExecutionEnvironment.canUseDOM ? _historyLibCreateBrowserHistory2['default'] : _historyLibCreateMemoryHistory2['default'])();
+
+  exports['default'] = location;
+  module.exports = exports['default'];
+
+/***/ },
+/* 10 */
+/***/ function(module, exports) {
+
+  module.exports = require("fbjs/lib/ExecutionEnvironment");
+
+/***/ },
+/* 11 */
+/***/ function(module, exports, __webpack_require__) {
+
+  /**
+   * React Static Boilerplate
+   * https://github.com/koistya/react-static-boilerplate
+   * Copyright (c) Konstantin Tarkus (@koistya) | MIT license
+   */
+
+  'use strict';
+
+  Object.defineProperty(exports, '__esModule', {
+    value: true
+  });
+
+  var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+
+  var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
+
+  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+
+  function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+  var _react = __webpack_require__(1);
+
+  var _react2 = _interopRequireDefault(_react);
+
+  __webpack_require__(33);
 
   var _Link = __webpack_require__(4);
 
@@ -781,7 +1099,7 @@ module.exports =
   module.exports = exports['default'];
 
 /***/ },
-/* 9 */
+/* 12 */
 /***/ function(module, exports, __webpack_require__) {
 
   /**
@@ -802,13 +1120,13 @@ module.exports =
 
   var _react2 = _interopRequireDefault(_react);
 
-  __webpack_require__(27);
+  __webpack_require__(34);
 
-  var _Navigation = __webpack_require__(10);
+  var _Navigation = __webpack_require__(13);
 
   var _Navigation2 = _interopRequireDefault(_Navigation);
 
-  var _Footer = __webpack_require__(8);
+  var _Footer = __webpack_require__(11);
 
   var _Footer2 = _interopRequireDefault(_Footer);
 
@@ -842,7 +1160,7 @@ module.exports =
   module.exports = exports['default'];
 
 /***/ },
-/* 10 */
+/* 13 */
 /***/ function(module, exports, __webpack_require__) {
 
   /**
@@ -863,7 +1181,7 @@ module.exports =
 
   var _react2 = _interopRequireDefault(_react);
 
-  __webpack_require__(29);
+  __webpack_require__(36);
 
   var _Link = __webpack_require__(4);
 
@@ -916,88 +1234,7 @@ module.exports =
   module.exports = exports['default'];
 
 /***/ },
-/* 11 */
-/***/ function(module, exports, __webpack_require__) {
-
-  'use strict';
-
-  Object.defineProperty(exports, '__esModule', {
-    value: true
-  });
-
-  var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
-  var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
-
-  var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
-
-  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-
-  function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
-
-  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
-
-  function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-  var _react = __webpack_require__(1);
-
-  var _react2 = _interopRequireDefault(_react);
-
-  var _Link2 = __webpack_require__(4);
-
-  var _Link3 = _interopRequireDefault(_Link2);
-
-  __webpack_require__(30);
-
-  var _default = (function (_Link) {
-    _inherits(_default, _Link);
-
-    function _default() {
-      _classCallCheck(this, _default);
-
-      _get(Object.getPrototypeOf(_default.prototype), 'constructor', this).apply(this, arguments);
-    }
-
-    _createClass(_default, [{
-      key: 'render',
-      value: function render() {
-        var _props = this.props;
-        var to = _props.to;
-        var children = _props.children;
-
-        var props = _objectWithoutProperties(_props, ['to', 'children']);
-
-        var _ref = global.window && global.window.location || {};
-
-        var pathname = _ref.pathname;
-
-        var isActive = pathname === to ? 'current-active' : '';
-        var className = (props.className || '') + ' ' + isActive;
-        return _react2['default'].createElement(
-          'a',
-          _extends({ href: to, className: className }, props, { onClick: _Link3['default'].handleClick.bind(this) }),
-          children
-        );
-      }
-    }], [{
-      key: 'propTypes',
-      value: {
-        to: _react.PropTypes.string.isRequired,
-        children: _react.PropTypes.node.isRequired,
-        state: _react.PropTypes.object,
-        onClick: _react.PropTypes.func
-      },
-      enumerable: true
-    }]);
-
-    return _default;
-  })(_Link3['default']);
-
-  exports['default'] = _default;
-  module.exports = exports['default'];
-
-/***/ },
-/* 12 */
+/* 14 */
 /***/ function(module, exports, __webpack_require__) {
 
   /**
@@ -1062,7 +1299,7 @@ module.exports =
   module.exports = exports["default"];
 
 /***/ },
-/* 13 */
+/* 15 */
 /***/ function(module, exports, __webpack_require__) {
 
   /**
@@ -1133,7 +1370,7 @@ module.exports =
   module.exports = exports['default'];
 
 /***/ },
-/* 14 */
+/* 16 */
 /***/ function(module, exports, __webpack_require__) {
 
   /**
@@ -1162,7 +1399,7 @@ module.exports =
 
   var _react2 = _interopRequireDefault(_react);
 
-  __webpack_require__(31);
+  __webpack_require__(38);
 
   var _default = (function (_Component) {
     _inherits(_default, _Component);
@@ -1311,7 +1548,7 @@ module.exports =
   module.exports = exports['default'];
 
 /***/ },
-/* 15 */
+/* 17 */
 /***/ function(module, exports, __webpack_require__) {
 
   /**
@@ -1336,7 +1573,7 @@ module.exports =
 
   function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-  __webpack_require__(32);
+  __webpack_require__(39);
 
   var _react = __webpack_require__(1);
 
@@ -1345,6 +1582,10 @@ module.exports =
   var _componentsManualMenu = __webpack_require__(5);
 
   var _componentsManualMenu2 = _interopRequireDefault(_componentsManualMenu);
+
+  var _componentsReferenceMenu = __webpack_require__(7);
+
+  var _componentsReferenceMenu2 = _interopRequireDefault(_componentsReferenceMenu);
 
   // import { Grid, Col, Row } from 'react-bootstrap';
 
@@ -1409,7 +1650,8 @@ module.exports =
                       { className: 'content' },
                       'API Reference'
                     )
-                  )
+                  ),
+                  _react2['default'].createElement(_componentsReferenceMenu2['default'], null)
                 ),
                 _react2['default'].createElement(
                   'div',
@@ -1455,7 +1697,7 @@ module.exports =
   module.exports = exports['default'];
 
 /***/ },
-/* 16 */
+/* 18 */
 /***/ function(module, exports, __webpack_require__) {
 
   /**
@@ -1484,7 +1726,7 @@ module.exports =
 
   var _react2 = _interopRequireDefault(_react);
 
-  var _componentsManualLayout = __webpack_require__(3);
+  var _componentsManualLayout = __webpack_require__(2);
 
   var _componentsManualLayout2 = _interopRequireDefault(_componentsManualLayout);
 
@@ -1500,7 +1742,77 @@ module.exports =
     _createClass(ManualPage, [{
       key: 'render',
       value: function render() {
-        var md = __webpack_require__(34);
+        var md = __webpack_require__(41);
+        return _react2['default'].createElement(
+          _componentsManualLayout2['default'],
+          { currentPageTitle: ManualPage.title },
+          _react2['default'].createElement(
+            'h1',
+            null,
+            ManualPage.title
+          ),
+          _react2['default'].createElement('div', { dangerouslySetInnerHTML: { __html: md } })
+        );
+      }
+    }], [{
+      key: 'title',
+      value: 'Accessing Data in the Cloud',
+      enumerable: true
+    }]);
+
+    return ManualPage;
+  })(_react.Component);
+
+  exports['default'] = ManualPage;
+  module.exports = exports['default'];
+
+/***/ },
+/* 19 */
+/***/ function(module, exports, __webpack_require__) {
+
+  /**
+   * React Static Boilerplate
+   * https://github.com/koistya/react-static-boilerplate
+   * Copyright (c) Konstantin Tarkus (@koistya) | MIT license
+   */
+
+  'use strict';
+
+  Object.defineProperty(exports, '__esModule', {
+    value: true
+  });
+
+  var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+
+  var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
+
+  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+
+  function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+  var _react = __webpack_require__(1);
+
+  var _react2 = _interopRequireDefault(_react);
+
+  var _componentsManualLayout = __webpack_require__(2);
+
+  var _componentsManualLayout2 = _interopRequireDefault(_componentsManualLayout);
+
+  var ManualPage = (function (_Component) {
+    _inherits(ManualPage, _Component);
+
+    function ManualPage() {
+      _classCallCheck(this, ManualPage);
+
+      _get(Object.getPrototypeOf(ManualPage.prototype), 'constructor', this).apply(this, arguments);
+    }
+
+    _createClass(ManualPage, [{
+      key: 'render',
+      value: function render() {
+        var md = __webpack_require__(42);
         return _react2['default'].createElement(
           _componentsManualLayout2['default'],
           { currentPageTitle: ManualPage.title },
@@ -1525,7 +1837,7 @@ module.exports =
   module.exports = exports['default'];
 
 /***/ },
-/* 17 */
+/* 20 */
 /***/ function(module, exports, __webpack_require__) {
 
   /**
@@ -1554,7 +1866,7 @@ module.exports =
 
   var _react2 = _interopRequireDefault(_react);
 
-  var _componentsManualLayout = __webpack_require__(3);
+  var _componentsManualLayout = __webpack_require__(2);
 
   var _componentsManualLayout2 = _interopRequireDefault(_componentsManualLayout);
 
@@ -1570,7 +1882,7 @@ module.exports =
     _createClass(ManualPage, [{
       key: 'render',
       value: function render() {
-        var md = __webpack_require__(35);
+        var md = __webpack_require__(43);
         return _react2['default'].createElement(
           _componentsManualLayout2['default'],
           { currentPageTitle: ManualPage.title },
@@ -1595,7 +1907,7 @@ module.exports =
   module.exports = exports['default'];
 
 /***/ },
-/* 18 */
+/* 21 */
 /***/ function(module, exports, __webpack_require__) {
 
   /**
@@ -1665,216 +1977,6 @@ module.exports =
   module.exports = exports['default'];
 
 /***/ },
-/* 19 */
-/***/ function(module, exports, __webpack_require__) {
-
-  /**
-   * React Static Boilerplate
-   * https://github.com/koistya/react-static-boilerplate
-   * Copyright (c) Konstantin Tarkus (@koistya) | MIT license
-   */
-
-  'use strict';
-
-  Object.defineProperty(exports, '__esModule', {
-    value: true
-  });
-
-  var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
-
-  var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
-
-  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-
-  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
-
-  function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-  var _react = __webpack_require__(1);
-
-  var _react2 = _interopRequireDefault(_react);
-
-  var _componentsManualLayout = __webpack_require__(3);
-
-  var _componentsManualLayout2 = _interopRequireDefault(_componentsManualLayout);
-
-  var ManualPage = (function (_Component) {
-    _inherits(ManualPage, _Component);
-
-    function ManualPage() {
-      _classCallCheck(this, ManualPage);
-
-      _get(Object.getPrototypeOf(ManualPage.prototype), 'constructor', this).apply(this, arguments);
-    }
-
-    _createClass(ManualPage, [{
-      key: 'render',
-      value: function render() {
-        var md = __webpack_require__(36);
-        return _react2['default'].createElement(
-          _componentsManualLayout2['default'],
-          { currentPageTitle: ManualPage.title },
-          _react2['default'].createElement(
-            'h1',
-            null,
-            ManualPage.title
-          ),
-          _react2['default'].createElement('div', { dangerouslySetInnerHTML: { __html: md } })
-        );
-      }
-    }], [{
-      key: 'title',
-      value: 'Quick Start Guide',
-      enumerable: true
-    }]);
-
-    return ManualPage;
-  })(_react.Component);
-
-  exports['default'] = ManualPage;
-  module.exports = exports['default'];
-
-/***/ },
-/* 20 */
-/***/ function(module, exports, __webpack_require__) {
-
-  /**
-   * React Static Boilerplate
-   * https://github.com/koistya/react-static-boilerplate
-   * Copyright (c) Konstantin Tarkus (@koistya) | MIT license
-   */
-
-  'use strict';
-
-  Object.defineProperty(exports, '__esModule', {
-    value: true
-  });
-
-  var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
-
-  var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
-
-  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-
-  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
-
-  function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-  var _react = __webpack_require__(1);
-
-  var _react2 = _interopRequireDefault(_react);
-
-  var _componentsManualLayout = __webpack_require__(3);
-
-  var _componentsManualLayout2 = _interopRequireDefault(_componentsManualLayout);
-
-  var ManualPage = (function (_Component) {
-    _inherits(ManualPage, _Component);
-
-    function ManualPage() {
-      _classCallCheck(this, ManualPage);
-
-      _get(Object.getPrototypeOf(ManualPage.prototype), 'constructor', this).apply(this, arguments);
-    }
-
-    _createClass(ManualPage, [{
-      key: 'render',
-      value: function render() {
-        var md = __webpack_require__(37);
-        return _react2['default'].createElement(
-          _componentsManualLayout2['default'],
-          { currentPageTitle: ManualPage.title },
-          _react2['default'].createElement(
-            'h1',
-            null,
-            ManualPage.title
-          ),
-          _react2['default'].createElement('div', { dangerouslySetInnerHTML: { __html: md } })
-        );
-      }
-    }], [{
-      key: 'title',
-      value: 'Searching Notes',
-      enumerable: true
-    }]);
-
-    return ManualPage;
-  })(_react.Component);
-
-  exports['default'] = ManualPage;
-  module.exports = exports['default'];
-
-/***/ },
-/* 21 */
-/***/ function(module, exports, __webpack_require__) {
-
-  /**
-   * React Static Boilerplate
-   * https://github.com/koistya/react-static-boilerplate
-   * Copyright (c) Konstantin Tarkus (@koistya) | MIT license
-   */
-
-  'use strict';
-
-  Object.defineProperty(exports, '__esModule', {
-    value: true
-  });
-
-  var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
-
-  var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
-
-  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-
-  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
-
-  function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-  var _react = __webpack_require__(1);
-
-  var _react2 = _interopRequireDefault(_react);
-
-  var _componentsManualLayout = __webpack_require__(3);
-
-  var _componentsManualLayout2 = _interopRequireDefault(_componentsManualLayout);
-
-  var ManualPage = (function (_Component) {
-    _inherits(ManualPage, _Component);
-
-    function ManualPage() {
-      _classCallCheck(this, ManualPage);
-
-      _get(Object.getPrototypeOf(ManualPage.prototype), 'constructor', this).apply(this, arguments);
-    }
-
-    _createClass(ManualPage, [{
-      key: 'render',
-      value: function render() {
-        var md = __webpack_require__(38);
-        return _react2['default'].createElement(
-          _componentsManualLayout2['default'],
-          { currentPageTitle: ManualPage.title },
-          _react2['default'].createElement(
-            'h1',
-            null,
-            ManualPage.title
-          ),
-          _react2['default'].createElement('div', { dangerouslySetInnerHTML: { __html: md } })
-        );
-      }
-    }], [{
-      key: 'title',
-      value: 'Synchronizing in the Cloud',
-      enumerable: true
-    }]);
-
-    return ManualPage;
-  })(_react.Component);
-
-  exports['default'] = ManualPage;
-  module.exports = exports['default'];
-
-/***/ },
 /* 22 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -1904,7 +2006,7 @@ module.exports =
 
   var _react2 = _interopRequireDefault(_react);
 
-  var _componentsManualLayout = __webpack_require__(3);
+  var _componentsManualLayout = __webpack_require__(2);
 
   var _componentsManualLayout2 = _interopRequireDefault(_componentsManualLayout);
 
@@ -1920,7 +2022,217 @@ module.exports =
     _createClass(ManualPage, [{
       key: 'render',
       value: function render() {
-        var md = __webpack_require__(39);
+        var md = __webpack_require__(44);
+        return _react2['default'].createElement(
+          _componentsManualLayout2['default'],
+          { currentPageTitle: ManualPage.title },
+          _react2['default'].createElement(
+            'h1',
+            null,
+            ManualPage.title
+          ),
+          _react2['default'].createElement('div', { dangerouslySetInnerHTML: { __html: md } })
+        );
+      }
+    }], [{
+      key: 'title',
+      value: 'Quick Start Guide',
+      enumerable: true
+    }]);
+
+    return ManualPage;
+  })(_react.Component);
+
+  exports['default'] = ManualPage;
+  module.exports = exports['default'];
+
+/***/ },
+/* 23 */
+/***/ function(module, exports, __webpack_require__) {
+
+  /**
+   * React Static Boilerplate
+   * https://github.com/koistya/react-static-boilerplate
+   * Copyright (c) Konstantin Tarkus (@koistya) | MIT license
+   */
+
+  'use strict';
+
+  Object.defineProperty(exports, '__esModule', {
+    value: true
+  });
+
+  var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+
+  var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
+
+  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+
+  function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+  var _react = __webpack_require__(1);
+
+  var _react2 = _interopRequireDefault(_react);
+
+  var _componentsManualLayout = __webpack_require__(2);
+
+  var _componentsManualLayout2 = _interopRequireDefault(_componentsManualLayout);
+
+  var ManualPage = (function (_Component) {
+    _inherits(ManualPage, _Component);
+
+    function ManualPage() {
+      _classCallCheck(this, ManualPage);
+
+      _get(Object.getPrototypeOf(ManualPage.prototype), 'constructor', this).apply(this, arguments);
+    }
+
+    _createClass(ManualPage, [{
+      key: 'render',
+      value: function render() {
+        var md = __webpack_require__(45);
+        return _react2['default'].createElement(
+          _componentsManualLayout2['default'],
+          { currentPageTitle: ManualPage.title },
+          _react2['default'].createElement(
+            'h1',
+            null,
+            ManualPage.title
+          ),
+          _react2['default'].createElement('div', { dangerouslySetInnerHTML: { __html: md } })
+        );
+      }
+    }], [{
+      key: 'title',
+      value: 'Searching Notes',
+      enumerable: true
+    }]);
+
+    return ManualPage;
+  })(_react.Component);
+
+  exports['default'] = ManualPage;
+  module.exports = exports['default'];
+
+/***/ },
+/* 24 */
+/***/ function(module, exports, __webpack_require__) {
+
+  /**
+   * React Static Boilerplate
+   * https://github.com/koistya/react-static-boilerplate
+   * Copyright (c) Konstantin Tarkus (@koistya) | MIT license
+   */
+
+  'use strict';
+
+  Object.defineProperty(exports, '__esModule', {
+    value: true
+  });
+
+  var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+
+  var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
+
+  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+
+  function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+  var _react = __webpack_require__(1);
+
+  var _react2 = _interopRequireDefault(_react);
+
+  var _componentsManualLayout = __webpack_require__(2);
+
+  var _componentsManualLayout2 = _interopRequireDefault(_componentsManualLayout);
+
+  var ManualPage = (function (_Component) {
+    _inherits(ManualPage, _Component);
+
+    function ManualPage() {
+      _classCallCheck(this, ManualPage);
+
+      _get(Object.getPrototypeOf(ManualPage.prototype), 'constructor', this).apply(this, arguments);
+    }
+
+    _createClass(ManualPage, [{
+      key: 'render',
+      value: function render() {
+        var md = __webpack_require__(46);
+        return _react2['default'].createElement(
+          _componentsManualLayout2['default'],
+          { currentPageTitle: ManualPage.title },
+          _react2['default'].createElement(
+            'h1',
+            null,
+            ManualPage.title
+          ),
+          _react2['default'].createElement('div', { dangerouslySetInnerHTML: { __html: md } })
+        );
+      }
+    }], [{
+      key: 'title',
+      value: 'Synchronizing in the Cloud',
+      enumerable: true
+    }]);
+
+    return ManualPage;
+  })(_react.Component);
+
+  exports['default'] = ManualPage;
+  module.exports = exports['default'];
+
+/***/ },
+/* 25 */
+/***/ function(module, exports, __webpack_require__) {
+
+  /**
+   * React Static Boilerplate
+   * https://github.com/koistya/react-static-boilerplate
+   * Copyright (c) Konstantin Tarkus (@koistya) | MIT license
+   */
+
+  'use strict';
+
+  Object.defineProperty(exports, '__esModule', {
+    value: true
+  });
+
+  var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+
+  var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
+
+  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+
+  function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+  var _react = __webpack_require__(1);
+
+  var _react2 = _interopRequireDefault(_react);
+
+  var _componentsManualLayout = __webpack_require__(2);
+
+  var _componentsManualLayout2 = _interopRequireDefault(_componentsManualLayout);
+
+  var ManualPage = (function (_Component) {
+    _inherits(ManualPage, _Component);
+
+    function ManualPage() {
+      _classCallCheck(this, ManualPage);
+
+      _get(Object.getPrototypeOf(ManualPage.prototype), 'constructor', this).apply(this, arguments);
+    }
+
+    _createClass(ManualPage, [{
+      key: 'render',
+      value: function render() {
+        var md = __webpack_require__(47);
         return _react2['default'].createElement(
           _componentsManualLayout2['default'],
           { currentPageTitle: ManualPage.title },
@@ -1945,7 +2257,7 @@ module.exports =
   module.exports = exports['default'];
 
 /***/ },
-/* 23 */
+/* 26 */
 /***/ function(module, exports, __webpack_require__) {
 
   /**
@@ -1986,7 +2298,7 @@ module.exports =
     _createClass(_default, [{
       key: 'render',
       value: function render() {
-        var md = __webpack_require__(33);
+        var md = __webpack_require__(40);
         return _react2['default'].createElement(
           'div',
           { className: 'ui container main-content' },
@@ -2011,7 +2323,287 @@ module.exports =
   module.exports = exports['default'];
 
 /***/ },
-/* 24 */
+/* 27 */
+/***/ function(module, exports, __webpack_require__) {
+
+  /**
+   * React Static Boilerplate
+   * https://github.com/koistya/react-static-boilerplate
+   * Copyright (c) Konstantin Tarkus (@koistya) | MIT license
+   */
+
+  'use strict';
+
+  Object.defineProperty(exports, '__esModule', {
+    value: true
+  });
+
+  var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+
+  var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
+
+  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+
+  function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+  var _react = __webpack_require__(1);
+
+  var _react2 = _interopRequireDefault(_react);
+
+  var _componentsReferenceLayout = __webpack_require__(6);
+
+  var _componentsReferenceLayout2 = _interopRequireDefault(_componentsReferenceLayout);
+
+  var ManualPage = (function (_Component) {
+    _inherits(ManualPage, _Component);
+
+    function ManualPage() {
+      _classCallCheck(this, ManualPage);
+
+      _get(Object.getPrototypeOf(ManualPage.prototype), 'constructor', this).apply(this, arguments);
+    }
+
+    _createClass(ManualPage, [{
+      key: 'render',
+      value: function render() {
+        var md = __webpack_require__(48);
+        return _react2['default'].createElement(
+          _componentsReferenceLayout2['default'],
+          { currentPageTitle: ManualPage.title },
+          _react2['default'].createElement(
+            'h1',
+            null,
+            ManualPage.title
+          ),
+          _react2['default'].createElement('div', { dangerouslySetInnerHTML: { __html: md } })
+        );
+      }
+    }], [{
+      key: 'title',
+      value: 'Book',
+      enumerable: true
+    }]);
+
+    return ManualPage;
+  })(_react.Component);
+
+  exports['default'] = ManualPage;
+  module.exports = exports['default'];
+
+/***/ },
+/* 28 */
+/***/ function(module, exports, __webpack_require__) {
+
+  /**
+   * React Static Boilerplate
+   * https://github.com/koistya/react-static-boilerplate
+   * Copyright (c) Konstantin Tarkus (@koistya) | MIT license
+   */
+
+  'use strict';
+
+  Object.defineProperty(exports, '__esModule', {
+    value: true
+  });
+
+  var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+
+  var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
+
+  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+
+  function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+  var _react = __webpack_require__(1);
+
+  var _react2 = _interopRequireDefault(_react);
+
+  var _componentsReferenceMenu = __webpack_require__(7);
+
+  var _componentsReferenceMenu2 = _interopRequireDefault(_componentsReferenceMenu);
+
+  var _default = (function (_Component) {
+    _inherits(_default, _Component);
+
+    function _default() {
+      _classCallCheck(this, _default);
+
+      _get(Object.getPrototypeOf(_default.prototype), 'constructor', this).apply(this, arguments);
+    }
+
+    _createClass(_default, [{
+      key: 'render',
+      value: function render() {
+        return _react2['default'].createElement(
+          'div',
+          { className: 'ui container main-content' },
+          _react2['default'].createElement(
+            'h2',
+            { className: 'ui header' },
+            _react2['default'].createElement('i', { className: 'setting icon' }),
+            _react2['default'].createElement(
+              'div',
+              { className: 'content' },
+              'Inkdrop API Reference'
+            )
+          ),
+          _react2['default'].createElement(_componentsReferenceMenu2['default'], null)
+        );
+      }
+    }]);
+
+    return _default;
+  })(_react.Component);
+
+  exports['default'] = _default;
+  module.exports = exports['default'];
+
+/***/ },
+/* 29 */
+/***/ function(module, exports, __webpack_require__) {
+
+  /**
+   * React Static Boilerplate
+   * https://github.com/koistya/react-static-boilerplate
+   * Copyright (c) Konstantin Tarkus (@koistya) | MIT license
+   */
+
+  'use strict';
+
+  Object.defineProperty(exports, '__esModule', {
+    value: true
+  });
+
+  var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+
+  var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
+
+  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+
+  function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+  var _react = __webpack_require__(1);
+
+  var _react2 = _interopRequireDefault(_react);
+
+  var _componentsReferenceLayout = __webpack_require__(6);
+
+  var _componentsReferenceLayout2 = _interopRequireDefault(_componentsReferenceLayout);
+
+  var ManualPage = (function (_Component) {
+    _inherits(ManualPage, _Component);
+
+    function ManualPage() {
+      _classCallCheck(this, ManualPage);
+
+      _get(Object.getPrototypeOf(ManualPage.prototype), 'constructor', this).apply(this, arguments);
+    }
+
+    _createClass(ManualPage, [{
+      key: 'render',
+      value: function render() {
+        var md = __webpack_require__(49);
+        return _react2['default'].createElement(
+          _componentsReferenceLayout2['default'],
+          { currentPageTitle: ManualPage.title },
+          _react2['default'].createElement(
+            'h1',
+            null,
+            ManualPage.title
+          ),
+          _react2['default'].createElement('div', { dangerouslySetInnerHTML: { __html: md } })
+        );
+      }
+    }], [{
+      key: 'title',
+      value: 'Note',
+      enumerable: true
+    }]);
+
+    return ManualPage;
+  })(_react.Component);
+
+  exports['default'] = ManualPage;
+  module.exports = exports['default'];
+
+/***/ },
+/* 30 */
+/***/ function(module, exports, __webpack_require__) {
+
+  /**
+   * React Static Boilerplate
+   * https://github.com/koistya/react-static-boilerplate
+   * Copyright (c) Konstantin Tarkus (@koistya) | MIT license
+   */
+
+  'use strict';
+
+  Object.defineProperty(exports, '__esModule', {
+    value: true
+  });
+
+  var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+
+  var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
+
+  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+
+  function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+  var _react = __webpack_require__(1);
+
+  var _react2 = _interopRequireDefault(_react);
+
+  var _componentsReferenceLayout = __webpack_require__(6);
+
+  var _componentsReferenceLayout2 = _interopRequireDefault(_componentsReferenceLayout);
+
+  var ManualPage = (function (_Component) {
+    _inherits(ManualPage, _Component);
+
+    function ManualPage() {
+      _classCallCheck(this, ManualPage);
+
+      _get(Object.getPrototypeOf(ManualPage.prototype), 'constructor', this).apply(this, arguments);
+    }
+
+    _createClass(ManualPage, [{
+      key: 'render',
+      value: function render() {
+        var md = __webpack_require__(50);
+        return _react2['default'].createElement(
+          _componentsReferenceLayout2['default'],
+          { currentPageTitle: ManualPage.title },
+          _react2['default'].createElement(
+            'h1',
+            null,
+            ManualPage.title
+          ),
+          _react2['default'].createElement('div', { dangerouslySetInnerHTML: { __html: md } })
+        );
+      }
+    }], [{
+      key: 'title',
+      value: 'Tag',
+      enumerable: true
+    }]);
+
+    return ManualPage;
+  })(_react.Component);
+
+  exports['default'] = ManualPage;
+  module.exports = exports['default'];
+
+/***/ },
+/* 31 */
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -2099,7 +2691,7 @@ module.exports =
   module.exports = exports['default'];
 
 /***/ },
-/* 25 */
+/* 32 */
 /***/ function(module, exports, __webpack_require__) {
 
   /**
@@ -2173,10 +2765,10 @@ module.exports =
   module.exports = exports['default'];
 
 /***/ },
-/* 26 */
+/* 33 */
 /***/ function(module, exports, __webpack_require__) {
 
-  exports = module.exports = __webpack_require__(2)();
+  exports = module.exports = __webpack_require__(3)();
   // imports
 
 
@@ -2187,10 +2779,10 @@ module.exports =
 
 
 /***/ },
-/* 27 */
+/* 34 */
 /***/ function(module, exports, __webpack_require__) {
 
-  exports = module.exports = __webpack_require__(2)();
+  exports = module.exports = __webpack_require__(3)();
   // imports
 
 
@@ -2201,10 +2793,10 @@ module.exports =
 
 
 /***/ },
-/* 28 */
+/* 35 */
 /***/ function(module, exports, __webpack_require__) {
 
-  exports = module.exports = __webpack_require__(2)();
+  exports = module.exports = __webpack_require__(3)();
   // imports
 
 
@@ -2215,10 +2807,10 @@ module.exports =
 
 
 /***/ },
-/* 29 */
+/* 36 */
 /***/ function(module, exports, __webpack_require__) {
 
-  exports = module.exports = __webpack_require__(2)();
+  exports = module.exports = __webpack_require__(3)();
   // imports
 
 
@@ -2229,10 +2821,10 @@ module.exports =
 
 
 /***/ },
-/* 30 */
+/* 37 */
 /***/ function(module, exports, __webpack_require__) {
 
-  exports = module.exports = __webpack_require__(2)();
+  exports = module.exports = __webpack_require__(3)();
   // imports
 
 
@@ -2243,10 +2835,10 @@ module.exports =
 
 
 /***/ },
-/* 31 */
+/* 38 */
 /***/ function(module, exports, __webpack_require__) {
 
-  exports = module.exports = __webpack_require__(2)();
+  exports = module.exports = __webpack_require__(3)();
   // imports
 
 
@@ -2257,10 +2849,10 @@ module.exports =
 
 
 /***/ },
-/* 32 */
+/* 39 */
 /***/ function(module, exports, __webpack_require__) {
 
-  exports = module.exports = __webpack_require__(2)();
+  exports = module.exports = __webpack_require__(3)();
   // imports
 
 
@@ -2271,67 +2863,91 @@ module.exports =
 
 
 /***/ },
-/* 33 */
+/* 40 */
 /***/ function(module, exports) {
 
   module.exports = "<h2 id=\"definitions\">Definitions</h2>\n<p>Inkdrop is owned by Takuya Matsuyama, Tokyo - Japan. (referred to as &quot;I&quot;, &quot;Me&quot;, &quot;Our&quot; or &quot;We&quot;).\nAs a customer of this service you&#39;re a &quot;User&quot; or &quot;You&quot; according to this agreement.\nThe App or any services offered by us will be referred to as &quot;Inkdrop&quot; or &quot;Service&quot;.</p>\n<h2 id=\"introduction\">Introduction</h2>\n<p>We realize that personal information is the important property of an individual, and have stated the following policies on treatment of personal information to appropriately collect and use personal information, to comply with laws and ordinances related to personal information and to prevent and cure leakage of personal information, and will take the best care in control and use of personal information. \nPlease note that any collection of personal information by linked sites or any other entities is not covered by this Privacy Policy.</p>\n<h2 id=\"appropriate-collection-and-purpose-of-use\">Appropriate Collection and Purpose of Use</h2>\n<p>We will collect personal information through appropriate methods for the following purposes:</p>\n<ul>\n<li>to provide our services;</li>\n<li>to provide notices and send questionnaires regarding our services that are currently provided or under consideration for future releases;</li>\n<li>to help improve the services and develop new services;</li>\n<li>to make contact with you;</li>\n<li>to verify your identity and otherwise respond to inquiries;</li>\n<li>to select in drawings and deliver prizes or products;</li>\n<li>to transmit advertisement information sponsored by us or any other third party;</li>\n<li>to create statistical data regarding the use of our services;</li>\n<li>to prevent any use in breach of the Terms of Service.</li>\n</ul>\n<h2 id=\"appropriate-control-and-protection\">Appropriate Control and Protection</h2>\n<p>Personal information will be strictly controlled, and appropriate measures will be taken to prevent and cure unauthorized access, loss, destruction, falsification, and leakage of personal information.</p>\n<h2 id=\"entrustment\">Entrustment</h2>\n<p>We may entrust the whole or part of the personal information it collected to outsourcing entities to the extent required to achieve the purpose of use. In such case, we will fully examine the eligibility of such outsourcing entities, state confidentiality provisions in the contracts with them, and provide any necessary and appropriate supervision to them.</p>\n<h2 id=\"provision-to-third-party\">Provision to Third Party</h2>\n<p>We will not disclose or provide any data to any third party except when a prior consent is given by you;\nit is based on laws and ordinances;\nany breach of the Terms of Service for Inkdrop or other our services should occur, and there are sufficient reasons for determining the disclosure of the personal information is necessary to protect our rights, property and services;\nit is necessary for the protection of the life, body or property of an individual and is difficult to obtain your consent;\nit is specially necessary for improving public health or promoting the sound growth of children and is difficult to obtain your consent;\nit is necessary for cooperating with a national or local authority or an entity entrusted by it in executing the affairs prescribed by laws and ordinances, and obtaining your consent is likely to impede the execution of such affairs; or\nany succession of our business including the provision of personal information is made due to any merger, company split, transfer of operations or other reasons.</p>\n<h2 id=\"joint-use\">Joint Use</h2>\n<p>We may jointly use any personal information with our business cooperators in providing our services.\nIn such case, we will, in advance, publish the items of the personal information used jointly, the scope of the joint users, the purpose for which the personal information is used jointly and the name of person responsible for the management of the personal information is used jointly.</p>\n<h2 id=\"use-by-minors-under-18\">Use by minors under 18</h2>\n<p>If you are under 18, please use our service and input the personal information upon the consent of your custodian.</p>\n<h2 id=\"procedures-for-disclosure\">Procedures for Disclosure</h2>\n<p>We will respond without delay to your request for notice of the purpose of use, disclosure, correction, addition or deletion of contents, discontinuance of the use, erasure, and discontinuance of provision to a third party (hereinafter referred to as “Disclosure, etc.”) of (your) personal information.\nProvided, however, you are required to take the procedures prescribed by us in requesting Disclosure, etc.</p>\n<h2 id=\"disclaimer\">Disclaimer</h2>\n<p>We shall assume no liability whatsoever if you reveal the personal information to third parties using any feature of our services or any other means and you become identifiable by such information you disclosed on our services.</p>\n<h2 id=\"creation-and-use-of-statistical-data\">Creation and Use of Statistical Data</h2>\n<p>We may create, based on the personal information collected, statistical data processed so that no individual is identifiable.\nWith regard to such creation and use of the personally unidentifiable statistical data, we may conduct without any restriction.</p>\n<h2 id=\"collection-and-use-of-attribute-information-activity-history\">Collection and Use of Attribute Information/Activity History</h2>\n<p>We may collect and/or use the following personally unidentifiable information to personalize our services or contents of advertisements and may provide such information to sponsors, information providers, or service providers: cookies, logs, activity histories for accessed URLs, contents or reference orders, individual terminal identification information and other device information, and attribute information on gender, occupation, or age.</p>\n<h2 id=\"amendment\">Amendment</h2>\n<p>We reserve the right to make amendments to this Privacy Policy.</p>\n";
 
 /***/ },
-/* 34 */
-/***/ function(module, exports) {
-
-  module.exports = "<h2 id=\"inkdrop-has-three-parts\">Inkdrop has three parts</h2>\n<p><img class=\"ui image\" src=\"/manual/02-basic-usage_screen.png\" title=\"null\" alt=\"Layout\" /></p>\n<ul>\n<li><strong>Sidebar</strong> (on the left): it lists notebooks and tags here. Notebooks are like folders you can create recursively. Tags are like labels which can link notes with related topic.</li>\n<li><strong>Note list</strong> (in the middle): all your notes live here, ordered by modification date by default. You can search notes with keywords from a search bar on the top of it.</li>\n<li><strong>Editor</strong> (on the right): this is where your magic happens; you&#39;re looking at it. 😄</li>\n</ul>\n<h2 id=\"creating-new-note-and-notebook\">Creating new note and notebook</h2>\n<p>To create new note, you can either push a button on the right top of the note list or input keybind <code>Cmd+N</code> / <code>Ctrl+N</code>.</p>\n<p><img class=\"ui image\" src=\"/manual/02-basic-usage_addnote.png\" title=\"null\" alt=\"AddNote\" /></p>\n<p>To create new notebook, click a menu item labeled &#39;New notebook..&#39; in the middle of sidebar:</p>\n<p><img class=\"ui image\" src=\"/manual/02-basic-usage_addbook.png\" title=\"null\" alt=\"AddBook\" /></p>\n<p>To create a sub notebook, right click on the notebook item which would be parent and choose &quot;New Sub Notebook..&quot; menu.</p>\n<h2 id=\"settings-and-preferences\">Settings and Preferences</h2>\n<p>Inkdrop has a number of settings and preferences you can modify in the Preferences View.</p>\n<p>To open the Settings View, you can:</p>\n<ul>\n<li>on macOS:<ul>\n<li>Use the <em>Inkdrop &gt; Preferences</em> menu item in the menu bar</li>\n<li>Use the <code>Cmd+,</code> keybinding</li>\n</ul>\n</li>\n<li>on Windows &amp; Linux:<ul>\n<li>Use the <em>File &gt; Settings</em> menu item in the menu bar</li>\n<li>Use the <code>Ctrl+,</code> keybinding</li>\n</ul>\n</li>\n</ul>\n<p>And you should see the window like this:</p>\n<p><img class=\"ui image\" src=\"/manual/02-basic-usage_preferences.png\" title=\"null\" alt=\"Preferences\" /></p>\n";
-
-/***/ },
-/* 35 */
-/***/ function(module, exports) {
-
-  module.exports = "<p>Plugins add new functionality or provide new look to Inkdrop. You can activate or deactivate them at any time.\nGo to <code>Preferences &gt; Plugins</code> to see a list of what’s available.\nTo find new plugins to install, please access to <a href=\"https://www.inkdrop.info/plugins\">Inkdrop plugin registry</a>.</p>\n<p>Developers can clone or download additional Inkdrop plugins via <a href=\"https://github.com/inkdropapp/\">GitHub</a>. Installation instructions are here. Many of these are community-contributed, and the selection will continue to grow over time.</p>\n<p>There are three types of the plugin:</p>\n<ul>\n<li><strong>General plugin</strong> - Plugin that adds new functionality</li>\n<li><strong>UI Theme</strong> - Theme for Inkdrop UI</li>\n<li><strong>Preview Theme</strong> - Theme for Markdown preview</li>\n</ul>\n<h2 id=\"using-ipm-inkdrop-plugin-manager-\">Using ipm (Inkdrop Plugin Manager)</h2>\n<blockquote>\n<p>Currently Inkdrop doesn&#39;t provide GUI for installing/uninstalling plugins. It&#39;s planned to support in the future.</p>\n<p>ipm is a fork of <a href=\"https://github.com/atom/apm\">apm (atom package manager)</a>, some output messages may include Atom-related though, please ignore them.</p>\n</blockquote>\n<p><strong>ipm</strong> is a command-line tool to manage plugins for Inkdrop.</p>\n<h3 id=\"macos\">macOS</h3>\n<p>When you first open Inkdrop, it will try to install the <code>ipm</code> command for use in the terminal.\nIf the <code>ipm</code> command has been installed, you&#39;ll see something like this:</p>\n<pre><code class=\"lang-bash\">$ <span class=\"hljs-built_in\">which</span> ipm\n/usr/<span class=\"hljs-built_in\">local</span>/bin/ipm\n</code></pre>\n<p>You can also manually install <code>ipm</code> from <code>Inkdrop -&gt; Install Shell Commands</code> from the menubar.</p>\n<h3 id=\"windows\">Windows</h3>\n<p>The setup program will install <code>ipm</code>, and add it to your <code>PATH</code>.</p>\n<h3 id=\"linux\">Linux</h3>\n<p><code>ipm</code> is not installed automatically. The command is available in the path of <code>&lt;path-to-inkdrop&gt;/resources/app/ipm/bin/ipm</code>.</p>\n<h2 id=\"finding-new-plugins\">Finding new plugins</h2>\n<p>You can also use <code>ipm</code> to find new plugins to install. If you run <code>ipm search</code>, you can search the plugin registry for a search term.</p>\n<pre><code class=\"lang-bash\">$ ipm search emoji\nSearch Results For <span class=\"hljs-string\">'emoji'</span> (1)\n└── markdown-emoji Add emoji syntax support to Inkdrop markdown editor (0 downloads, 0 stars)\n\nUse `ipm install` to install them or visit https://www.inkdrop.info/plugins to <span class=\"hljs-built_in\">read</span> more about them.\n</code></pre>\n<h2 id=\"installing-plugins\">Installing plugins</h2>\n<p>Once you found new plugins to install, you can install them by using the <code>ipm install</code> command:</p>\n<ul>\n<li><code>ipm install &lt;package_name&gt;</code> to install the latest version.</li>\n<li><code>ipm install &lt;package_name&gt;@&lt;package_version&gt;</code> to install a specific version.</li>\n</ul>\n<p>For example <code>ipm install markdown-emoji@0.1.0</code> installs the 0.1.0 release of the <a href=\"https://www.inkdrop.info/plugins/markdown-emoji\">markdown-emoji</a> package.</p>\n<h2 id=\"activating-plugins\">Activating plugins</h2>\n<p>Go to <code>Preferences &gt; Plugins</code>, you can activate/deactivate plugins by toggling a switch on the left of the plugin name here.</p>\n<p><img class=\"ui image\" src=\"/manual/06-plugins-preferences_activating.png\" title=\"null\" alt=\"Activating Plugins\" /></p>\n<h2 id=\"uninstalling-plugins\">Uninstalling plugins</h2>\n<p>You can also uninstall the plugin by running below command:</p>\n<pre><code>$ ipm uninstall &lt;package_name&gt;\n</code></pre>";
-
-/***/ },
-/* 36 */
-/***/ function(module, exports) {
-
-  module.exports = "<p>Welcome to Inkdrop! Here&#39;s how to get started.\nTo get started with Inkdrop, we&#39;ll need to get it on your system.</p>\n<h2 id=\"creating-your-inkdrop-account\">Creating your Inkdrop account</h2>\n<p>First, go to <a href=\"https://www.inkdrop.info/\">Inkdrop website</a> and sign up.\nInkdrop will prepare new database for storing your note data.\nAlso your account can be used for publishing your plugins and so on.</p>\n<h2 id=\"downloading-the-app\">Downloading the app</h2>\n<p>After you set up an account and log in, you should see a download button as shown here:</p>\n<p><img class=\"ui image\" src=\"/manual/01-quick-start-guide_download.png\" title=\"null\" alt=\"Download\" /></p>\n<p>Desktop application is ready for macOS, Windows and Linux, so choose one for your environment:</p>\n<p><img class=\"ui image\" src=\"/manual/01-quick-start-guide_download2.png\" title=\"null\" alt=\"Download\" /></p>\n<h2 id=\"installing-inkdrop-on-macos\">Installing Inkdrop on macOS</h2>\n<p>Inkdrop follows the standard Mac zip installation process. You can download the <code>Inkdrop-x.y.z-Mac.zip</code> file from the Inkdrop website. Once you have that file, you can click on it to extract the application and then drag the new Inkdrop application into your &quot;Applications&quot; folder.</p>\n<h2 id=\"installing-inkdrop-on-windows\">Installing Inkdrop on Windows</h2>\n<p>Inkdrop is both available with a Windows installer and zip archive. The installer is recommended because it can provide auto-update features which automatically update to the latest version of the Inkdrop app.</p>\n<h2 id=\"installing-inkdrop-on-linux\">Installing Inkdrop on Linux</h2>\n<p>To install Inkdrop on Linux, you can download a Debian package or a zip archive.\nThe package do not currently have auto-update features, so when you would like to upgrade to a new release of Inkdrop, you will have to repeat this installation process.</p>\n<p>To install Atom on Debian, Ubuntu, or related systems:</p>\n<pre><code class=\"lang-bash\"><span class=\"hljs-comment\"># Install Inkdrop</span>\nsudo dpkg -i inkdrop_x.y.z_amd64.deb\n\n<span class=\"hljs-comment\"># Install Inkdrop's dependencies if they are missing</span>\nsudo apt-get <span class=\"hljs-_\">-f</span> install\n</code></pre>\n<h2 id=\"log-in\">Log in</h2>\n<p>When you first open Inkdrop, you should see Log-in screen like this:</p>\n<p><img class=\"ui image\" src=\"/manual/01-quick-start-guide_login.png\" title=\"null\" alt=\"Login\" /></p>\n<p>Enter your email address and password to get started.</p>\n";
-
-/***/ },
-/* 37 */
-/***/ function(module, exports) {
-
-  module.exports = "<p>Notes are only useful if you can find them quickly. Inkdrop&#39;s full-text search also supports filtering notebooks and tags with search qualifiers.</p>\n<p>To search all the notes, either click the search bar on the top of the note list or press <code>Cmd+F</code> / <code>Ctrl+F</code> keybind to set focus to it.</p>\n<p><img class=\"ui image\" src=\"/manual/04-searching_searchbar.png\" title=\"null\" alt=\"SideBySide\" /></p>\n<p>Now you can search by keyword.</p>\n<h2 id=\"search-notes-within-a-notebook-and-with-tags\">Search notes within a notebook and with tags</h2>\n<p>With <code>book:&lt;book_name&gt;</code> qualifier, you can search notes within specified notebook.\nFor example:</p>\n<pre><code>book:Blog\nbook:&quot;First Notebook&quot;\n</code></pre><p>If the notebook name has one or more space characters, enclose its name in double quotes (<code>&quot;</code>).</p>\n<p>With <code>tag:&lt;tag_name&gt;</code> qualifier, you can search notes with specified tag.\nFor example:</p>\n<pre><code>tag:JavaScript\ntag:WIP\n</code></pre><h2 id=\"search-with-a-phrase\">Search with a phrase</h2>\n<p>By enclosing keywords in double quotes (<code>&quot;</code>), you can search notes by a phrase including spaces.\nExample:</p>\n<pre><code>&quot;foo bar&quot;\n</code></pre><h2 id=\"excluding-modifier\">Excluding modifier</h2>\n<p>To search notes NOT matched with specified keyword and condition, add <code>-</code> modifier before the keyword and the qualifier like following:</p>\n<pre><code>-book:Blog\n-tag:JavaScript\n-foo\n-&quot;foo bar&quot;\n</code></pre>";
-
-/***/ },
-/* 38 */
-/***/ function(module, exports) {
-
-  module.exports = "<p>Inkdrop lets you sync notes across multiple computers via Cloud.\nBy default, Inkdrop stores your data in Inkdrop sync server.\nYou can configure synchronizations in the Preferences like this:</p>\n<p><img class=\"ui image\" src=\"/manual/05-sync_preferences.png\" title=\"null\" alt=\"Sync Preferences\" /></p>\n<p>There are three sync options:</p>\n<ul>\n<li><strong>Don&#39;t Sync</strong> - Store Inkdrop data only in this computer</li>\n<li><strong>Inkdrop Sync Server</strong> - Sync with Inkdrop&#39;s own service</li>\n<li><strong>Advanced (CouchDB)</strong> - Sync with your own compatible server</li>\n</ul>\n<h2 id=\"how-to-set-up-your-own-sync-server\">How to set up your own sync server</h2>\n<p>Inkdrop lets you store your notes in your own database compatible with <a href=\"http://couchdb.apache.org/\">CouchDB</a> API instead of Inkdrop&#39;s own service.\nCouchDB is just another open-source NoSQL database so you can deploy it on your environment for free. See CouchDB&#39;s <a href=\"http://docs.couchdb.org/en/1.6.1/install/index.html\">installation guide</a> for more informations.\nUsing DBaaS instead of operating database by yourself is good choice. For instance, <a href=\"https://cloudant.com/\">Cloudant</a> is one of fully-managed DBaaS providers.</p>\n<blockquote>\n<p><strong>WARNING</strong>: Use this feature at your own risk. Inkdrop itself doesn&#39;t protect data from other people on your server. To protect your data, read &quot;Security&quot; section at the bottom of this page.</p>\n</blockquote>\n<h3 id=\"create-a-database\">Create a database</h3>\n<p>Once you got your CouchDB server, let&#39;s create a database for storing your notes.\nYou need only one database for Inkdrop. For example, run below command to create a database:</p>\n<pre><code class=\"lang-bash\">&gt; curl -X PUT http://localhost:5984/my-inkdrop-notes\n</code></pre>\n<blockquote>\n<p>NOTE: If you are running CouchDB not on localhost and port 5984 (default), replace <code>localhost:5984</code> to your server address and port.</p>\n</blockquote>\n<p>Retrieving the list of databases shows some useful results this time:</p>\n<pre><code class=\"lang-bash\">&gt; curl -X GET http://127.0.0.1:5984/_all_dbs\n[<span class=\"hljs-string\">\"my-inkdrop-notes\"</span>]\n</code></pre>\n<p>Return to the Inkdrop sync preferences, you can input the URL to your database to the <strong>Address</strong> section:</p>\n<pre><code>http://localhost:5984/my-inkdrop-notes\n</code></pre><p><img class=\"ui image\" src=\"/manual/05-sync-custom-server.png\" title=\"null\" alt=\"Sync with custom server\" /></p>\n<p>Then, push the <strong>Apply</strong> button.</p>\n<p>Please read <a href=\"http://guide.couchdb.org/draft/tour.html\">CouchDB&#39;s tutorial</a> for more information.</p>\n<h3 id=\"optional-security\">Optional: Security</h3>\n<p>As you may know, CouchDB is running with the Admin Party by default. It means Everybody has privileges to do anything.\nPlease read the <a href=\"http://guide.couchdb.org/draft/security.html\">documentation</a>.\nTo keep your notes secure, we recommend that you create an admin user with a username and password as your credentials.</p>\n<p>Now let’s create an admin user. We’ll call her <code>anna</code>, and her password is <code>secret</code>:</p>\n<pre><code class=\"lang-bash\">&gt; curl -X PUT http://127.0.0.1:5984/_config/admins/anna <span class=\"hljs-_\">-d</span> <span class=\"hljs-string\">'\"secret\"'</span>\n</code></pre>\n<p>Now we have an admin user named <code>anna</code>, let&#39;s give her an admin access to <code>my-inkdrop-notes</code>:</p>\n<pre><code class=\"lang-bash\">&gt; curl -X PUT http://127.0.0.1:5984/my-inkdrop-notes/_security <span class=\"hljs-_\">-d</span> <span class=\"hljs-string\">'{ \"admins\": { \"names\": [ \"anna\" ] } }'</span>\n</code></pre>\n<p>It restricts access from people without the valid credentials:</p>\n<pre><code class=\"lang-bash\">&gt; curl -X PUT http://127.0.0.1:5984/my-inkdrop-notes\n{<span class=\"hljs-string\">\"error\"</span>:<span class=\"hljs-string\">\"unauthorized\"</span>,<span class=\"hljs-string\">\"reason\"</span>:<span class=\"hljs-string\">\"You are not a server admin.\"</span>}\n</code></pre>\n<p>That looks about right. Now we try again with the correct credentials:</p>\n<pre><code class=\"lang-bash\">&gt; HOST=<span class=\"hljs-string\">\"http://anna:secret@127.0.0.1:5984\"</span>\n&gt; curl -X PUT <span class=\"hljs-variable\">$HOST</span>/my-inkdrop-notes\n{<span class=\"hljs-string\">\"ok\"</span>:<span class=\"hljs-literal\">true</span>}\n</code></pre>\n<p>Looks good!</p>\n<p>Return to the Inkdrop sync preferences, you can input the URL to your database to the <strong>Address</strong> section:</p>\n<pre><code>http://anna:secret@127.0.0.1:5984/my-inkdrop-notes\n</code></pre>";
-
-/***/ },
-/* 39 */
-/***/ function(module, exports) {
-
-  module.exports = "<p>The editor supports standard Markdown syntax as well as \n<a href=\"https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet\">GitHub Flavored Markdown (GFM)</a> with inline formatting.</p>\n<h2 id=\"live-preview\">Live Preview</h2>\n<p>Inkdrop supports live preview of note. You can switch to Side-by-Side Preview with <code>Cmd+P</code> (on macOS) / <code>Ctrl+P</code> (on Windows/Linux) keybind to see the editor and preview side-by-side like this:</p>\n<p><img class=\"ui image\" src=\"/manual/03-editing_sidebyside.png\" title=\"null\" alt=\"SideBySide\" /></p>\n<h2 id=\"distraction-free-mode\">Distraction Free Mode</h2>\n<p>To hide the sidebar and the note list, press <code>Cmd+Shift+D</code> / <code>Ctrl+Shift+D</code> to toggle <em>Distraction Free Mode</em>.\nYou can even hide the toolbar on the top of the editor from the preferences if you don&#39;t need it.</p>\n<h2 id=\"tagging\">Tagging</h2>\n<p>Inkdrop lets you assign tags to a note.\nThis is another way to organize your notes.</p>\n<p><img class=\"ui image\" src=\"/manual/03-editing_tags.png\" title=\"null\" alt=\"Tagging\" /></p>\n<p>Tags are listed on the sidebar.</p>\n";
-
-/***/ },
-/* 40 */
-/***/ function(module, exports) {
-
-  module.exports = require("history/lib/createBrowserHistory");
-
-/***/ },
 /* 41 */
 /***/ function(module, exports) {
 
-  module.exports = require("history/lib/createMemoryHistory");
+  module.exports = "<h2 id=\"compatible-with-couchdb\">Compatible with CouchDB</h2>\n<p>Inkdrop provides API to &quot;hack&quot; your note data from remote computer.\nIt&#39;s called <strong>Data Access API</strong> which is compatible with <a href=\"http://couchdb.apache.org/\">CouchDB</a>.\nThat means, there&#39;re already tons of libraries for CouchDB and you can choose from them in your favorite language.\nWe&#39;re using <a href=\"https://github.com/pouchdb/pouchdb\">PouchDB</a> for building the desktop app.</p>\n<p>By using this API, you can make your own notebook client app with sync feature or useful utility.</p>\n<h2 id=\"creating-api-keys\">Creating API Keys</h2>\n<p>The API key is necessary for both publishing your plugins and accessing your data stored in the cloud.\nTo create new API key, go to <a href=\"https://www.inkdrop.info/account/api-keys\">API Keys</a> page and push &quot;Create new API key&quot; button.\nGenerated API key is not stored in the database, so be carefully and don&#39;t lose it.</p>\n<h2 id=\"getting-your-database-url\">Getting your database URL</h2>\n<p>By default, Inkdrop creates a separate database for storing your data in the cloud. It has a URL for each databases.\nSo you already have a URL to your database after signing up to Inkdrop.</p>\n<p>Your database URL can be checked at <code>Preferences -&gt; Sync</code>.\nYou should see your specific URL on the bottom of pane like this:</p>\n<p><img class=\"ui image\" src=\"/manual/2-1-data-access-api_url.png\" title=\"null\" alt=\"Sync Preferences\" /></p>\n<p>The URL is something like this: <code>https://black.inkdrop.info/user-&lt;user_id&gt;</code></p>\n<h2 id=\"accessing-your-database\">Accessing your database</h2>\n<p>Now you can send a request to the URL via HTTPS, but you will get an error as following:</p>\n<pre><code class=\"lang-bash\">$ curl https://black.inkdrop.info/user-&lt;user_id&gt;/\n{<span class=\"hljs-string\">\"error\"</span>:<span class=\"hljs-string\">\"unauthorized\"</span>,<span class=\"hljs-string\">\"reason\"</span>:<span class=\"hljs-string\">\"_reader access is required for this request\"</span>}\n</code></pre>\n<p>Because it&#39;s protected and you can&#39;t access without any credentials.\nYou need to append your API keys as the credentials with HTTP Basic authentication in the request:</p>\n<pre><code>$ curl https://&lt;access_key_id&gt;:&lt;secret_access_key&gt;@black.inkdrop.info/&lt;database_name&gt;/\n</code></pre><p>and you will get a response represented with JSON like following:</p>\n<pre><code class=\"lang-JSON\">{<span class=\"hljs-attr\">\"update_seq\"</span>:<span class=\"hljs-string\">\"2856-g1AAAAD5eJzLYWBgYMlgTmFQSklKzi9KdUhJMjTUy83PzyvOyMxL1UvOyS9NScwr0ctLLckBqmVKZEiy____f1YSkC0H0qgI12iJT1-SA5BMqodp_YSq1RSf1jwWIMnQAKSAuveDtDNHoDnZiLD-AxD9EOsPZAEAbTlR6A\"</span>,<span class=\"hljs-attr\">\"db_name\"</span>:<span class=\"hljs-string\">\"user-***\"</span>,<span class=\"hljs-attr\">\"sizes\"</span>:{<span class=\"hljs-attr\">\"file\"</span>:<span class=\"hljs-number\">2171762</span>,<span class=\"hljs-attr\">\"external\"</span>:<span class=\"hljs-number\">361988</span>,<span class=\"hljs-attr\">\"active\"</span>:<span class=\"hljs-number\">705412</span>},<span class=\"hljs-attr\">\"purge_seq\"</span>:<span class=\"hljs-number\">0</span>,<span class=\"hljs-attr\">\"other\"</span>:{<span class=\"hljs-attr\">\"data_size\"</span>:<span class=\"hljs-number\">361988</span>},<span class=\"hljs-attr\">\"doc_del_count\"</span>:<span class=\"hljs-number\">94</span>,<span class=\"hljs-attr\">\"doc_count\"</span>:<span class=\"hljs-number\">218</span>,<span class=\"hljs-attr\">\"disk_size\"</span>:<span class=\"hljs-number\">2171762</span>,<span class=\"hljs-attr\">\"disk_format_version\"</span>:<span class=\"hljs-number\">6</span>,<span class=\"hljs-attr\">\"data_size\"</span>:<span class=\"hljs-number\">705412</span>,<span class=\"hljs-attr\">\"compact_running\"</span>:<span class=\"hljs-literal\">false</span>,<span class=\"hljs-attr\">\"instance_start_time\"</span>:<span class=\"hljs-string\">\"0\"</span>}\n</code></pre>\n<p>Now you got access to your database.\nSee <a href=\"http://docs.couchdb.org/en/1.6.1/api/\">CouchDB documentation</a> for detailed API specifications.</p>\n";
 
 /***/ },
 /* 42 */
 /***/ function(module, exports) {
 
-  module.exports = require("history/lib/useQueries");
+  module.exports = "<h2 id=\"inkdrop-has-three-parts\">Inkdrop has three parts</h2>\n<p><img class=\"ui image\" src=\"/manual/02-basic-usage_screen.png\" title=\"null\" alt=\"Layout\" /></p>\n<ul>\n<li><strong>Sidebar</strong> (on the left): it lists notebooks and tags here. Notebooks are like folders you can create recursively. Tags are like labels which can link notes with related topic.</li>\n<li><strong>Note list</strong> (in the middle): all your notes live here, ordered by modification date by default. You can search notes with keywords from a search bar on the top of it.</li>\n<li><strong>Editor</strong> (on the right): this is where your magic happens; you&#39;re looking at it. 😄</li>\n</ul>\n<h2 id=\"creating-new-note-and-notebook\">Creating new note and notebook</h2>\n<p>To create new note, you can either push a button on the right top of the note list or input keybind <code>Cmd+N</code> / <code>Ctrl+N</code>.</p>\n<p><img class=\"ui image\" src=\"/manual/02-basic-usage_addnote.png\" title=\"null\" alt=\"AddNote\" /></p>\n<p>To create new notebook, click a menu item labeled &#39;New notebook..&#39; in the middle of sidebar:</p>\n<p><img class=\"ui image\" src=\"/manual/02-basic-usage_addbook.png\" title=\"null\" alt=\"AddBook\" /></p>\n<p>To create a sub notebook, right click on the notebook item which would be parent and choose &quot;New Sub Notebook..&quot; menu.</p>\n<h2 id=\"settings-and-preferences\">Settings and Preferences</h2>\n<p>Inkdrop has a number of settings and preferences you can modify in the Preferences View.</p>\n<p>To open the Settings View, you can:</p>\n<ul>\n<li>on macOS:<ul>\n<li>Use the <em>Inkdrop &gt; Preferences</em> menu item in the menu bar</li>\n<li>Use the <code>Cmd+,</code> keybinding</li>\n</ul>\n</li>\n<li>on Windows &amp; Linux:<ul>\n<li>Use the <em>File &gt; Settings</em> menu item in the menu bar</li>\n<li>Use the <code>Ctrl+,</code> keybinding</li>\n</ul>\n</li>\n</ul>\n<p>And you should see the window like this:</p>\n<p><img class=\"ui image\" src=\"/manual/02-basic-usage_preferences.png\" title=\"null\" alt=\"Preferences\" /></p>\n";
 
 /***/ },
 /* 43 */
+/***/ function(module, exports) {
+
+  module.exports = "<p>Plugins add new functionality or provide new look to Inkdrop. You can activate or deactivate them at any time.\nGo to <code>Preferences &gt; Plugins</code> to see a list of what’s available.\nTo find new plugins to install, please access to <a href=\"https://www.inkdrop.info/plugins\">Inkdrop plugin registry</a>.</p>\n<p>Developers can clone or download additional Inkdrop plugins via <a href=\"https://github.com/inkdropapp/\">GitHub</a>. Installation instructions are here. Many of these are community-contributed, and the selection will continue to grow over time.</p>\n<p>There are three types of the plugin:</p>\n<ul>\n<li><strong>General plugin</strong> - Plugin that adds new functionality</li>\n<li><strong>UI Theme</strong> - Theme for Inkdrop UI</li>\n<li><strong>Preview Theme</strong> - Theme for Markdown preview</li>\n</ul>\n<h2 id=\"using-ipm-inkdrop-plugin-manager-\">Using ipm (Inkdrop Plugin Manager)</h2>\n<blockquote>\n<p>Currently Inkdrop doesn&#39;t provide GUI for installing/uninstalling plugins. It&#39;s planned to support in the future.</p>\n<p>ipm is a fork of <a href=\"https://github.com/atom/apm\">apm (atom package manager)</a>, some output messages may include Atom-related though, please ignore them.</p>\n</blockquote>\n<p><strong>ipm</strong> is a command-line tool to manage plugins for Inkdrop.</p>\n<h3 id=\"macos\">macOS</h3>\n<p>When you first open Inkdrop, it will try to install the <code>ipm</code> command for use in the terminal.\nIf the <code>ipm</code> command has been installed, you&#39;ll see something like this:</p>\n<pre><code class=\"lang-bash\">$ <span class=\"hljs-built_in\">which</span> ipm\n/usr/<span class=\"hljs-built_in\">local</span>/bin/ipm\n</code></pre>\n<p>You can also manually install <code>ipm</code> from <code>Inkdrop -&gt; Install Shell Commands</code> from the menubar.</p>\n<h3 id=\"windows\">Windows</h3>\n<p>The setup program will install <code>ipm</code>, and add it to your <code>PATH</code>.</p>\n<h3 id=\"linux\">Linux</h3>\n<p><code>ipm</code> is not installed automatically. The command is available in the path of <code>&lt;path-to-inkdrop&gt;/resources/app/ipm/bin/ipm</code>.</p>\n<h2 id=\"finding-new-plugins\">Finding new plugins</h2>\n<p>You can also use <code>ipm</code> to find new plugins to install. If you run <code>ipm search</code>, you can search the plugin registry for a search term.</p>\n<pre><code class=\"lang-bash\">$ ipm search emoji\nSearch Results For <span class=\"hljs-string\">'emoji'</span> (1)\n└── markdown-emoji Add emoji syntax support to Inkdrop markdown editor (0 downloads, 0 stars)\n\nUse `ipm install` to install them or visit https://www.inkdrop.info/plugins to <span class=\"hljs-built_in\">read</span> more about them.\n</code></pre>\n<h2 id=\"installing-plugins\">Installing plugins</h2>\n<p>Once you found new plugins to install, you can install them by using the <code>ipm install</code> command:</p>\n<ul>\n<li><code>ipm install &lt;package_name&gt;</code> to install the latest version.</li>\n<li><code>ipm install &lt;package_name&gt;@&lt;package_version&gt;</code> to install a specific version.</li>\n</ul>\n<p>For example <code>ipm install markdown-emoji@0.1.0</code> installs the 0.1.0 release of the <a href=\"https://www.inkdrop.info/plugins/markdown-emoji\">markdown-emoji</a> package.</p>\n<h2 id=\"activating-plugins\">Activating plugins</h2>\n<p>Go to <code>Preferences &gt; Plugins</code>, you can activate/deactivate plugins by toggling a switch on the left of the plugin name here.</p>\n<p><img class=\"ui image\" src=\"/manual/06-plugins-preferences_activating.png\" title=\"null\" alt=\"Activating Plugins\" /></p>\n<h2 id=\"uninstalling-plugins\">Uninstalling plugins</h2>\n<p>You can also uninstall the plugin by running below command:</p>\n<pre><code>$ ipm uninstall &lt;package_name&gt;\n</code></pre>";
+
+/***/ },
+/* 44 */
+/***/ function(module, exports) {
+
+  module.exports = "<p>Welcome to Inkdrop! Here&#39;s how to get started.\nTo get started with Inkdrop, we&#39;ll need to get it on your system.</p>\n<h2 id=\"creating-your-inkdrop-account\">Creating your Inkdrop account</h2>\n<p>First, go to <a href=\"https://www.inkdrop.info/\">Inkdrop website</a> and sign up.\nInkdrop will prepare new database for storing your note data.\nAlso your account can be used for publishing your plugins and so on.</p>\n<h2 id=\"downloading-the-app\">Downloading the app</h2>\n<p>After you set up an account and log in, you should see a download button as shown here:</p>\n<p><img class=\"ui image\" src=\"/manual/01-quick-start-guide_download.png\" title=\"null\" alt=\"Download\" /></p>\n<p>Desktop application is ready for macOS, Windows and Linux, so choose one for your environment:</p>\n<p><img class=\"ui image\" src=\"/manual/01-quick-start-guide_download2.png\" title=\"null\" alt=\"Download\" /></p>\n<h2 id=\"installing-inkdrop-on-macos\">Installing Inkdrop on macOS</h2>\n<p>Inkdrop follows the standard Mac zip installation process. You can download the <code>Inkdrop-x.y.z-Mac.zip</code> file from the Inkdrop website. Once you have that file, you can click on it to extract the application and then drag the new Inkdrop application into your &quot;Applications&quot; folder.</p>\n<h2 id=\"installing-inkdrop-on-windows\">Installing Inkdrop on Windows</h2>\n<p>Inkdrop is both available with a Windows installer and zip archive. The installer is recommended because it can provide auto-update features which automatically update to the latest version of the Inkdrop app.</p>\n<h2 id=\"installing-inkdrop-on-linux\">Installing Inkdrop on Linux</h2>\n<p>To install Inkdrop on Linux, you can download a Debian package or a zip archive.\nThe package do not currently have auto-update features, so when you would like to upgrade to a new release of Inkdrop, you will have to repeat this installation process.</p>\n<p>To install Atom on Debian, Ubuntu, or related systems:</p>\n<pre><code class=\"lang-bash\"><span class=\"hljs-comment\"># Install Inkdrop</span>\nsudo dpkg -i inkdrop_x.y.z_amd64.deb\n\n<span class=\"hljs-comment\"># Install Inkdrop's dependencies if they are missing</span>\nsudo apt-get <span class=\"hljs-_\">-f</span> install\n</code></pre>\n<h2 id=\"log-in\">Log in</h2>\n<p>When you first open Inkdrop, you should see Log-in screen like this:</p>\n<p><img class=\"ui image\" src=\"/manual/01-quick-start-guide_login.png\" title=\"null\" alt=\"Login\" /></p>\n<p>Enter your email address and password to get started.</p>\n";
+
+/***/ },
+/* 45 */
+/***/ function(module, exports) {
+
+  module.exports = "<p>Notes are only useful if you can find them quickly. Inkdrop&#39;s full-text search also supports filtering notebooks and tags with search qualifiers.</p>\n<p>To search all the notes, either click the search bar on the top of the note list or press <code>Cmd+F</code> / <code>Ctrl+F</code> keybind to set focus to it.</p>\n<p><img class=\"ui image\" src=\"/manual/04-searching_searchbar.png\" title=\"null\" alt=\"SideBySide\" /></p>\n<p>Now you can search by keyword.</p>\n<h2 id=\"search-notes-within-a-notebook-and-with-tags\">Search notes within a notebook and with tags</h2>\n<p>With <code>book:&lt;book_name&gt;</code> qualifier, you can search notes within specified notebook.\nFor example:</p>\n<pre><code>book:Blog\nbook:&quot;First Notebook&quot;\n</code></pre><p>If the notebook name has one or more space characters, enclose its name in double quotes (<code>&quot;</code>).</p>\n<p>With <code>tag:&lt;tag_name&gt;</code> qualifier, you can search notes with specified tag.\nFor example:</p>\n<pre><code>tag:JavaScript\ntag:WIP\n</code></pre><h2 id=\"search-with-a-phrase\">Search with a phrase</h2>\n<p>By enclosing keywords in double quotes (<code>&quot;</code>), you can search notes by a phrase including spaces.\nExample:</p>\n<pre><code>&quot;foo bar&quot;\n</code></pre><h2 id=\"excluding-modifier\">Excluding modifier</h2>\n<p>To search notes NOT matched with specified keyword and condition, add <code>-</code> modifier before the keyword and the qualifier like following:</p>\n<pre><code>-book:Blog\n-tag:JavaScript\n-foo\n-&quot;foo bar&quot;\n</code></pre>";
+
+/***/ },
+/* 46 */
+/***/ function(module, exports) {
+
+  module.exports = "<p>Inkdrop lets you sync notes across multiple computers via Cloud.\nBy default, Inkdrop stores your data in Inkdrop sync server.\nYou can configure synchronizations in the Preferences like this:</p>\n<p><img class=\"ui image\" src=\"/manual/05-sync_preferences.png\" title=\"null\" alt=\"Sync Preferences\" /></p>\n<p>There are three sync options:</p>\n<ul>\n<li><strong>Don&#39;t Sync</strong> - Store Inkdrop data only in this computer</li>\n<li><strong>Inkdrop Sync Server</strong> - Sync with Inkdrop&#39;s own service</li>\n<li><strong>Advanced (CouchDB)</strong> - Sync with your own compatible server</li>\n</ul>\n<h2 id=\"how-to-set-up-your-own-sync-server\">How to set up your own sync server</h2>\n<p>Inkdrop lets you store your notes in your own database compatible with <a href=\"http://couchdb.apache.org/\">CouchDB</a> API instead of Inkdrop&#39;s own service.\nCouchDB is just another open-source NoSQL database so you can deploy it on your environment for free. See CouchDB&#39;s <a href=\"http://docs.couchdb.org/en/1.6.1/install/index.html\">installation guide</a> for more informations.\nUsing DBaaS instead of operating database by yourself is good choice. For instance, <a href=\"https://cloudant.com/\">Cloudant</a> is one of fully-managed DBaaS providers.</p>\n<blockquote>\n<p><strong>WARNING</strong>: Use this feature at your own risk. Inkdrop itself doesn&#39;t protect data from other people on your server. To protect your data, read &quot;Security&quot; section at the bottom of this page.</p>\n</blockquote>\n<h3 id=\"create-a-database\">Create a database</h3>\n<p>Once you got your CouchDB server, let&#39;s create a database for storing your notes.\nYou need only one database for Inkdrop. For example, run below command to create a database:</p>\n<pre><code class=\"lang-bash\">&gt; curl -X PUT http://localhost:5984/my-inkdrop-notes\n</code></pre>\n<blockquote>\n<p>NOTE: If you are running CouchDB not on localhost and port 5984 (default), replace <code>localhost:5984</code> to your server address and port.</p>\n</blockquote>\n<p>Retrieving the list of databases shows some useful results this time:</p>\n<pre><code class=\"lang-bash\">&gt; curl -X GET http://127.0.0.1:5984/_all_dbs\n[<span class=\"hljs-string\">\"my-inkdrop-notes\"</span>]\n</code></pre>\n<p>Return to the Inkdrop sync preferences, you can input the URL to your database to the <strong>Address</strong> section:</p>\n<pre><code>http://localhost:5984/my-inkdrop-notes\n</code></pre><p><img class=\"ui image\" src=\"/manual/05-sync-custom-server.png\" title=\"null\" alt=\"Sync with custom server\" /></p>\n<p>Then, push the <strong>Apply</strong> button.</p>\n<p>Please read <a href=\"http://guide.couchdb.org/draft/tour.html\">CouchDB&#39;s tutorial</a> for more information.</p>\n<h3 id=\"optional-security\">Optional: Security</h3>\n<p>As you may know, CouchDB is running with the Admin Party by default. It means Everybody has privileges to do anything.\nPlease read the <a href=\"http://guide.couchdb.org/draft/security.html\">documentation</a>.\nTo keep your notes secure, we recommend that you create an admin user with a username and password as your credentials.</p>\n<p>Now let’s create an admin user. We’ll call her <code>anna</code>, and her password is <code>secret</code>:</p>\n<pre><code class=\"lang-bash\">&gt; curl -X PUT http://127.0.0.1:5984/_config/admins/anna <span class=\"hljs-_\">-d</span> <span class=\"hljs-string\">'\"secret\"'</span>\n</code></pre>\n<p>Now we have an admin user named <code>anna</code>, let&#39;s give her an admin access to <code>my-inkdrop-notes</code>:</p>\n<pre><code class=\"lang-bash\">&gt; curl -X PUT http://127.0.0.1:5984/my-inkdrop-notes/_security <span class=\"hljs-_\">-d</span> <span class=\"hljs-string\">'{ \"admins\": { \"names\": [ \"anna\" ] } }'</span>\n</code></pre>\n<p>It restricts access from people without the valid credentials:</p>\n<pre><code class=\"lang-bash\">&gt; curl -X PUT http://127.0.0.1:5984/my-inkdrop-notes\n{<span class=\"hljs-string\">\"error\"</span>:<span class=\"hljs-string\">\"unauthorized\"</span>,<span class=\"hljs-string\">\"reason\"</span>:<span class=\"hljs-string\">\"You are not a server admin.\"</span>}\n</code></pre>\n<p>That looks about right. Now we try again with the correct credentials:</p>\n<pre><code class=\"lang-bash\">&gt; HOST=<span class=\"hljs-string\">\"http://anna:secret@127.0.0.1:5984\"</span>\n&gt; curl -X PUT <span class=\"hljs-variable\">$HOST</span>/my-inkdrop-notes\n{<span class=\"hljs-string\">\"ok\"</span>:<span class=\"hljs-literal\">true</span>}\n</code></pre>\n<p>Looks good!</p>\n<p>Return to the Inkdrop sync preferences, you can input the URL to your database to the <strong>Address</strong> section:</p>\n<pre><code>http://anna:secret@127.0.0.1:5984/my-inkdrop-notes\n</code></pre>";
+
+/***/ },
+/* 47 */
+/***/ function(module, exports) {
+
+  module.exports = "<p>The editor supports standard Markdown syntax as well as \n<a href=\"https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet\">GitHub Flavored Markdown (GFM)</a> with inline formatting.</p>\n<h2 id=\"live-preview\">Live Preview</h2>\n<p>Inkdrop supports live preview of note. You can switch to Side-by-Side Preview with <code>Cmd+P</code> (on macOS) / <code>Ctrl+P</code> (on Windows/Linux) keybind to see the editor and preview side-by-side like this:</p>\n<p><img class=\"ui image\" src=\"/manual/03-editing_sidebyside.png\" title=\"null\" alt=\"SideBySide\" /></p>\n<h2 id=\"distraction-free-mode\">Distraction Free Mode</h2>\n<p>To hide the sidebar and the note list, press <code>Cmd+Shift+D</code> / <code>Ctrl+Shift+D</code> to toggle <em>Distraction Free Mode</em>.\nYou can even hide the toolbar on the top of the editor from the preferences if you don&#39;t need it.</p>\n<h2 id=\"tagging\">Tagging</h2>\n<p>Inkdrop lets you assign tags to a note.\nThis is another way to organize your notes.</p>\n<p><img class=\"ui image\" src=\"/manual/03-editing_tags.png\" title=\"null\" alt=\"Tagging\" /></p>\n<p>Tags are listed on the sidebar.</p>\n";
+
+/***/ },
+/* 48 */
+/***/ function(module, exports) {
+
+  module.exports = "<p>Example:</p>\n<pre><code class=\"lang-JSON\">{\n   <span class=\"hljs-attr\">\"_id\"</span>: <span class=\"hljs-string\">\"book:rylKOycF\"</span>,\n   <span class=\"hljs-attr\">\"_rev\"</span>: <span class=\"hljs-string\">\"2-8995d31a85ff253ffa12062ed5e1ec0a\"</span>,\n   <span class=\"hljs-attr\">\"updatedAt\"</span>: <span class=\"hljs-number\">1470970961407</span>,\n   <span class=\"hljs-attr\">\"createdAt\"</span>: <span class=\"hljs-number\">1470916727554</span>,\n   <span class=\"hljs-attr\">\"count\"</span>: <span class=\"hljs-number\">0</span>,\n   <span class=\"hljs-attr\">\"name\"</span>: <span class=\"hljs-string\">\"First Notebook\"</span>\n}\n</code></pre>\n";
+
+/***/ },
+/* 49 */
+/***/ function(module, exports) {
+
+  module.exports = "<p>Example (not encrypted):</p>\n<pre><code class=\"lang-JSON\">{\n   <span class=\"hljs-attr\">\"_id\"</span>: <span class=\"hljs-string\">\"note:ryajdJ9Y\"</span>,\n   <span class=\"hljs-attr\">\"_rev\"</span>: <span class=\"hljs-string\">\"30-317a1636d4cdb2c755aee6e92e699cb3\"</span>,\n   <span class=\"hljs-attr\">\"title\"</span>: <span class=\"hljs-string\">\"Welcome to Inkdrop\"</span>,\n   <span class=\"hljs-attr\">\"doctype\"</span>: <span class=\"hljs-string\">\"markdown\"</span>,\n   <span class=\"hljs-attr\">\"updatedAt\"</span>: <span class=\"hljs-number\">1471228624903</span>,\n   <span class=\"hljs-attr\">\"createdAt\"</span>: <span class=\"hljs-number\">1470916772952</span>,\n   <span class=\"hljs-attr\">\"tags\"</span>: [\n       <span class=\"hljs-string\">\"Tutorial\"</span>\n   ],\n   <span class=\"hljs-attr\">\"body\"</span>: <span class=\"hljs-string\">\"![logo](/Users/nora/Documents/pkpk/products/inkdrop/images/banner_sm.png)\\n\\nFor help, please visit:\\n\\n * The [Inkdrop docs](http://doc.inkdrop.info/) for Guides and the API reference.\\n * The Inkdrop forum at [github](https://github.com/inkdropapp/forum). Please report issue or suggest feedback here.\\n * The [Inkdropapp org](https://github.com/inkdropapp/). This is where all Inkdrop-created packages can be found.\\n\\n* * *\\n\\n### Get to know Inkdrop 🚀\\n\\n * [👀 Check a note example](inkdrop://note:HyxgYO15t)\\n * [📓 Create a notebook]()\\n * [✍️ Create a note]()\\n * [🖌 Choose a Theme]()\\n * [⚙ Customize the Editor]()\\n * [⌨️ Learn some Shortcuts]()\\n\"</span>,\n   <span class=\"hljs-attr\">\"bookId\"</span>: <span class=\"hljs-string\">\"book:rylKOycF\"</span>\n}\n</code></pre>\n<p>Example (encrypted):</p>\n<pre><code class=\"lang-JSON\">{\n  <span class=\"hljs-attr\">\"_id\"</span>: <span class=\"hljs-string\">\"note:BykcqFxK\"</span>,\n  <span class=\"hljs-attr\">\"_rev\"</span>: <span class=\"hljs-string\">\"8-c14fcf8e3fd745ca89231a8a39487987\"</span>,\n  <span class=\"hljs-attr\">\"title\"</span>: <span class=\"hljs-string\">\"Welcome to Inkdrop\"</span>,\n  <span class=\"hljs-attr\">\"doctype\"</span>: <span class=\"hljs-string\">\"markdown\"</span>,\n  <span class=\"hljs-attr\">\"updatedAt\"</span>: <span class=\"hljs-number\">1470303011701</span>,\n  <span class=\"hljs-attr\">\"createdAt\"</span>: <span class=\"hljs-number\">1470302855436</span>,\n  <span class=\"hljs-attr\">\"tags\"</span>: [\n      <span class=\"hljs-string\">\"Tutorial\"</span>\n  ],\n  <span class=\"hljs-attr\">\"bookId\"</span>: <span class=\"hljs-string\">\"book:05f32a5b-eca0-4bfa-bd9b-6e39afbd6b72:SyEczB-U\"</span>,\n  <span class=\"hljs-attr\">\"encrypted\"</span>: <span class=\"hljs-string\">\"aes-256-gcm\"</span>,\n  <span class=\"hljs-attr\">\"encryptedBody\"</span>: {\n    <span class=\"hljs-attr\">\"content\"</span>: <span class=\"hljs-string\">\"oZLpfVvymz4s3IffRn9okvw8CGiaYEMjoze8AwQgyrQFhJ0y0WHEfMN9ORlz3UFaRsh5BxjVq+1Lx3g6LOGBpYDBmYVTVkhC7Ah3o4+LNpFQ76y7Z+xoBkP1gNgs7pcs5OkEz4OqzmlZ225RXfmCl4kGgon8v7umZ3GYvZHch+QodLySXUtg0a5P6DB55kZ2VRqqKzneQvVJoESoIK7L95fRLtcJ0fFlUE1WX77cRtXeVYWB3vMxKfxdrILyL0oUQY8/kr5kqYM5ZFooSBcW2qsi/i71YZUf/aS3QuR7QIanbaYMMH3KGsSZ8vonqANTcQulhBcLtQMMyndzphOJ67mUZpJicuAffCIWyvipNTK8NiFVuttjKRM7iu5TpINDDd4pqXApwoHG3Ba3yJdusNX5ZQJZSsb250ex6fErCRRfaIe7JgeRanPROOKQQFC6N+7idYCCNWyeWr6tgQ==\"</span>,\n    <span class=\"hljs-attr\">\"iv\"</span>: <span class=\"hljs-string\">\"ce6f133dbda3a3cc5bbcf8d3\"</span>,\n    <span class=\"hljs-attr\">\"tag\"</span>: <span class=\"hljs-string\">\"635096d9a0a2a30e41c1afa6ea5765e5\"</span>\n  }\n}\n</code></pre>\n";
+
+/***/ },
+/* 50 */
+/***/ function(module, exports) {
+
+  module.exports = "<p>Example:</p>\n<pre><code class=\"lang-JSON\">{\n   <span class=\"hljs-attr\">\"_id\"</span>: <span class=\"hljs-string\">\"tag:1f0a9052-c82b-4749-9568-b79581d5282b\"</span>,\n   <span class=\"hljs-attr\">\"_rev\"</span>: <span class=\"hljs-string\">\"3-0da4f435c145fbf73d9eb5962996c2ec\"</span>,\n   <span class=\"hljs-attr\">\"name\"</span>: <span class=\"hljs-string\">\"Tutorial\"</span>,\n   <span class=\"hljs-attr\">\"count\"</span>: <span class=\"hljs-number\">2</span>\n}\n</code></pre>\n";
+
+/***/ },
+/* 51 */
+/***/ function(module, exports) {
+
+  module.exports = require("history/lib/createBrowserHistory");
+
+/***/ },
+/* 52 */
+/***/ function(module, exports) {
+
+  module.exports = require("history/lib/createMemoryHistory");
+
+/***/ },
+/* 53 */
+/***/ function(module, exports) {
+
+  module.exports = require("history/lib/useQueries");
+
+/***/ },
+/* 54 */
 /***/ function(module, exports) {
 
   module.exports = require("react-dom");
