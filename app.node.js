@@ -285,6 +285,7 @@ module.exports =
                   this.props.currentPageTitle
                 )
               ),
+              _react2['default'].createElement('div', { className: 'ui divider' }),
               this.props.children,
               _react2['default'].createElement(_helpus2['default'], null)
             )
@@ -568,6 +569,7 @@ module.exports =
                   this.props.currentPageTitle
                 )
               ),
+              _react2['default'].createElement('div', { className: 'ui divider' }),
               this.props.children,
               _react2['default'].createElement(_helpus2['default'], null)
             )
@@ -1715,12 +1717,6 @@ module.exports =
 /* 18 */
 /***/ function(module, exports, __webpack_require__) {
 
-  /**
-   * React Static Boilerplate
-   * https://github.com/koistya/react-static-boilerplate
-   * Copyright (c) Konstantin Tarkus (@koistya) | MIT license
-   */
-
   'use strict';
 
   Object.defineProperty(exports, '__esModule', {
@@ -1741,6 +1737,10 @@ module.exports =
 
   var _react2 = _interopRequireDefault(_react);
 
+  var _componentsLink = __webpack_require__(3);
+
+  var _componentsLink2 = _interopRequireDefault(_componentsLink);
+
   var _default = (function (_Component) {
     _inherits(_default, _Component);
 
@@ -1758,10 +1758,21 @@ module.exports =
           'div',
           { className: 'ui container main-content' },
           _react2['default'].createElement(
-            'h1',
-            null,
-            'FAQ'
+            'div',
+            { className: 'ui breadcrumb' },
+            _react2['default'].createElement(
+              _componentsLink2['default'],
+              { to: '/', className: 'section' },
+              'Docs'
+            ),
+            _react2['default'].createElement('i', { className: 'right chevron icon divider' }),
+            _react2['default'].createElement(
+              'div',
+              { className: 'active section' },
+              'FAQ'
+            )
           ),
+          _react2['default'].createElement('div', { className: 'ui divider' }),
           _react2['default'].createElement('div', { dangerouslySetInnerHTML: { __html: md } })
         );
       }
@@ -2478,6 +2489,7 @@ module.exports =
               'Inkdrop Manual'
             )
           ),
+          _react2['default'].createElement('div', { className: 'ui divider' }),
           _react2['default'].createElement(
             'h2',
             { className: 'ui header' },
@@ -3179,6 +3191,7 @@ module.exports =
               'Inkdrop API Reference'
             )
           ),
+          _react2['default'].createElement('div', { className: 'ui divider' }),
           _react2['default'].createElement(
             'h2',
             { className: 'ui header' },
