@@ -65,7 +65,7 @@ module.exports =
 
   var _react2 = _interopRequireDefault(_react);
 
-  var _reactDom = __webpack_require__(78);
+  var _reactDom = __webpack_require__(81);
 
   var _reactDom2 = _interopRequireDefault(_reactDom);
 
@@ -122,24 +122,26 @@ module.exports =
       return __webpack_require__(35);
     }, '/manual/writing-note': function manualWritingNote() {
       return __webpack_require__(36);
-    }, '/privacy': function privacy() {
+    }, '/notation': function notation() {
       return __webpack_require__(37);
-    }, '/reference/book': function referenceBook() {
+    }, '/privacy': function privacy() {
       return __webpack_require__(38);
-    }, '/reference/editor-actions': function referenceEditorActions() {
+    }, '/reference/book': function referenceBook() {
       return __webpack_require__(39);
-    }, '/reference/editor-store': function referenceEditorStore() {
+    }, '/reference/editor-actions': function referenceEditorActions() {
       return __webpack_require__(40);
-    }, '/reference/': function reference() {
+    }, '/reference/editor-store': function referenceEditorStore() {
       return __webpack_require__(41);
-    }, '/reference/note': function referenceNote() {
+    }, '/reference/': function reference() {
       return __webpack_require__(42);
-    }, '/reference/tag': function referenceTag() {
+    }, '/reference/note': function referenceNote() {
       return __webpack_require__(43);
-    }, '/security': function security() {
+    }, '/reference/tag': function referenceTag() {
       return __webpack_require__(44);
-    }, '/terms': function terms() {
+    }, '/security': function security() {
       return __webpack_require__(45);
+    }, '/terms': function terms() {
+      return __webpack_require__(46);
     } }; // Auto-generated on build. See tools/lib/routes-loader.js
 
   var route = function route(path, callback) {
@@ -349,7 +351,7 @@ module.exports =
 
   var _react2 = _interopRequireDefault(_react);
 
-  __webpack_require__(48);
+  __webpack_require__(49);
 
   var _coreLocation = __webpack_require__(11);
 
@@ -1028,7 +1030,7 @@ module.exports =
 
   var _Link3 = _interopRequireDefault(_Link2);
 
-  __webpack_require__(50);
+  __webpack_require__(51);
 
   var _default = (function (_Link) {
     _inherits(_default, _Link);
@@ -1106,6 +1108,10 @@ module.exports =
   var _react = __webpack_require__(1);
 
   var _react2 = _interopRequireDefault(_react);
+
+  var _Link = __webpack_require__(3);
+
+  var _Link2 = _interopRequireDefault(_Link);
 
   var _manualMenu = __webpack_require__(6);
 
@@ -1189,6 +1195,29 @@ module.exports =
                     'Inkdrop Forum'
                   ),
                   ' is the place to discuss anything and everything Inkdrop related with the entire Inkdrop community. If you have problems or are looking for help, this is your place.'
+                ),
+                _react2['default'].createElement(
+                  'h3',
+                  { className: 'ui header' },
+                  _react2['default'].createElement('i', { className: 'info icon' }),
+                  _react2['default'].createElement(
+                    'div',
+                    { className: 'content' },
+                    'Further Informations'
+                  )
+                ),
+                _react2['default'].createElement(
+                  'ul',
+                  null,
+                  _react2['default'].createElement(
+                    'li',
+                    null,
+                    _react2['default'].createElement(
+                      _Link2['default'],
+                      { to: '/notation' },
+                      'Notation based on the Specified Commercial Transaction Act'
+                    )
+                  )
                 )
               )
             )
@@ -1223,15 +1252,15 @@ module.exports =
 
   var _fbjsLibExecutionEnvironment = __webpack_require__(12);
 
-  var _historyLibCreateBrowserHistory = __webpack_require__(75);
+  var _historyLibCreateBrowserHistory = __webpack_require__(78);
 
   var _historyLibCreateBrowserHistory2 = _interopRequireDefault(_historyLibCreateBrowserHistory);
 
-  var _historyLibCreateMemoryHistory = __webpack_require__(76);
+  var _historyLibCreateMemoryHistory = __webpack_require__(79);
 
   var _historyLibCreateMemoryHistory2 = _interopRequireDefault(_historyLibCreateMemoryHistory);
 
-  var _historyLibUseQueries = __webpack_require__(77);
+  var _historyLibUseQueries = __webpack_require__(80);
 
   var _historyLibUseQueries2 = _interopRequireDefault(_historyLibUseQueries);
 
@@ -1276,7 +1305,7 @@ module.exports =
 
   var _react2 = _interopRequireDefault(_react);
 
-  __webpack_require__(46);
+  __webpack_require__(47);
 
   var _Link = __webpack_require__(3);
 
@@ -1318,18 +1347,7 @@ module.exports =
               { className: 'ui stackable grid' },
               _react2['default'].createElement(
                 'div',
-                { className: 'three wide column text-left' },
-                _react2['default'].createElement(
-                  'a',
-                  { href: 'http://odoruinu.net/',
-                    target: '_blank',
-                    onClick: this.handleOutboundLinkClick },
-                  '© Takuya Matsuyama'
-                )
-              ),
-              _react2['default'].createElement(
-                'div',
-                { className: 'thirteen wide column right aligned' },
+                { className: 'thirteen wide column links' },
                 _react2['default'].createElement(
                   'ul',
                   { className: 'links' },
@@ -1356,9 +1374,7 @@ module.exports =
                     null,
                     _react2['default'].createElement(
                       _Link2['default'],
-                      {
-                        to: '/faq'
-                      },
+                      { to: '/faq' },
                       'FAQ'
                     )
                   ),
@@ -1401,6 +1417,17 @@ module.exports =
                     )
                   )
                 )
+              ),
+              _react2['default'].createElement(
+                'div',
+                { className: 'three wide column text-left' },
+                _react2['default'].createElement(
+                  'a',
+                  { href: 'http://odoruinu.net/',
+                    target: '_blank',
+                    onClick: this.handleOutboundLinkClick },
+                  '© Takuya Matsuyama'
+                )
               )
             )
           )
@@ -1436,7 +1463,7 @@ module.exports =
 
   var _react2 = _interopRequireDefault(_react);
 
-  __webpack_require__(47);
+  __webpack_require__(48);
 
   var _Navigation = __webpack_require__(15);
 
@@ -1497,7 +1524,7 @@ module.exports =
 
   var _react2 = _interopRequireDefault(_react);
 
-  __webpack_require__(49);
+  __webpack_require__(50);
 
   var _Link = __webpack_require__(3);
 
@@ -1738,7 +1765,7 @@ module.exports =
 
   var _react2 = _interopRequireDefault(_react);
 
-  __webpack_require__(51);
+  __webpack_require__(52);
 
   var _default = (function (_Component) {
     _inherits(_default, _Component);
@@ -2053,7 +2080,7 @@ module.exports =
 
   function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-  __webpack_require__(52);
+  __webpack_require__(53);
 
   var _react = __webpack_require__(1);
 
@@ -3164,12 +3191,6 @@ module.exports =
 /* 37 */
 /***/ function(module, exports, __webpack_require__) {
 
-  /**
-   * React Static Boilerplate
-   * https://github.com/koistya/react-static-boilerplate
-   * Copyright (c) Konstantin Tarkus (@koistya) | MIT license
-   */
-
   'use strict';
 
   Object.defineProperty(exports, '__esModule', {
@@ -3202,21 +3223,21 @@ module.exports =
     _createClass(_default, [{
       key: 'render',
       value: function render() {
-        var md = __webpack_require__(53);
+        var md = __webpack_require__(70);
         return _react2['default'].createElement(
           'div',
           { className: 'ui container main-content' },
           _react2['default'].createElement(
             'h1',
             null,
-            'Privacy Policy'
+            'Notation based on the Specified Commercial Transaction Act'
           ),
           _react2['default'].createElement('div', { dangerouslySetInnerHTML: { __html: md } })
         );
       }
     }], [{
       key: 'title',
-      value: 'Privacy Policy',
+      value: 'Notation based on the Specified Commercial Transaction Act',
       enumerable: true
     }]);
 
@@ -3256,113 +3277,51 @@ module.exports =
 
   var _react2 = _interopRequireDefault(_react);
 
-  var _componentsReferenceLayout = __webpack_require__(5);
+  var _default = (function (_Component) {
+    _inherits(_default, _Component);
 
-  var _componentsReferenceLayout2 = _interopRequireDefault(_componentsReferenceLayout);
+    function _default() {
+      _classCallCheck(this, _default);
 
-  var ManualPage = (function (_Component) {
-    _inherits(ManualPage, _Component);
-
-    function ManualPage() {
-      _classCallCheck(this, ManualPage);
-
-      _get(Object.getPrototypeOf(ManualPage.prototype), 'constructor', this).apply(this, arguments);
+      _get(Object.getPrototypeOf(_default.prototype), 'constructor', this).apply(this, arguments);
     }
 
-    _createClass(ManualPage, [{
+    _createClass(_default, [{
       key: 'render',
       value: function render() {
-        var md = __webpack_require__(70);
+        var md = __webpack_require__(71);
         return _react2['default'].createElement(
-          _componentsReferenceLayout2['default'],
-          { currentPageTitle: ManualPage.title },
+          'div',
+          { className: 'ui container main-content' },
           _react2['default'].createElement(
             'h1',
             null,
-            ManualPage.title
+            'Privacy Policy'
           ),
           _react2['default'].createElement('div', { dangerouslySetInnerHTML: { __html: md } })
         );
       }
     }], [{
       key: 'title',
-      value: 'Book',
+      value: 'Privacy Policy',
       enumerable: true
     }]);
 
-    return ManualPage;
+    return _default;
   })(_react.Component);
 
-  exports['default'] = ManualPage;
+  exports['default'] = _default;
   module.exports = exports['default'];
 
 /***/ },
 /* 39 */
 /***/ function(module, exports, __webpack_require__) {
 
-  'use strict';
-
-  Object.defineProperty(exports, '__esModule', {
-    value: true
-  });
-
-  var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
-
-  var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
-
-  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-
-  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
-
-  function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-  var _react = __webpack_require__(1);
-
-  var _react2 = _interopRequireDefault(_react);
-
-  var _componentsReferenceLayout = __webpack_require__(5);
-
-  var _componentsReferenceLayout2 = _interopRequireDefault(_componentsReferenceLayout);
-
-  var ManualPage = (function (_Component) {
-    _inherits(ManualPage, _Component);
-
-    function ManualPage() {
-      _classCallCheck(this, ManualPage);
-
-      _get(Object.getPrototypeOf(ManualPage.prototype), 'constructor', this).apply(this, arguments);
-    }
-
-    _createClass(ManualPage, [{
-      key: 'render',
-      value: function render() {
-        var md = __webpack_require__(71);
-        return _react2['default'].createElement(
-          _componentsReferenceLayout2['default'],
-          { currentPageTitle: ManualPage.title },
-          _react2['default'].createElement(
-            'h1',
-            null,
-            ManualPage.title
-          ),
-          _react2['default'].createElement('div', { dangerouslySetInnerHTML: { __html: md } })
-        );
-      }
-    }], [{
-      key: 'title',
-      value: 'Editor Actions',
-      enumerable: true
-    }]);
-
-    return ManualPage;
-  })(_react.Component);
-
-  exports['default'] = ManualPage;
-  module.exports = exports['default'];
-
-/***/ },
-/* 40 */
-/***/ function(module, exports, __webpack_require__) {
+  /**
+   * React Static Boilerplate
+   * https://github.com/koistya/react-static-boilerplate
+   * Copyright (c) Konstantin Tarkus (@koistya) | MIT license
+   */
 
   'use strict';
 
@@ -3414,7 +3373,71 @@ module.exports =
       }
     }], [{
       key: 'title',
-      value: 'Editor Store',
+      value: 'Book',
+      enumerable: true
+    }]);
+
+    return ManualPage;
+  })(_react.Component);
+
+  exports['default'] = ManualPage;
+  module.exports = exports['default'];
+
+/***/ },
+/* 40 */
+/***/ function(module, exports, __webpack_require__) {
+
+  'use strict';
+
+  Object.defineProperty(exports, '__esModule', {
+    value: true
+  });
+
+  var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+
+  var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
+
+  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+
+  function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+  var _react = __webpack_require__(1);
+
+  var _react2 = _interopRequireDefault(_react);
+
+  var _componentsReferenceLayout = __webpack_require__(5);
+
+  var _componentsReferenceLayout2 = _interopRequireDefault(_componentsReferenceLayout);
+
+  var ManualPage = (function (_Component) {
+    _inherits(ManualPage, _Component);
+
+    function ManualPage() {
+      _classCallCheck(this, ManualPage);
+
+      _get(Object.getPrototypeOf(ManualPage.prototype), 'constructor', this).apply(this, arguments);
+    }
+
+    _createClass(ManualPage, [{
+      key: 'render',
+      value: function render() {
+        var md = __webpack_require__(73);
+        return _react2['default'].createElement(
+          _componentsReferenceLayout2['default'],
+          { currentPageTitle: ManualPage.title },
+          _react2['default'].createElement(
+            'h1',
+            null,
+            ManualPage.title
+          ),
+          _react2['default'].createElement('div', { dangerouslySetInnerHTML: { __html: md } })
+        );
+      }
+    }], [{
+      key: 'title',
+      value: 'Editor Actions',
       enumerable: true
     }]);
 
@@ -3426,6 +3449,70 @@ module.exports =
 
 /***/ },
 /* 41 */
+/***/ function(module, exports, __webpack_require__) {
+
+  'use strict';
+
+  Object.defineProperty(exports, '__esModule', {
+    value: true
+  });
+
+  var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+
+  var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
+
+  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+
+  function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+  var _react = __webpack_require__(1);
+
+  var _react2 = _interopRequireDefault(_react);
+
+  var _componentsReferenceLayout = __webpack_require__(5);
+
+  var _componentsReferenceLayout2 = _interopRequireDefault(_componentsReferenceLayout);
+
+  var ManualPage = (function (_Component) {
+    _inherits(ManualPage, _Component);
+
+    function ManualPage() {
+      _classCallCheck(this, ManualPage);
+
+      _get(Object.getPrototypeOf(ManualPage.prototype), 'constructor', this).apply(this, arguments);
+    }
+
+    _createClass(ManualPage, [{
+      key: 'render',
+      value: function render() {
+        var md = __webpack_require__(74);
+        return _react2['default'].createElement(
+          _componentsReferenceLayout2['default'],
+          { currentPageTitle: ManualPage.title },
+          _react2['default'].createElement(
+            'h1',
+            null,
+            ManualPage.title
+          ),
+          _react2['default'].createElement('div', { dangerouslySetInnerHTML: { __html: md } })
+        );
+      }
+    }], [{
+      key: 'title',
+      value: 'Editor Store',
+      enumerable: true
+    }]);
+
+    return ManualPage;
+  })(_react.Component);
+
+  exports['default'] = ManualPage;
+  module.exports = exports['default'];
+
+/***/ },
+/* 42 */
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -3513,76 +3600,6 @@ module.exports =
   module.exports = exports['default'];
 
 /***/ },
-/* 42 */
-/***/ function(module, exports, __webpack_require__) {
-
-  /**
-   * React Static Boilerplate
-   * https://github.com/koistya/react-static-boilerplate
-   * Copyright (c) Konstantin Tarkus (@koistya) | MIT license
-   */
-
-  'use strict';
-
-  Object.defineProperty(exports, '__esModule', {
-    value: true
-  });
-
-  var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
-
-  var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
-
-  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-
-  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
-
-  function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-  var _react = __webpack_require__(1);
-
-  var _react2 = _interopRequireDefault(_react);
-
-  var _componentsReferenceLayout = __webpack_require__(5);
-
-  var _componentsReferenceLayout2 = _interopRequireDefault(_componentsReferenceLayout);
-
-  var ManualPage = (function (_Component) {
-    _inherits(ManualPage, _Component);
-
-    function ManualPage() {
-      _classCallCheck(this, ManualPage);
-
-      _get(Object.getPrototypeOf(ManualPage.prototype), 'constructor', this).apply(this, arguments);
-    }
-
-    _createClass(ManualPage, [{
-      key: 'render',
-      value: function render() {
-        var md = __webpack_require__(73);
-        return _react2['default'].createElement(
-          _componentsReferenceLayout2['default'],
-          { currentPageTitle: ManualPage.title },
-          _react2['default'].createElement(
-            'h1',
-            null,
-            ManualPage.title
-          ),
-          _react2['default'].createElement('div', { dangerouslySetInnerHTML: { __html: md } })
-        );
-      }
-    }], [{
-      key: 'title',
-      value: 'Note',
-      enumerable: true
-    }]);
-
-    return ManualPage;
-  })(_react.Component);
-
-  exports['default'] = ManualPage;
-  module.exports = exports['default'];
-
-/***/ },
 /* 43 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -3628,7 +3645,77 @@ module.exports =
     _createClass(ManualPage, [{
       key: 'render',
       value: function render() {
-        var md = __webpack_require__(74);
+        var md = __webpack_require__(75);
+        return _react2['default'].createElement(
+          _componentsReferenceLayout2['default'],
+          { currentPageTitle: ManualPage.title },
+          _react2['default'].createElement(
+            'h1',
+            null,
+            ManualPage.title
+          ),
+          _react2['default'].createElement('div', { dangerouslySetInnerHTML: { __html: md } })
+        );
+      }
+    }], [{
+      key: 'title',
+      value: 'Note',
+      enumerable: true
+    }]);
+
+    return ManualPage;
+  })(_react.Component);
+
+  exports['default'] = ManualPage;
+  module.exports = exports['default'];
+
+/***/ },
+/* 44 */
+/***/ function(module, exports, __webpack_require__) {
+
+  /**
+   * React Static Boilerplate
+   * https://github.com/koistya/react-static-boilerplate
+   * Copyright (c) Konstantin Tarkus (@koistya) | MIT license
+   */
+
+  'use strict';
+
+  Object.defineProperty(exports, '__esModule', {
+    value: true
+  });
+
+  var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+
+  var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
+
+  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+
+  function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+  var _react = __webpack_require__(1);
+
+  var _react2 = _interopRequireDefault(_react);
+
+  var _componentsReferenceLayout = __webpack_require__(5);
+
+  var _componentsReferenceLayout2 = _interopRequireDefault(_componentsReferenceLayout);
+
+  var ManualPage = (function (_Component) {
+    _inherits(ManualPage, _Component);
+
+    function ManualPage() {
+      _classCallCheck(this, ManualPage);
+
+      _get(Object.getPrototypeOf(ManualPage.prototype), 'constructor', this).apply(this, arguments);
+    }
+
+    _createClass(ManualPage, [{
+      key: 'render',
+      value: function render() {
+        var md = __webpack_require__(76);
         return _react2['default'].createElement(
           _componentsReferenceLayout2['default'],
           { currentPageTitle: ManualPage.title },
@@ -3653,7 +3740,7 @@ module.exports =
   module.exports = exports['default'];
 
 /***/ },
-/* 44 */
+/* 45 */
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -3754,14 +3841,8 @@ module.exports =
   module.exports = exports['default'];
 
 /***/ },
-/* 45 */
+/* 46 */
 /***/ function(module, exports, __webpack_require__) {
-
-  /**
-   * React Static Boilerplate
-   * https://github.com/koistya/react-static-boilerplate
-   * Copyright (c) Konstantin Tarkus (@koistya) | MIT license
-   */
 
   'use strict';
 
@@ -3795,24 +3876,16 @@ module.exports =
     _createClass(_default, [{
       key: 'render',
       value: function render() {
+        var md = __webpack_require__(77);
         return _react2['default'].createElement(
           'div',
           { className: 'ui container main-content' },
           _react2['default'].createElement(
             'h1',
             null,
-            'Terms of Use'
+            'Terms of Service'
           ),
-          _react2['default'].createElement(
-            'p',
-            null,
-            'The beta version of this service is free of charge to beta users during the beta stage. The \'beta version\' or \'private beta\' is the trial period of this service until its official release which may include a change in the service name and the features it includes. A beta user is someone who is interested in examining and evaluating the beta version of this service for personal or business reasons. This terms of use are subject to change with or without notice after the initial beta sign up stage.'
-          ),
-          _react2['default'].createElement(
-            'p',
-            null,
-            'In addition, there is no guarantee that the features and functionalities of the beta version will be included in the official release - the official version may include different features and functionalities than the beta version. Inkdrop is not responsible for any damage, inconvenience, or loss experienced during the beta trial period, when available, by any beta user.'
-          )
+          _react2['default'].createElement('div', { dangerouslySetInnerHTML: { __html: md } })
         );
       }
     }], [{
@@ -3828,20 +3901,6 @@ module.exports =
   module.exports = exports['default'];
 
 /***/ },
-/* 46 */
-/***/ function(module, exports, __webpack_require__) {
-
-  exports = module.exports = __webpack_require__(4)();
-  // imports
-
-
-  // module
-  exports.push([module.id, ".app--footer {\n  padding: 3rem 0;\n  border-top: 1px solid rgba(34, 36, 38, 0.15);\n  background: rgba(34, 36, 38, 0.02);\n  font-size: 1.1rem;\n}\n.app--footer iframe:first-child {\n  margin-right: 25px;\n}\n.app--footer .app--footer-content {\n  text-align: center;\n}\n.app--footer ul.links {\n  display: inline-block;\n  list-style: none;\n  margin: 0;\n}\n.app--footer ul.links li {\n  display: inline-block;\n  margin: 0 1em;\n}\n", ""]);
-
-  // exports
-
-
-/***/ },
 /* 47 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -3850,7 +3909,7 @@ module.exports =
 
 
   // module
-  exports.push([module.id, "/**\n * React Static Boilerplate\n * https://github.com/koistya/react-static-boilerplate\n * Copyright (c) Konstantin Tarkus (@koistya) | MIT license\n */\n\n/**\n * React Static Boilerplate\n * https://github.com/koistya/react-static-boilerplate\n * Copyright (c) Konstantin Tarkus (@koistya) | MIT license\n */\n\n/*\n * Scaffolding\n * -------------------------------------------------------------------------- */\n\n/*\n * Typography\n * -------------------------------------------------------------------------- */\n\n/*\n * Media queries breakpoints\n * -------------------------------------------------------------------------- */\n/*\n\ngithub.com style (c) Vasily Polovnyov <vast@whiteants.net>\n\n*/\n\n.hljs {\n  display: block;\n  overflow-x: auto;\n  padding: 0.5em;\n  color: #333;\n  background: #f8f8f8;\n  -webkit-text-size-adjust: none;\n}\n\n.hljs-comment, .diff .hljs-header {\n  color: #998;\n  font-style: italic;\n}\n\n.hljs-keyword, .css .rule .hljs-keyword, .hljs-winutils, .nginx .hljs-title, .hljs-subst, .hljs-request, .hljs-status {\n  color: #333;\n  font-weight: bold;\n}\n\n.hljs-number, .hljs-hexcolor, .ruby .hljs-constant {\n  color: #008080;\n}\n\n.hljs-string, .hljs-tag .hljs-value, .hljs-doctag, .tex .hljs-formula {\n  color: #d14;\n}\n\n.hljs-title, .hljs-id, .scss .hljs-preprocessor {\n  color: #900;\n  font-weight: bold;\n}\n\n.hljs-list .hljs-keyword, .hljs-subst {\n  font-weight: normal;\n}\n\n.hljs-class .hljs-title, .hljs-type, .vhdl .hljs-literal, .tex .hljs-command {\n  color: #458;\n  font-weight: bold;\n}\n\n.hljs-tag, .hljs-tag .hljs-title, .hljs-rule .hljs-property, .django .hljs-tag .hljs-keyword {\n  color: #000080;\n  font-weight: normal;\n}\n\n.hljs-attribute, .hljs-variable, .lisp .hljs-body, .hljs-name {\n  color: #008080;\n}\n\n.hljs-regexp {\n  color: #009926;\n}\n\n.hljs-symbol, .ruby .hljs-symbol .hljs-string, .lisp .hljs-keyword, .clojure .hljs-keyword, .scheme .hljs-keyword, .tex .hljs-special, .hljs-prompt {\n  color: #990073;\n}\n\n.hljs-built_in {\n  color: #0086b3;\n}\n\n.hljs-preprocessor, .hljs-pragma, .hljs-pi, .hljs-doctype, .hljs-shebang, .hljs-cdata {\n  color: #999;\n  font-weight: bold;\n}\n\n.hljs-deletion {\n  background: #fdd;\n}\n\n.hljs-addition {\n  background: #dfd;\n}\n\n.diff .hljs-change {\n  background: #0086b3;\n}\n\n.hljs-chunk {\n  color: #aaa;\n}\n\nhtml, body {\n  margin: 0;\n  padding: 0;\n  background-color: white;\n  color: #525252;\n  font-family: 'Roboto','Helvetica',sans-serif;\n}\n\n.main-content {\n  padding-top: 2rem;\n  margin-bottom: 50px;\n}\n\n.main-content h1 a, .main-content h2 a, .main-content h3 a, .main-content h4 a, .main-content h5 a, .main-content h6 a {\n  opacity: 0;\n  margin-left: -32px;\n  color: inherit;\n}\n\n.main-content h1:hover a, .main-content h2:hover a, .main-content h3:hover a, .main-content h4:hover a, .main-content h5:hover a, .main-content h6:hover a {\n  opacity: 1;\n  display: inline-block;\n}\n\n.main-content h3 a {\n  margin-left: -25px;\n}\n\n.main-content .article-list a {\n  display: block;\n  padding: 4px;\n}\n\n.main-content .doc-content {\n\n  -webkit-text-size-adjust: 100%;\n  text-size-adjust: 100%;\n  font-family: \"Helvetica Neue\", Helvetica, \"Segoe UI\", Arial, freesans, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\";\n  font-size: 16px;\n  line-height: 1.6;\n  word-wrap: break-word;\n\n}\n\n.main-content .doc-content blockquote {\n  margin: 0;\n}\n\n.main-content .doc-content p, .main-content .doc-content blockquote, .main-content .doc-content ul, .main-content .doc-content ol, .main-content .doc-content dl, .main-content .doc-content table, .main-content .doc-content pre {\n  margin-top: 0;\n  margin-bottom: 16px;\n}\n\n.main-content .doc-content hr {\n  height: 4px;\n  padding: 0;\n  margin: 16px 0;\n  background-color: #e7e7e7;\n  border: 0 none;\n}\n\n.main-content .doc-content blockquote {\n  padding: 5px 15px;\n  color: #777;\n  border-left: 4px solid #ddd;\n}\n\n.main-content .doc-content blockquote>:first-child {\n  margin-top: 0;\n}\n\n.main-content .doc-content blockquote>:last-child {\n  margin-bottom: 0;\n}\n\n.main-content .doc-content code {\n  padding: 0;\n  padding-top: 0.2em;\n  padding-bottom: 0.2em;\n  margin: 0;\n  font-size: 85%;\n  background-color: rgba(0,0,0,0.04);\n  border-radius: 3px;\n}\n\n.main-content .doc-content code:before, .main-content .doc-content code:after {\n  letter-spacing: -0.2em;\n  content: \"\\A0\";\n}\n\n.main-content .doc-content pre>code {\n  padding: 0;\n  margin: 0;\n  font-size: 100%;\n  word-break: normal;\n  white-space: pre;\n  background: transparent;\n  border: 0;\n}\n\n.main-content .doc-content .highlight {\n  margin-bottom: 16px;\n}\n\n.main-content .doc-content .highlight pre, .main-content .doc-content pre {\n  padding: 16px;\n  overflow: auto;\n  font-size: 85%;\n  line-height: 1.45;\n  background-color: #f7f7f7;\n  border-radius: 3px;\n}\n\n.main-content .doc-content .highlight pre {\n  margin-bottom: 0;\n  word-break: normal;\n}\n\n.main-content .doc-content pre {\n  word-wrap: normal;\n}\n\n.main-content .doc-content pre code {\n  display: inline;\n  max-width: initial;\n  padding: 0;\n  margin: 0;\n  overflow: initial;\n  line-height: inherit;\n  word-wrap: normal;\n  background-color: transparent;\n  border: 0;\n}\n\n.main-content .doc-content pre code:before, .main-content .doc-content pre code:after {\n  content: normal;\n}\n", ""]);
+  exports.push([module.id, ".app--footer {\n  padding: 3rem 0;\n  border-top: 1px solid rgba(34, 36, 38, 0.15);\n  background: rgba(34, 36, 38, 0.02);\n  font-size: 1.1rem;\n}\n.app--footer iframe:first-child {\n  margin-right: 25px;\n}\n.app--footer .app--footer-content {\n  text-align: center;\n}\n.app--footer div.column.links {\n  text-align: left;\n}\n.app--footer div.column.links ul.links {\n  display: inline-block;\n  list-style: none;\n  margin: 0;\n  padding: 0;\n}\n.app--footer div.column.links ul.links li {\n  display: inline-block;\n  margin: 0 1em;\n}\n", ""]);
 
   // exports
 
@@ -3864,7 +3923,7 @@ module.exports =
 
 
   // module
-  exports.push([module.id, "/**\n * React Static Boilerplate\n * https://github.com/koistya/react-static-boilerplate\n * Copyright (c) Konstantin Tarkus (@koistya) | MIT license\n */\n\n.Link {\n\n}\n", ""]);
+  exports.push([module.id, "/**\n * React Static Boilerplate\n * https://github.com/koistya/react-static-boilerplate\n * Copyright (c) Konstantin Tarkus (@koistya) | MIT license\n */\n\n/**\n * React Static Boilerplate\n * https://github.com/koistya/react-static-boilerplate\n * Copyright (c) Konstantin Tarkus (@koistya) | MIT license\n */\n\n/*\n * Scaffolding\n * -------------------------------------------------------------------------- */\n\n/*\n * Typography\n * -------------------------------------------------------------------------- */\n\n/*\n * Media queries breakpoints\n * -------------------------------------------------------------------------- */\n/*\n\ngithub.com style (c) Vasily Polovnyov <vast@whiteants.net>\n\n*/\n\n.hljs {\n  display: block;\n  overflow-x: auto;\n  padding: 0.5em;\n  color: #333;\n  background: #f8f8f8;\n  -webkit-text-size-adjust: none;\n}\n\n.hljs-comment, .diff .hljs-header {\n  color: #998;\n  font-style: italic;\n}\n\n.hljs-keyword, .css .rule .hljs-keyword, .hljs-winutils, .nginx .hljs-title, .hljs-subst, .hljs-request, .hljs-status {\n  color: #333;\n  font-weight: bold;\n}\n\n.hljs-number, .hljs-hexcolor, .ruby .hljs-constant {\n  color: #008080;\n}\n\n.hljs-string, .hljs-tag .hljs-value, .hljs-doctag, .tex .hljs-formula {\n  color: #d14;\n}\n\n.hljs-title, .hljs-id, .scss .hljs-preprocessor {\n  color: #900;\n  font-weight: bold;\n}\n\n.hljs-list .hljs-keyword, .hljs-subst {\n  font-weight: normal;\n}\n\n.hljs-class .hljs-title, .hljs-type, .vhdl .hljs-literal, .tex .hljs-command {\n  color: #458;\n  font-weight: bold;\n}\n\n.hljs-tag, .hljs-tag .hljs-title, .hljs-rule .hljs-property, .django .hljs-tag .hljs-keyword {\n  color: #000080;\n  font-weight: normal;\n}\n\n.hljs-attribute, .hljs-variable, .lisp .hljs-body, .hljs-name {\n  color: #008080;\n}\n\n.hljs-regexp {\n  color: #009926;\n}\n\n.hljs-symbol, .ruby .hljs-symbol .hljs-string, .lisp .hljs-keyword, .clojure .hljs-keyword, .scheme .hljs-keyword, .tex .hljs-special, .hljs-prompt {\n  color: #990073;\n}\n\n.hljs-built_in {\n  color: #0086b3;\n}\n\n.hljs-preprocessor, .hljs-pragma, .hljs-pi, .hljs-doctype, .hljs-shebang, .hljs-cdata {\n  color: #999;\n  font-weight: bold;\n}\n\n.hljs-deletion {\n  background: #fdd;\n}\n\n.hljs-addition {\n  background: #dfd;\n}\n\n.diff .hljs-change {\n  background: #0086b3;\n}\n\n.hljs-chunk {\n  color: #aaa;\n}\n\nhtml, body {\n  margin: 0;\n  padding: 0;\n  background-color: white;\n  color: #525252;\n  font-family: 'SF UI Text','Helvetica Neue','Helvetica','Roboto',sans-serif;\n}\n\n.main-content {\n  padding-top: 2rem;\n  margin-bottom: 50px;\n}\n\n.main-content h1 a, .main-content h2 a, .main-content h3 a, .main-content h4 a, .main-content h5 a, .main-content h6 a {\n  opacity: 0;\n  margin-left: -32px;\n  color: inherit;\n}\n\n.main-content h1:hover a, .main-content h2:hover a, .main-content h3:hover a, .main-content h4:hover a, .main-content h5:hover a, .main-content h6:hover a {\n  opacity: 1;\n  display: inline-block;\n}\n\n.main-content h3 a {\n  margin-left: -25px;\n}\n\n.main-content .article-list a {\n  display: block;\n  padding: 4px;\n}\n\n.main-content .doc-content {\n\n  -webkit-text-size-adjust: 100%;\n  text-size-adjust: 100%;\n  font-family: \"Helvetica Neue\", Helvetica, \"Segoe UI\", Arial, freesans, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\";\n  font-size: 16px;\n  line-height: 1.6;\n  word-wrap: break-word;\n\n}\n\n.main-content .doc-content blockquote {\n  margin: 0;\n}\n\n.main-content .doc-content p, .main-content .doc-content blockquote, .main-content .doc-content ul, .main-content .doc-content ol, .main-content .doc-content dl, .main-content .doc-content table, .main-content .doc-content pre {\n  margin-top: 0;\n  margin-bottom: 16px;\n}\n\n.main-content .doc-content hr {\n  height: 4px;\n  padding: 0;\n  margin: 16px 0;\n  background-color: #e7e7e7;\n  border: 0 none;\n}\n\n.main-content .doc-content blockquote {\n  padding: 5px 15px;\n  color: #777;\n  border-left: 4px solid #ddd;\n}\n\n.main-content .doc-content blockquote>:first-child {\n  margin-top: 0;\n}\n\n.main-content .doc-content blockquote>:last-child {\n  margin-bottom: 0;\n}\n\n.main-content .doc-content code {\n  padding: 0;\n  padding-top: 0.2em;\n  padding-bottom: 0.2em;\n  margin: 0;\n  font-size: 85%;\n  background-color: rgba(0,0,0,0.04);\n  border-radius: 3px;\n}\n\n.main-content .doc-content code:before, .main-content .doc-content code:after {\n  letter-spacing: -0.2em;\n  content: \"\\A0\";\n}\n\n.main-content .doc-content pre>code {\n  padding: 0;\n  margin: 0;\n  font-size: 100%;\n  word-break: normal;\n  white-space: pre;\n  background: transparent;\n  border: 0;\n}\n\n.main-content .doc-content .highlight {\n  margin-bottom: 16px;\n}\n\n.main-content .doc-content .highlight pre, .main-content .doc-content pre {\n  padding: 16px;\n  overflow: auto;\n  font-size: 85%;\n  line-height: 1.45;\n  background-color: #f7f7f7;\n  border-radius: 3px;\n}\n\n.main-content .doc-content .highlight pre {\n  margin-bottom: 0;\n  word-break: normal;\n}\n\n.main-content .doc-content pre {\n  word-wrap: normal;\n}\n\n.main-content .doc-content pre code {\n  display: inline;\n  max-width: initial;\n  padding: 0;\n  margin: 0;\n  overflow: initial;\n  line-height: inherit;\n  word-wrap: normal;\n  background-color: transparent;\n  border: 0;\n}\n\n.main-content .doc-content pre code:before, .main-content .doc-content pre code:after {\n  content: normal;\n}\n", ""]);
 
   // exports
 
@@ -3878,7 +3937,7 @@ module.exports =
 
 
   // module
-  exports.push([module.id, "/**\n * React Static Boilerplate\n * https://github.com/koistya/react-static-boilerplate\n * Copyright (c) Konstantin Tarkus (@koistya) | MIT license\n */\n\n/**\n * React Static Boilerplate\n * https://github.com/koistya/react-static-boilerplate\n * Copyright (c) Konstantin Tarkus (@koistya) | MIT license\n */\n\n/*\n * Scaffolding\n * -------------------------------------------------------------------------- */\n\n/*\n * Typography\n * -------------------------------------------------------------------------- */\n\n/*\n * Media queries breakpoints\n * -------------------------------------------------------------------------- */\n\n.app--header {\n  background-color: #071B26;\n\n}\n\n.app--header .app--logo {\n  -webkit-box-flex: 1;\n  -webkit-flex: 1 auto;\n      -ms-flex: 1 auto;\n          flex: 1 auto;\n  line-height: 1;\n\n}\n\n.app--header .ui.grid {\n  margin: 0;\n\n}\n\n.app--header ul.app--navbar {\n  -webkit-box-flex: 1;\n  -webkit-flex: 1 auto;\n      -ms-flex: 1 auto;\n          flex: 1 auto;\n  text-align: right;\n  height: 45px;\n  margin: 0;\n\n}\n\n.app--header ul.app--navbar li {\n  display: inline-block;\n  margin-right: 20px;\n  font-size: 1rem;\n\n}\n\n.app--header ul.app--navbar li > a {\n  display: inline-block;\n  padding: 14px 0;\n\n}\n\n.app--header ul.app--navbar li:last-child {\n  margin-right: 0;\n\n}\n\n.app--header a {\n  color: #bbb\n\n}\n\n.app--header a:hover {\n  color: white;\n\n}\n\n", ""]);
+  exports.push([module.id, "/**\n * React Static Boilerplate\n * https://github.com/koistya/react-static-boilerplate\n * Copyright (c) Konstantin Tarkus (@koistya) | MIT license\n */\n\n.Link {\n\n}\n", ""]);
 
   // exports
 
@@ -3892,7 +3951,7 @@ module.exports =
 
 
   // module
-  exports.push([module.id, "a.current-active {\n  font-weight: bold;\n  background-color: lightblue;\n}\n", ""]);
+  exports.push([module.id, "/**\n * React Static Boilerplate\n * https://github.com/koistya/react-static-boilerplate\n * Copyright (c) Konstantin Tarkus (@koistya) | MIT license\n */\n\n/**\n * React Static Boilerplate\n * https://github.com/koistya/react-static-boilerplate\n * Copyright (c) Konstantin Tarkus (@koistya) | MIT license\n */\n\n/*\n * Scaffolding\n * -------------------------------------------------------------------------- */\n\n/*\n * Typography\n * -------------------------------------------------------------------------- */\n\n/*\n * Media queries breakpoints\n * -------------------------------------------------------------------------- */\n\n.app--header {\n  background-color: #071B26;\n\n}\n\n.app--header .app--logo {\n  -webkit-box-flex: 1;\n  -webkit-flex: 1 auto;\n      -ms-flex: 1 auto;\n          flex: 1 auto;\n  line-height: 1;\n\n}\n\n.app--header .ui.grid {\n  margin: 0;\n\n}\n\n.app--header ul.app--navbar {\n  -webkit-box-flex: 1;\n  -webkit-flex: 1 auto;\n      -ms-flex: 1 auto;\n          flex: 1 auto;\n  text-align: right;\n  height: 45px;\n  margin: 0;\n\n}\n\n.app--header ul.app--navbar li {\n  display: inline-block;\n  margin-right: 20px;\n  font-size: 1rem;\n\n}\n\n.app--header ul.app--navbar li > a {\n  display: inline-block;\n  padding: 14px 0;\n\n}\n\n.app--header ul.app--navbar li:last-child {\n  margin-right: 0;\n\n}\n\n.app--header a {\n  color: #bbb\n\n}\n\n.app--header a:hover {\n  color: white;\n\n}\n\n", ""]);
 
   // exports
 
@@ -3906,7 +3965,7 @@ module.exports =
 
 
   // module
-  exports.push([module.id, "/**\n * React Static Boilerplate\n * https://github.com/koistya/react-static-boilerplate\n * Copyright (c) Konstantin Tarkus (@koistya) | MIT license\n */\n\n/*\n * Scaffolding\n * -------------------------------------------------------------------------- */\n\n/*\n * Typography\n * -------------------------------------------------------------------------- */\n\n/*\n * Media queries breakpoints\n * -------------------------------------------------------------------------- */\n\nimg.top-image {\n  border: 8px solid white;\n  border-radius: 4px;\n  -webkit-box-shadow: 0 2px 2px 0px rgba(0,0,0,0.2);\n          box-shadow: 0 2px 2px 0px rgba(0,0,0,0.2);\n}\n\n@media (min-width: 768px) {\n  img.top-image {\n    border-width: 16px;\n  }\n}\n\n.about .section {\n  margin: 0.8em 0;\n}\n\n.about .section strong {\n  color: #525252;\n}\n", ""]);
+  exports.push([module.id, "a.current-active {\n  font-weight: bold;\n  background-color: lightblue;\n}\n", ""]);
 
   // exports
 
@@ -3920,16 +3979,24 @@ module.exports =
 
 
   // module
-  exports.push([module.id, "/**\n * React Static Boilerplate\n * https://github.com/koistya/react-static-boilerplate\n * Copyright (c) Konstantin Tarkus (@koistya) | MIT license\n */\n\n/*\n * Scaffolding\n * -------------------------------------------------------------------------- */\n\n/*\n * Typography\n * -------------------------------------------------------------------------- */\n\n/*\n * Media queries breakpoints\n * -------------------------------------------------------------------------- */\n\nimg.top-image {\n  border: 8px solid white;\n  border-radius: 4px;\n  -webkit-box-shadow: 0 2px 2px 0px rgba(0,0,0,0.2);\n          box-shadow: 0 2px 2px 0px rgba(0,0,0,0.2);\n}\n\n@media (min-width: 768px) {\n  img.top-image {\n    border-width: 16px;\n  }\n}\n\n", ""]);
+  exports.push([module.id, "/**\n * React Static Boilerplate\n * https://github.com/koistya/react-static-boilerplate\n * Copyright (c) Konstantin Tarkus (@koistya) | MIT license\n */\n\n/*\n * Scaffolding\n * -------------------------------------------------------------------------- */\n\n/*\n * Typography\n * -------------------------------------------------------------------------- */\n\n/*\n * Media queries breakpoints\n * -------------------------------------------------------------------------- */\n\nimg.top-image {\n  border: 8px solid white;\n  border-radius: 4px;\n  -webkit-box-shadow: 0 2px 2px 0px rgba(0,0,0,0.2);\n          box-shadow: 0 2px 2px 0px rgba(0,0,0,0.2);\n}\n\n@media (min-width: 768px) {\n  img.top-image {\n    border-width: 16px;\n  }\n}\n\n.about .section {\n  margin: 0.8em 0;\n}\n\n.about .section strong {\n  color: #525252;\n}\n", ""]);
 
   // exports
 
 
 /***/ },
 /* 53 */
-/***/ function(module, exports) {
+/***/ function(module, exports, __webpack_require__) {
 
-  module.exports = "<h2><a name=\"definitions\" class=\"anchor\" href=\"#definitions\"><i class=\"linkify icon\"></i></a>Definitions</h2><p>Inkdrop is owned by Takuya Matsuyama, Tokyo - Japan. (referred to as &quot;I&quot;, &quot;Me&quot;, &quot;Our&quot; or &quot;We&quot;).\nAs a customer of this service you&#39;re a &quot;User&quot; or &quot;You&quot; according to this agreement.\nThe App or any services offered by us will be referred to as &quot;Inkdrop&quot; or &quot;Service&quot;.</p>\n<h2><a name=\"introduction\" class=\"anchor\" href=\"#introduction\"><i class=\"linkify icon\"></i></a>Introduction</h2><p>We realize that personal information is the important property of an individual, and have stated the following policies on treatment of personal information to appropriately collect and use personal information, to comply with laws and ordinances related to personal information and to prevent and cure leakage of personal information, and will take the best care in control and use of personal information. \nPlease note that any collection of personal information by linked sites or any other entities is not covered by this Privacy Policy.</p>\n<h2><a name=\"appropriate-collection-and-purpose-of-use\" class=\"anchor\" href=\"#appropriate-collection-and-purpose-of-use\"><i class=\"linkify icon\"></i></a>Appropriate Collection and Purpose of Use</h2><p>We will collect personal information through appropriate methods for the following purposes:</p>\n<ul>\n<li>to provide our services;</li>\n<li>to provide notices and send questionnaires regarding our services that are currently provided or under consideration for future releases;</li>\n<li>to help improve the services and develop new services;</li>\n<li>to make contact with you;</li>\n<li>to verify your identity and otherwise respond to inquiries;</li>\n<li>to select in drawings and deliver prizes or products;</li>\n<li>to transmit advertisement information sponsored by us or any other third party;</li>\n<li>to create statistical data regarding the use of our services;</li>\n<li>to prevent any use in breach of the Terms of Service.</li>\n</ul>\n<h2><a name=\"appropriate-control-and-protection\" class=\"anchor\" href=\"#appropriate-control-and-protection\"><i class=\"linkify icon\"></i></a>Appropriate Control and Protection</h2><p>Personal information will be strictly controlled, and appropriate measures will be taken to prevent and cure unauthorized access, loss, destruction, falsification, and leakage of personal information.</p>\n<h2><a name=\"entrustment\" class=\"anchor\" href=\"#entrustment\"><i class=\"linkify icon\"></i></a>Entrustment</h2><p>We may entrust the whole or part of the personal information it collected to outsourcing entities to the extent required to achieve the purpose of use. In such case, we will fully examine the eligibility of such outsourcing entities, state confidentiality provisions in the contracts with them, and provide any necessary and appropriate supervision to them.</p>\n<h2><a name=\"provision-to-third-party\" class=\"anchor\" href=\"#provision-to-third-party\"><i class=\"linkify icon\"></i></a>Provision to Third Party</h2><p>We will not disclose or provide any data to any third party except when a prior consent is given by you;\nit is based on laws and ordinances;\nany breach of the Terms of Service for Inkdrop or other our services should occur, and there are sufficient reasons for determining the disclosure of the personal information is necessary to protect our rights, property and services;\nit is necessary for the protection of the life, body or property of an individual and is difficult to obtain your consent;\nit is specially necessary for improving public health or promoting the sound growth of children and is difficult to obtain your consent;\nit is necessary for cooperating with a national or local authority or an entity entrusted by it in executing the affairs prescribed by laws and ordinances, and obtaining your consent is likely to impede the execution of such affairs; or\nany succession of our business including the provision of personal information is made due to any merger, company split, transfer of operations or other reasons.</p>\n<h2><a name=\"joint-use\" class=\"anchor\" href=\"#joint-use\"><i class=\"linkify icon\"></i></a>Joint Use</h2><p>We may jointly use any personal information with our business cooperators in providing our services.\nIn such case, we will, in advance, publish the items of the personal information used jointly, the scope of the joint users, the purpose for which the personal information is used jointly and the name of person responsible for the management of the personal information is used jointly.</p>\n<h2><a name=\"use-by-minors-under-18\" class=\"anchor\" href=\"#use-by-minors-under-18\"><i class=\"linkify icon\"></i></a>Use by minors under 18</h2><p>If you are under 18, please use our service and input the personal information upon the consent of your custodian.</p>\n<h2><a name=\"procedures-for-disclosure\" class=\"anchor\" href=\"#procedures-for-disclosure\"><i class=\"linkify icon\"></i></a>Procedures for Disclosure</h2><p>We will respond without delay to your request for notice of the purpose of use, disclosure, correction, addition or deletion of contents, discontinuance of the use, erasure, and discontinuance of provision to a third party (hereinafter referred to as “Disclosure, etc.”) of (your) personal information.\nProvided, however, you are required to take the procedures prescribed by us in requesting Disclosure, etc.</p>\n<h2><a name=\"disclaimer\" class=\"anchor\" href=\"#disclaimer\"><i class=\"linkify icon\"></i></a>Disclaimer</h2><p>We shall assume no liability whatsoever if you reveal the personal information to third parties using any feature of our services or any other means and you become identifiable by such information you disclosed on our services.</p>\n<h2><a name=\"creation-and-use-of-statistical-data\" class=\"anchor\" href=\"#creation-and-use-of-statistical-data\"><i class=\"linkify icon\"></i></a>Creation and Use of Statistical Data</h2><p>We may create, based on the personal information collected, statistical data processed so that no individual is identifiable.\nWith regard to such creation and use of the personally unidentifiable statistical data, we may conduct without any restriction.</p>\n<h2><a name=\"collection-and-use-of-attribute-information-activity-history\" class=\"anchor\" href=\"#collection-and-use-of-attribute-information-activity-history\"><i class=\"linkify icon\"></i></a>Collection and Use of Attribute Information/Activity History</h2><p>We may collect and/or use the following personally unidentifiable information to personalize our services or contents of advertisements and may provide such information to sponsors, information providers, or service providers: cookies, logs, activity histories for accessed URLs, contents or reference orders, individual terminal identification information and other device information, and attribute information on gender, occupation, or age.</p>\n<h2><a name=\"amendment\" class=\"anchor\" href=\"#amendment\"><i class=\"linkify icon\"></i></a>Amendment</h2><p>We reserve the right to make amendments to this Privacy Policy.</p>\n";
+  exports = module.exports = __webpack_require__(4)();
+  // imports
+
+
+  // module
+  exports.push([module.id, "/**\n * React Static Boilerplate\n * https://github.com/koistya/react-static-boilerplate\n * Copyright (c) Konstantin Tarkus (@koistya) | MIT license\n */\n\n/*\n * Scaffolding\n * -------------------------------------------------------------------------- */\n\n/*\n * Typography\n * -------------------------------------------------------------------------- */\n\n/*\n * Media queries breakpoints\n * -------------------------------------------------------------------------- */\n\nimg.top-image {\n  border: 8px solid white;\n  border-radius: 4px;\n  -webkit-box-shadow: 0 2px 2px 0px rgba(0,0,0,0.2);\n          box-shadow: 0 2px 2px 0px rgba(0,0,0,0.2);\n}\n\n@media (min-width: 768px) {\n  img.top-image {\n    border-width: 16px;\n  }\n}\n\n", ""]);
+
+  // exports
+
 
 /***/ },
 /* 54 */
@@ -3941,7 +4008,7 @@ module.exports =
 /* 55 */
 /***/ function(module, exports) {
 
-  module.exports = "<h2><a name=\"what-platforms-does-inkdrop-run-on-\" class=\"anchor\" href=\"#what-platforms-does-inkdrop-run-on-\"><i class=\"linkify icon\"></i></a>What platforms does Inkdrop run on?</h2><p>Inkdrop is available for OS X 10.8 or later, Windows 7 or later, and Ubuntu Linux.</p>\n<h2><a name=\"can-i-sync-my-data-with-dropbox-googledrive-etc-\" class=\"anchor\" href=\"#can-i-sync-my-data-with-dropbox-googledrive-etc-\"><i class=\"linkify icon\"></i></a>Can I sync my data with DropBox, GoogleDrive, etc?</h2><p>No. You can only sync your data with a server compatible with CouchDB.</p>\n<h2><a name=\"i-don-t-trust-anyone-with-my-note-can-i-run-inkdrop-server-myself-\" class=\"anchor\" href=\"#i-don-t-trust-anyone-with-my-note-can-i-run-inkdrop-server-myself-\"><i class=\"linkify icon\"></i></a>I don’t trust anyone with my note. Can I run Inkdrop server myself?</h2><p>Yes!\nSee the <a href=\"/manual/synchronizing-in-the-cloud\">documentation</a> for full instructions on setting up the sync server on your local machine.</p>\n<h2><a name=\"how-can-i-delete-my-account-\" class=\"anchor\" href=\"#how-can-i-delete-my-account-\"><i class=\"linkify icon\"></i></a>How can I delete my account?</h2><p>You can delete your account from <a href=\"https://www.inkdrop.info/account/delete\">here</a>.\nYou data will be deleted immediately.</p>\n<h2><a name=\"i-forgot-my-password-how-to-reset-my-password-\" class=\"anchor\" href=\"#i-forgot-my-password-how-to-reset-my-password-\"><i class=\"linkify icon\"></i></a>I forgot my password. How to reset my password?</h2><p>Inkdrop cannot reset your password for security reason.\nPlease read <a href=\"/manual/recovering-your-password\">how to recover your password</a>.</p>\n";
+  module.exports = "<h2><a name=\"what-platforms-does-inkdrop-run-on-\" class=\"anchor\" href=\"#what-platforms-does-inkdrop-run-on-\"><i class=\"linkify icon\"></i></a>What platforms does Inkdrop run on?</h2><p>Inkdrop is available for OS X 10.8 or later, Windows 7 or later, and Ubuntu Linux.</p>\n<h2><a name=\"can-i-sync-my-data-with-dropbox-googledrive-etc-\" class=\"anchor\" href=\"#can-i-sync-my-data-with-dropbox-googledrive-etc-\"><i class=\"linkify icon\"></i></a>Can I sync my data with DropBox, GoogleDrive, etc?</h2><p>No. You can only sync your data with a server compatible with CouchDB.</p>\n<h2><a name=\"i-don-t-trust-anyone-with-my-note-can-i-run-inkdrop-server-myself-\" class=\"anchor\" href=\"#i-don-t-trust-anyone-with-my-note-can-i-run-inkdrop-server-myself-\"><i class=\"linkify icon\"></i></a>I don’t trust anyone with my note. Can I run Inkdrop server myself?</h2><p>Yes!\nSee the <a href=\"/manual/synchronizing-in-the-cloud\">documentation</a> for full instructions on setting up the sync server on your local machine.</p>\n<h2><a name=\"how-can-i-delete-my-account-\" class=\"anchor\" href=\"#how-can-i-delete-my-account-\"><i class=\"linkify icon\"></i></a>How can I delete my account?</h2><p>You can delete your account from <a href=\"https://www.inkdrop.info/account/delete\">here</a>.\nYou data will be deleted immediately.</p>\n<h2><a name=\"i-forgot-my-password-how-to-reset-my-password-\" class=\"anchor\" href=\"#i-forgot-my-password-how-to-reset-my-password-\"><i class=\"linkify icon\"></i></a>I forgot my password. How to reset my password?</h2><p>Inkdrop cannot reset your password for security reason.\nPlease read <a href=\"/manual/recovering-your-password\">how to recover your password</a>.</p>\n<h2><a name=\"does-inkdrop-support-icloud-or-dropbox-\" class=\"anchor\" href=\"#does-inkdrop-support-icloud-or-dropbox-\"><i class=\"linkify icon\"></i></a>Does Inkdrop support iCloud or Dropbox?</h2><p>We’re delivering stable smooth experience to our users.\nThat’s why we don’t want to defocus on support of different platforms.\nInkdrop exclusively works with a server compatible with CouchDB.</p>\n";
 
 /***/ },
 /* 56 */
@@ -4031,52 +4098,70 @@ module.exports =
 /* 70 */
 /***/ function(module, exports) {
 
-  module.exports = "<p>Example:</p>\n<pre><code class=\"lang-JSON\">{\n   <span class=\"hljs-attr\">\"_id\"</span>: <span class=\"hljs-string\">\"book:rylKOycF\"</span>,\n   <span class=\"hljs-attr\">\"_rev\"</span>: <span class=\"hljs-string\">\"2-8995d31a85ff253ffa12062ed5e1ec0a\"</span>,\n   <span class=\"hljs-attr\">\"updatedAt\"</span>: <span class=\"hljs-number\">1470970961407</span>,\n   <span class=\"hljs-attr\">\"createdAt\"</span>: <span class=\"hljs-number\">1470916727554</span>,\n   <span class=\"hljs-attr\">\"count\"</span>: <span class=\"hljs-number\">0</span>,\n   <span class=\"hljs-attr\">\"name\"</span>: <span class=\"hljs-string\">\"First Notebook\"</span>\n}\n</code></pre>\n";
+  module.exports = "<h3><a name=\"seller\" class=\"anchor\" href=\"#seller\"><i class=\"linkify icon\"></i></a>Seller</h3><p>Takuya Matsuyama</p>\n<h3><a name=\"operating-officer\" class=\"anchor\" href=\"#operating-officer\"><i class=\"linkify icon\"></i></a>Operating Officer</h3><p>Takuya Matsuyama</p>\n<h3><a name=\"address\" class=\"anchor\" href=\"#address\"><i class=\"linkify icon\"></i></a>Address</h3><p>5-18-11-303, Tagara, Nerima, Tokyo 179-0073, Japan</p>\n<h3><a name=\"contact\" class=\"anchor\" href=\"#contact\"><i class=\"linkify icon\"></i></a>Contact</h3><p>Email: inkdrop@pkpk.info</p>\n<p>Tel: +815071086381</p>\n<h3><a name=\"payment-methods\" class=\"anchor\" href=\"#payment-methods\"><i class=\"linkify icon\"></i></a>Payment Methods</h3><p>Credit Card</p>\n<h3><a name=\"delivery-time\" class=\"anchor\" href=\"#delivery-time\"><i class=\"linkify icon\"></i></a>Delivery Time</h3><p>We will offer the Service as soon as the payment transaction becomes complete.</p>\n<h3><a name=\"cancelling-returning-of-product-s-\" class=\"anchor\" href=\"#cancelling-returning-of-product-s-\"><i class=\"linkify icon\"></i></a>Cancelling / Returning of Product(s)</h3><p>In principle, order cancelations and product returns or exchange are not accepted</p>\n";
 
 /***/ },
 /* 71 */
 /***/ function(module, exports) {
 
-  module.exports = "<p>This actions class manages all essential editing state for a note editor.\nIf you&#39;re manipulating the state of an editor, use this class.</p>\n<h2><a name=\"accessing-editor-actions-instance\" class=\"anchor\" href=\"#accessing-editor-actions-instance\"><i class=\"linkify icon\"></i></a>Accessing Editor Actions Instance</h2><pre><code class=\"lang-js\"><span class=\"hljs-keyword\">const</span> editorActions = inkdrop.flux.getActions(<span class=\"hljs-string\">'editor'</span>)\n</code></pre>\n<h2><a name=\"methods\" class=\"anchor\" href=\"#methods\"><i class=\"linkify icon\"></i></a>Methods</h2><h3><a name=\"-code-create-code-\" class=\"anchor\" href=\"#-code-create-code-\"><i class=\"linkify icon\"></i></a><code>create ()</code></h3><p>Create new note and open it in the editor.</p>\n<h3><a name=\"-code-open-noteid-passphrase-rememberpassphrase-viewmode-isnew-force-code-\" class=\"anchor\" href=\"#-code-open-noteid-passphrase-rememberpassphrase-viewmode-isnew-force-code-\"><i class=\"linkify icon\"></i></a><code>open ({ noteId, passphrase, rememberPassphrase, viewMode, isNew, force })</code></h3><p>Open a note in the editor.</p>\n<ul>\n<li><code>noteId</code>: A String containing a note ID to open</li>\n<li><code>passphrase</code>: A String containing a password to decrypt the note. Required if the note is encrypted.</li>\n<li><code>rememberPassphrase</code>: A Boolean indicating whether the encryption password is remembered in the memory. Required if the note is encrypted.</li>\n<li><code>viewMode</code>: A String which can be <code>preview</code>, <code>sideBySide</code> or <code>edit</code>. Default: <code>preview</code>.</li>\n<li><code>isNew</code>: A Boolean indicating whether opening note is new. Default: <code>false</code>.</li>\n<li><code>force</code>: A Boolean, <code>true</code> to force open a note again even if it&#39;s already opened. Default: <code>false</code>.</li>\n</ul>\n<h3><a name=\"-code-close-code-\" class=\"anchor\" href=\"#-code-close-code-\"><i class=\"linkify icon\"></i></a><code>close ()</code></h3><p>Close current note.</p>\n<h3><a name=\"-code-update-document-changed-code-\" class=\"anchor\" href=\"#-code-update-document-changed-code-\"><i class=\"linkify icon\"></i></a><code>update ({ document, changed })</code></h3><p>Update current note.</p>\n<ul>\n<li><code>document</code>: A <a href=\"/reference/note\">Note</a> Object representing the current note to update.</li>\n<li><code>changed</code>: A Boolean indicating the note has been changed or not.</li>\n</ul>\n<h3><a name=\"-code-changeviewmode-viewmode-code-\" class=\"anchor\" href=\"#-code-changeviewmode-viewmode-code-\"><i class=\"linkify icon\"></i></a><code>changeViewMode ({ viewMode })</code></h3><p>Change the editor view mode.</p>\n<ul>\n<li><code>viewMode</code>: A String which can be following values:<ul>\n<li><code>preview</code></li>\n<li><code>sideBySide</code></li>\n<li><code>edit</code></li>\n</ul>\n</li>\n</ul>\n<h3><a name=\"-code-save-document-passphrase-rememberpassphrase-code-\" class=\"anchor\" href=\"#-code-save-document-passphrase-rememberpassphrase-code-\"><i class=\"linkify icon\"></i></a><code>save ({ document, passphrase, rememberPassphrase })</code></h3><p>Save current note to the local database.</p>\n<ul>\n<li><code>document</code>: A <a href=\"/reference/note\">Note</a> Object representing the current note to save.</li>\n<li><code>passphrase</code>: A String containing an encryption password. Required if the note is encrypted.</li>\n<li><code>rememberPassphrase</code>: A Boolean indicating whether the encryption password is remembered in the memory. Required if the note is encrypted.</li>\n</ul>\n";
+  module.exports = "<h2><a name=\"definitions\" class=\"anchor\" href=\"#definitions\"><i class=\"linkify icon\"></i></a>Definitions</h2><p>Inkdrop is owned by Takuya Matsuyama, Tokyo - Japan. (referred to as &quot;I&quot;, &quot;Me&quot;, &quot;Our&quot; or &quot;We&quot;).\nAs a customer of this service you&#39;re a &quot;User&quot; or &quot;You&quot; according to this agreement.\nThe App or any services offered by us will be referred to as &quot;Inkdrop&quot; or &quot;Service&quot;.</p>\n<h2><a name=\"introduction\" class=\"anchor\" href=\"#introduction\"><i class=\"linkify icon\"></i></a>Introduction</h2><p>We realize that personal information is the important property of an individual, and have stated the following policies on treatment of personal information to appropriately collect and use personal information, to comply with laws and ordinances related to personal information and to prevent and cure leakage of personal information, and will take the best care in control and use of personal information. \nPlease note that any collection of personal information by linked sites or any other entities is not covered by this Privacy Policy.</p>\n<h2><a name=\"appropriate-collection-and-purpose-of-use\" class=\"anchor\" href=\"#appropriate-collection-and-purpose-of-use\"><i class=\"linkify icon\"></i></a>Appropriate Collection and Purpose of Use</h2><p>We will collect personal information through appropriate methods for the following purposes:</p>\n<ul>\n<li>to provide our services;</li>\n<li>to provide notices and send questionnaires regarding our services that are currently provided or under consideration for future releases;</li>\n<li>to help improve the services and develop new services;</li>\n<li>to make contact with you;</li>\n<li>to verify your identity and otherwise respond to inquiries;</li>\n<li>to select in drawings and deliver prizes or products;</li>\n<li>to transmit advertisement information sponsored by us or any other third party;</li>\n<li>to create statistical data regarding the use of our services;</li>\n<li>to prevent any use in breach of the Terms of Service.</li>\n</ul>\n<h2><a name=\"appropriate-control-and-protection\" class=\"anchor\" href=\"#appropriate-control-and-protection\"><i class=\"linkify icon\"></i></a>Appropriate Control and Protection</h2><p>Personal information will be strictly controlled, and appropriate measures will be taken to prevent and cure unauthorized access, loss, destruction, falsification, and leakage of personal information.</p>\n<h2><a name=\"entrustment\" class=\"anchor\" href=\"#entrustment\"><i class=\"linkify icon\"></i></a>Entrustment</h2><p>We may entrust the whole or part of the personal information it collected to outsourcing entities to the extent required to achieve the purpose of use. In such case, we will fully examine the eligibility of such outsourcing entities, state confidentiality provisions in the contracts with them, and provide any necessary and appropriate supervision to them.</p>\n<h2><a name=\"provision-to-third-party\" class=\"anchor\" href=\"#provision-to-third-party\"><i class=\"linkify icon\"></i></a>Provision to Third Party</h2><p>We will not disclose or provide any data to any third party except when a prior consent is given by you;\nit is based on laws and ordinances;\nany breach of the Terms of Service for Inkdrop or other our services should occur, and there are sufficient reasons for determining the disclosure of the personal information is necessary to protect our rights, property and services;\nit is necessary for the protection of the life, body or property of an individual and is difficult to obtain your consent;\nit is specially necessary for improving public health or promoting the sound growth of children and is difficult to obtain your consent;\nit is necessary for cooperating with a national or local authority or an entity entrusted by it in executing the affairs prescribed by laws and ordinances, and obtaining your consent is likely to impede the execution of such affairs; or\nany succession of our business including the provision of personal information is made due to any merger, company split, transfer of operations or other reasons.</p>\n<h2><a name=\"joint-use\" class=\"anchor\" href=\"#joint-use\"><i class=\"linkify icon\"></i></a>Joint Use</h2><p>We may jointly use any personal information with our business cooperators in providing our services.\nIn such case, we will, in advance, publish the items of the personal information used jointly, the scope of the joint users, the purpose for which the personal information is used jointly and the name of person responsible for the management of the personal information is used jointly.</p>\n<h2><a name=\"use-by-minors-under-18\" class=\"anchor\" href=\"#use-by-minors-under-18\"><i class=\"linkify icon\"></i></a>Use by minors under 18</h2><p>If you are under 18, please use our service and input the personal information upon the consent of your custodian.</p>\n<h2><a name=\"procedures-for-disclosure\" class=\"anchor\" href=\"#procedures-for-disclosure\"><i class=\"linkify icon\"></i></a>Procedures for Disclosure</h2><p>We will respond without delay to your request for notice of the purpose of use, disclosure, correction, addition or deletion of contents, discontinuance of the use, erasure, and discontinuance of provision to a third party (hereinafter referred to as “Disclosure, etc.”) of (your) personal information.\nProvided, however, you are required to take the procedures prescribed by us in requesting Disclosure, etc.</p>\n<h2><a name=\"disclaimer\" class=\"anchor\" href=\"#disclaimer\"><i class=\"linkify icon\"></i></a>Disclaimer</h2><p>We shall assume no liability whatsoever if you reveal the personal information to third parties using any feature of our services or any other means and you become identifiable by such information you disclosed on our services.</p>\n<h2><a name=\"creation-and-use-of-statistical-data\" class=\"anchor\" href=\"#creation-and-use-of-statistical-data\"><i class=\"linkify icon\"></i></a>Creation and Use of Statistical Data</h2><p>We may create, based on the personal information collected, statistical data processed so that no individual is identifiable.\nWith regard to such creation and use of the personally unidentifiable statistical data, we may conduct without any restriction.</p>\n<h2><a name=\"collection-and-use-of-attribute-information-activity-history\" class=\"anchor\" href=\"#collection-and-use-of-attribute-information-activity-history\"><i class=\"linkify icon\"></i></a>Collection and Use of Attribute Information/Activity History</h2><p>We may collect and/or use the following personally unidentifiable information to personalize our services or contents of advertisements and may provide such information to sponsors, information providers, or service providers: cookies, logs, activity histories for accessed URLs, contents or reference orders, individual terminal identification information and other device information, and attribute information on gender, occupation, or age.</p>\n<h2><a name=\"amendment\" class=\"anchor\" href=\"#amendment\"><i class=\"linkify icon\"></i></a>Amendment</h2><p>We reserve the right to make amendments to this Privacy Policy.</p>\n";
 
 /***/ },
 /* 72 */
 /***/ function(module, exports) {
 
-  module.exports = "<p>This store class represents all essential editing state for a note editor.</p>\n<h2><a name=\"accessing-editor-store-instance\" class=\"anchor\" href=\"#accessing-editor-store-instance\"><i class=\"linkify icon\"></i></a>Accessing Editor Store Instance</h2><pre><code class=\"lang-js\"><span class=\"hljs-keyword\">const</span> editorStore = inkdrop.flux.getStore(<span class=\"hljs-string\">'editor'</span>)\n<span class=\"hljs-keyword\">const</span> editorState = editorStore.getState()\n</code></pre>\n<h2><a name=\"state-properties\" class=\"anchor\" href=\"#state-properties\"><i class=\"linkify icon\"></i></a>State Properties</h2><ul>\n<li><code>noteId</code>: A String containing an ID of a note currently editing.</li>\n<li><code>document</code>: A <a href=\"/reference/note\">Note</a> Object representing the current note.</li>\n<li><code>changed</code>: A Boolean indicating the note has been changed since it&#39;s opened.</li>\n<li><code>openingNoteId</code>: A String containing an ID of a note currently being loaded.</li>\n<li><code>viewMode</code>: A String containing the editor&#39;s view mode which can be following values:<ul>\n<li><code>preview</code></li>\n<li><code>sideBySide</code></li>\n<li><code>edit</code></li>\n</ul>\n</li>\n<li><code>lastError</code>: A Error object indicating a last error occurred during an editor action.</li>\n</ul>\n";
+  module.exports = "<p>Example:</p>\n<pre><code class=\"lang-JSON\">{\n   <span class=\"hljs-attr\">\"_id\"</span>: <span class=\"hljs-string\">\"book:rylKOycF\"</span>,\n   <span class=\"hljs-attr\">\"_rev\"</span>: <span class=\"hljs-string\">\"2-8995d31a85ff253ffa12062ed5e1ec0a\"</span>,\n   <span class=\"hljs-attr\">\"updatedAt\"</span>: <span class=\"hljs-number\">1470970961407</span>,\n   <span class=\"hljs-attr\">\"createdAt\"</span>: <span class=\"hljs-number\">1470916727554</span>,\n   <span class=\"hljs-attr\">\"count\"</span>: <span class=\"hljs-number\">0</span>,\n   <span class=\"hljs-attr\">\"name\"</span>: <span class=\"hljs-string\">\"First Notebook\"</span>\n}\n</code></pre>\n";
 
 /***/ },
 /* 73 */
 /***/ function(module, exports) {
 
-  module.exports = "<p>The Note model represents a Note object.</p>\n<h2><a name=\"example-not-encrypted-\" class=\"anchor\" href=\"#example-not-encrypted-\"><i class=\"linkify icon\"></i></a>Example (not encrypted)</h2><pre><code class=\"lang-JSON\">{\n   <span class=\"hljs-attr\">\"_id\"</span>: <span class=\"hljs-string\">\"note:ryajdJ9Y\"</span>,\n   <span class=\"hljs-attr\">\"_rev\"</span>: <span class=\"hljs-string\">\"30-317a1636d4cdb2c755aee6e92e699cb3\"</span>,\n   <span class=\"hljs-attr\">\"title\"</span>: <span class=\"hljs-string\">\"Welcome to Inkdrop\"</span>,\n   <span class=\"hljs-attr\">\"doctype\"</span>: <span class=\"hljs-string\">\"markdown\"</span>,\n   <span class=\"hljs-attr\">\"updatedAt\"</span>: <span class=\"hljs-number\">1471228624903</span>,\n   <span class=\"hljs-attr\">\"createdAt\"</span>: <span class=\"hljs-number\">1470916772952</span>,\n   <span class=\"hljs-attr\">\"tags\"</span>: [\n       <span class=\"hljs-string\">\"Tutorial\"</span>\n   ],\n   <span class=\"hljs-attr\">\"body\"</span>: <span class=\"hljs-string\">\"![logo](/Users/nora/Documents/pkpk/products/inkdrop/images/banner_sm.png)\\n\\nFor help, please visit:\\n\\n * The [Inkdrop docs](http://doc.inkdrop.info/) for Guides and the API reference.\\n * The Inkdrop forum at [github](https://github.com/inkdropapp/forum). Please report issue or suggest feedback here.\\n * The [Inkdropapp org](https://github.com/inkdropapp/). This is where all Inkdrop-created packages can be found.\\n\\n* * *\\n\\n### Get to know Inkdrop 🚀\\n\\n * [👀 Check a note example](inkdrop://note:HyxgYO15t)\\n * [📓 Create a notebook]()\\n * [✍️ Create a note]()\\n * [🖌 Choose a Theme]()\\n * [⚙ Customize the Editor]()\\n * [⌨️ Learn some Shortcuts]()\\n\"</span>,\n   <span class=\"hljs-attr\">\"bookId\"</span>: <span class=\"hljs-string\">\"book:rylKOycF\"</span>\n}\n</code></pre>\n<h2><a name=\"fields\" class=\"anchor\" href=\"#fields\"><i class=\"linkify icon\"></i></a>Fields</h2><h3><a name=\"_id\" class=\"anchor\" href=\"#_id\"><i class=\"linkify icon\"></i></a>_id</h3><p>Type: <strong>String</strong></p>\n<p>The unique document ID which should start with <code>note:</code> and the remains are randomly generated string.</p>\n<h3><a name=\"_rev\" class=\"anchor\" href=\"#_rev\"><i class=\"linkify icon\"></i></a>_rev</h3><p>Type: <strong>String</strong></p>\n<p>This is a CouchDB specific field.\nThe current MVCC-token/revision of this document (mandatory and immutable).</p>\n<h3><a name=\"title\" class=\"anchor\" href=\"#title\"><i class=\"linkify icon\"></i></a>title</h3><p>Type: <strong>String</strong></p>\n<p>The title of the note.</p>\n<h3><a name=\"doctype\" class=\"anchor\" href=\"#doctype\"><i class=\"linkify icon\"></i></a>doctype</h3><p>Type: <strong>String</strong></p>\n<p>The format type of the body field.\nIt currently can take <code>markdown</code> only, reserved for the future.</p>\n<h3><a name=\"updatedat\" class=\"anchor\" href=\"#updatedat\"><i class=\"linkify icon\"></i></a>updatedAt</h3><p>Type: <strong>Number</strong></p>\n<p>The date time when the note was last updated, represented with <a href=\"http://www.unixtimestamp.com/\">Unix timestamps</a> in milliseconds.</p>\n<h3><a name=\"createdat\" class=\"anchor\" href=\"#createdat\"><i class=\"linkify icon\"></i></a>createdAt</h3><p>Type: <strong>Number</strong></p>\n<p>The date time when the note was created, represented with <a href=\"http://www.unixtimestamp.com/\">Unix timestamps</a> in milliseconds.</p>\n<h3><a name=\"tags\" class=\"anchor\" href=\"#tags\"><i class=\"linkify icon\"></i></a>tags</h3><p>Type: <strong>Array of String</strong></p>\n<p>The list of tag names.</p>\n<h3><a name=\"body\" class=\"anchor\" href=\"#body\"><i class=\"linkify icon\"></i></a>body</h3><p>Type: <strong>String</strong></p>\n<p>The content of the note represented with Markdown.</p>\n<h3><a name=\"bookid\" class=\"anchor\" href=\"#bookid\"><i class=\"linkify icon\"></i></a>bookId</h3><p>The ID of the book with which the note is associated.</p>\n";
+  module.exports = "<p>This actions class manages all essential editing state for a note editor.\nIf you&#39;re manipulating the state of an editor, use this class.</p>\n<h2><a name=\"accessing-editor-actions-instance\" class=\"anchor\" href=\"#accessing-editor-actions-instance\"><i class=\"linkify icon\"></i></a>Accessing Editor Actions Instance</h2><pre><code class=\"lang-js\"><span class=\"hljs-keyword\">const</span> editorActions = inkdrop.flux.getActions(<span class=\"hljs-string\">'editor'</span>)\n</code></pre>\n<h2><a name=\"methods\" class=\"anchor\" href=\"#methods\"><i class=\"linkify icon\"></i></a>Methods</h2><h3><a name=\"-code-create-code-\" class=\"anchor\" href=\"#-code-create-code-\"><i class=\"linkify icon\"></i></a><code>create ()</code></h3><p>Create new note and open it in the editor.</p>\n<h3><a name=\"-code-open-noteid-passphrase-rememberpassphrase-viewmode-isnew-force-code-\" class=\"anchor\" href=\"#-code-open-noteid-passphrase-rememberpassphrase-viewmode-isnew-force-code-\"><i class=\"linkify icon\"></i></a><code>open ({ noteId, passphrase, rememberPassphrase, viewMode, isNew, force })</code></h3><p>Open a note in the editor.</p>\n<ul>\n<li><code>noteId</code>: A String containing a note ID to open</li>\n<li><code>passphrase</code>: A String containing a password to decrypt the note. Required if the note is encrypted.</li>\n<li><code>rememberPassphrase</code>: A Boolean indicating whether the encryption password is remembered in the memory. Required if the note is encrypted.</li>\n<li><code>viewMode</code>: A String which can be <code>preview</code>, <code>sideBySide</code> or <code>edit</code>. Default: <code>preview</code>.</li>\n<li><code>isNew</code>: A Boolean indicating whether opening note is new. Default: <code>false</code>.</li>\n<li><code>force</code>: A Boolean, <code>true</code> to force open a note again even if it&#39;s already opened. Default: <code>false</code>.</li>\n</ul>\n<h3><a name=\"-code-close-code-\" class=\"anchor\" href=\"#-code-close-code-\"><i class=\"linkify icon\"></i></a><code>close ()</code></h3><p>Close current note.</p>\n<h3><a name=\"-code-update-document-changed-code-\" class=\"anchor\" href=\"#-code-update-document-changed-code-\"><i class=\"linkify icon\"></i></a><code>update ({ document, changed })</code></h3><p>Update current note.</p>\n<ul>\n<li><code>document</code>: A <a href=\"/reference/note\">Note</a> Object representing the current note to update.</li>\n<li><code>changed</code>: A Boolean indicating the note has been changed or not.</li>\n</ul>\n<h3><a name=\"-code-changeviewmode-viewmode-code-\" class=\"anchor\" href=\"#-code-changeviewmode-viewmode-code-\"><i class=\"linkify icon\"></i></a><code>changeViewMode ({ viewMode })</code></h3><p>Change the editor view mode.</p>\n<ul>\n<li><code>viewMode</code>: A String which can be following values:<ul>\n<li><code>preview</code></li>\n<li><code>sideBySide</code></li>\n<li><code>edit</code></li>\n</ul>\n</li>\n</ul>\n<h3><a name=\"-code-save-document-passphrase-rememberpassphrase-code-\" class=\"anchor\" href=\"#-code-save-document-passphrase-rememberpassphrase-code-\"><i class=\"linkify icon\"></i></a><code>save ({ document, passphrase, rememberPassphrase })</code></h3><p>Save current note to the local database.</p>\n<ul>\n<li><code>document</code>: A <a href=\"/reference/note\">Note</a> Object representing the current note to save.</li>\n<li><code>passphrase</code>: A String containing an encryption password. Required if the note is encrypted.</li>\n<li><code>rememberPassphrase</code>: A Boolean indicating whether the encryption password is remembered in the memory. Required if the note is encrypted.</li>\n</ul>\n";
 
 /***/ },
 /* 74 */
 /***/ function(module, exports) {
 
-  module.exports = "<p>Example:</p>\n<pre><code class=\"lang-JSON\">{\n   <span class=\"hljs-attr\">\"_id\"</span>: <span class=\"hljs-string\">\"tag:1f0a9052-c82b-4749-9568-b79581d5282b\"</span>,\n   <span class=\"hljs-attr\">\"_rev\"</span>: <span class=\"hljs-string\">\"3-0da4f435c145fbf73d9eb5962996c2ec\"</span>,\n   <span class=\"hljs-attr\">\"name\"</span>: <span class=\"hljs-string\">\"Tutorial\"</span>,\n   <span class=\"hljs-attr\">\"count\"</span>: <span class=\"hljs-number\">2</span>\n}\n</code></pre>\n";
+  module.exports = "<p>This store class represents all essential editing state for a note editor.</p>\n<h2><a name=\"accessing-editor-store-instance\" class=\"anchor\" href=\"#accessing-editor-store-instance\"><i class=\"linkify icon\"></i></a>Accessing Editor Store Instance</h2><pre><code class=\"lang-js\"><span class=\"hljs-keyword\">const</span> editorStore = inkdrop.flux.getStore(<span class=\"hljs-string\">'editor'</span>)\n<span class=\"hljs-keyword\">const</span> editorState = editorStore.getState()\n</code></pre>\n<h2><a name=\"state-properties\" class=\"anchor\" href=\"#state-properties\"><i class=\"linkify icon\"></i></a>State Properties</h2><ul>\n<li><code>noteId</code>: A String containing an ID of a note currently editing.</li>\n<li><code>document</code>: A <a href=\"/reference/note\">Note</a> Object representing the current note.</li>\n<li><code>changed</code>: A Boolean indicating the note has been changed since it&#39;s opened.</li>\n<li><code>openingNoteId</code>: A String containing an ID of a note currently being loaded.</li>\n<li><code>viewMode</code>: A String containing the editor&#39;s view mode which can be following values:<ul>\n<li><code>preview</code></li>\n<li><code>sideBySide</code></li>\n<li><code>edit</code></li>\n</ul>\n</li>\n<li><code>lastError</code>: A Error object indicating a last error occurred during an editor action.</li>\n</ul>\n";
 
 /***/ },
 /* 75 */
 /***/ function(module, exports) {
 
-  module.exports = require("history/lib/createBrowserHistory");
+  module.exports = "<p>The Note model represents a Note object.</p>\n<h2><a name=\"example-not-encrypted-\" class=\"anchor\" href=\"#example-not-encrypted-\"><i class=\"linkify icon\"></i></a>Example (not encrypted)</h2><pre><code class=\"lang-JSON\">{\n   <span class=\"hljs-attr\">\"_id\"</span>: <span class=\"hljs-string\">\"note:ryajdJ9Y\"</span>,\n   <span class=\"hljs-attr\">\"_rev\"</span>: <span class=\"hljs-string\">\"30-317a1636d4cdb2c755aee6e92e699cb3\"</span>,\n   <span class=\"hljs-attr\">\"title\"</span>: <span class=\"hljs-string\">\"Welcome to Inkdrop\"</span>,\n   <span class=\"hljs-attr\">\"doctype\"</span>: <span class=\"hljs-string\">\"markdown\"</span>,\n   <span class=\"hljs-attr\">\"updatedAt\"</span>: <span class=\"hljs-number\">1471228624903</span>,\n   <span class=\"hljs-attr\">\"createdAt\"</span>: <span class=\"hljs-number\">1470916772952</span>,\n   <span class=\"hljs-attr\">\"tags\"</span>: [\n       <span class=\"hljs-string\">\"Tutorial\"</span>\n   ],\n   <span class=\"hljs-attr\">\"body\"</span>: <span class=\"hljs-string\">\"![logo](/Users/nora/Documents/pkpk/products/inkdrop/images/banner_sm.png)\\n\\nFor help, please visit:\\n\\n * The [Inkdrop docs](http://doc.inkdrop.info/) for Guides and the API reference.\\n * The Inkdrop forum at [github](https://github.com/inkdropapp/forum). Please report issue or suggest feedback here.\\n * The [Inkdropapp org](https://github.com/inkdropapp/). This is where all Inkdrop-created packages can be found.\\n\\n* * *\\n\\n### Get to know Inkdrop 🚀\\n\\n * [👀 Check a note example](inkdrop://note:HyxgYO15t)\\n * [📓 Create a notebook]()\\n * [✍️ Create a note]()\\n * [🖌 Choose a Theme]()\\n * [⚙ Customize the Editor]()\\n * [⌨️ Learn some Shortcuts]()\\n\"</span>,\n   <span class=\"hljs-attr\">\"bookId\"</span>: <span class=\"hljs-string\">\"book:rylKOycF\"</span>\n}\n</code></pre>\n<h2><a name=\"fields\" class=\"anchor\" href=\"#fields\"><i class=\"linkify icon\"></i></a>Fields</h2><h3><a name=\"_id\" class=\"anchor\" href=\"#_id\"><i class=\"linkify icon\"></i></a>_id</h3><p>Type: <strong>String</strong></p>\n<p>The unique document ID which should start with <code>note:</code> and the remains are randomly generated string.</p>\n<h3><a name=\"_rev\" class=\"anchor\" href=\"#_rev\"><i class=\"linkify icon\"></i></a>_rev</h3><p>Type: <strong>String</strong></p>\n<p>This is a CouchDB specific field.\nThe current MVCC-token/revision of this document (mandatory and immutable).</p>\n<h3><a name=\"title\" class=\"anchor\" href=\"#title\"><i class=\"linkify icon\"></i></a>title</h3><p>Type: <strong>String</strong></p>\n<p>The title of the note.</p>\n<h3><a name=\"doctype\" class=\"anchor\" href=\"#doctype\"><i class=\"linkify icon\"></i></a>doctype</h3><p>Type: <strong>String</strong></p>\n<p>The format type of the body field.\nIt currently can take <code>markdown</code> only, reserved for the future.</p>\n<h3><a name=\"updatedat\" class=\"anchor\" href=\"#updatedat\"><i class=\"linkify icon\"></i></a>updatedAt</h3><p>Type: <strong>Number</strong></p>\n<p>The date time when the note was last updated, represented with <a href=\"http://www.unixtimestamp.com/\">Unix timestamps</a> in milliseconds.</p>\n<h3><a name=\"createdat\" class=\"anchor\" href=\"#createdat\"><i class=\"linkify icon\"></i></a>createdAt</h3><p>Type: <strong>Number</strong></p>\n<p>The date time when the note was created, represented with <a href=\"http://www.unixtimestamp.com/\">Unix timestamps</a> in milliseconds.</p>\n<h3><a name=\"tags\" class=\"anchor\" href=\"#tags\"><i class=\"linkify icon\"></i></a>tags</h3><p>Type: <strong>Array of String</strong></p>\n<p>The list of tag names.</p>\n<h3><a name=\"body\" class=\"anchor\" href=\"#body\"><i class=\"linkify icon\"></i></a>body</h3><p>Type: <strong>String</strong></p>\n<p>The content of the note represented with Markdown.</p>\n<h3><a name=\"bookid\" class=\"anchor\" href=\"#bookid\"><i class=\"linkify icon\"></i></a>bookId</h3><p>The ID of the book with which the note is associated.</p>\n";
 
 /***/ },
 /* 76 */
 /***/ function(module, exports) {
 
-  module.exports = require("history/lib/createMemoryHistory");
+  module.exports = "<p>Example:</p>\n<pre><code class=\"lang-JSON\">{\n   <span class=\"hljs-attr\">\"_id\"</span>: <span class=\"hljs-string\">\"tag:1f0a9052-c82b-4749-9568-b79581d5282b\"</span>,\n   <span class=\"hljs-attr\">\"_rev\"</span>: <span class=\"hljs-string\">\"3-0da4f435c145fbf73d9eb5962996c2ec\"</span>,\n   <span class=\"hljs-attr\">\"name\"</span>: <span class=\"hljs-string\">\"Tutorial\"</span>,\n   <span class=\"hljs-attr\">\"count\"</span>: <span class=\"hljs-number\">2</span>\n}\n</code></pre>\n";
 
 /***/ },
 /* 77 */
 /***/ function(module, exports) {
 
-  module.exports = require("history/lib/useQueries");
+  module.exports = "<p>These Terms of Service (&quot;<strong>Terms</strong>&quot;) govern your access to and use of the services, including our various websites, APIs, email notifications, and applications (the &quot;<strong>Services</strong>&quot; or &quot;<strong>Inkdrop</strong>&quot;), and any information, text, graphics, photos or other materials uploaded, downloaded or appearing on the Services (collectively referred to as &quot;<strong>Content</strong>&quot;). Inkdrop is owned by Takuya Matsuyama, Tokyo - Japan. (referred to as &quot;<strong>I</strong>&quot;, &quot;<strong>Me</strong>&quot;, &quot;<strong>Our</strong>&quot; or &quot;<strong>We</strong>&quot;). As a customer of this service you&#39;re a &quot;<strong>User</strong>&quot; or &quot;<strong>You</strong>&quot; according to this agreement. Your access to and use of the Services are conditioned on your acceptance of and compliance with these Terms. By accessing or using the Services you agree to be bound by these Terms.</p>\n<p>We reserve the right to update and change these Terms of Service without notice. Any new features that augment or enhance the current Service, including the release of new tools and resources, shall be subject to the Terms of Service. Continued use of the Service after any such changes shall constitute your consent to such changes. You can review the most current version of the Terms of Service at any time at: <a href=\"http://doc.inkdrop.info/terms\">http://doc.inkdrop.info/terms</a></p>\n<p>Violation of any of the terms below will result in the termination of your Account. While Inkdrop prohibits such conduct and Content on the Service, you understand and agree that Inkdrop cannot be responsible for the Content posted on the Service and you nonetheless may be exposed to such materials. You agree to use the Service at your own risk. </p>\n<h2><a name=\"account-registration-and-passwords\" class=\"anchor\" href=\"#account-registration-and-passwords\"><i class=\"linkify icon\"></i></a>Account Registration and Passwords</h2><ol>\n<li>You may be required to create an account with Inkdrop in order to access certain Services. It is a condition of your use of the Services that all the information you provide on the Services is correct, current and complete. We reserve the right to disable any user account, at any time in our sole discretion for any or no reason, including if, in our opinion, you have failed to comply with any provision of these Terms.</li>\n<li>You are responsible for safeguarding the password that you use in association with your account and for any activities or actions performed under your account. We recommend that you use &quot;strong&quot; passwords (passwords that use a combination of upper and lower case letters, numbers and symbols) with your account and that you logout from your account at the end of every session. Inkdrop cannot and will not be liable for any loss or damage arising from your failure to comply with the above. You agree to notify Inkdrop immediately at <a href=\"mailto:inkdrop@pkpk.info\">inkdrop@pkpk.info</a> of any actual or suspected unauthorized use of your account or any other breach of security known by you.</li>\n<li>Your login may only be used by one person - a single login shared by multiple people is not permitted. You may create separate logins for as many people as you&#39;d like.</li>\n<li>You may not use the Service for any illegal purpose or to violate any laws in your jurisdiction (including but not limited to copyright laws).</li>\n</ol>\n<h2><a name=\"privacy\" class=\"anchor\" href=\"#privacy\"><i class=\"linkify icon\"></i></a>Privacy</h2><ol>\n<li>Any information that you provide to Inkdrop is subject to our <a href=\"/privacy\">Privacy Policy</a>, which governs our collection and use of your information. You understand that through your use of the Services you consent to the collection and use (as set forth in the Privacy Policy) of this information, including the transfer of this information to Japan and/or other countries for storage, processing and use by Inkdrop.</li>\n<li>As part of providing you the Services, we may need to provide you with certain communications, such as service announcements and administrative messages. These communications are considered part of the Services and your Inkdrop account, which you may not be able to opt-out from receiving.</li>\n</ol>\n<h2><a name=\"payment-and-refunds-terms\" class=\"anchor\" href=\"#payment-and-refunds-terms\"><i class=\"linkify icon\"></i></a>Payment and Refunds Terms</h2><ol>\n<li>The Service is offered with a 60-day free trial. You will only be able to continue using the Service by paying in advance for additional usage. If you fail to pay for additional usage, your account will be frozen and inaccessible until payment is made.</li>\n<li>There will be no refunds or credits for partial months of service.</li>\n<li>All fees are exclusive of all taxes, levies, or duties imposed by taxing authorities. If your billing address is in Japan, you shall be responsible for payment of a consumption tax.</li>\n<li>The credit card that you provided will automatically be charged the new rate on your next billing cycle when your billing status changes.</li>\n<li>If you switch a plan to another one with different billing cycle (e.g., from a monthly plan to a yearly plan), the billing date becomes the date of the switch. By default, Inkdrop prorates subscription costs in this case.</li>\n</ol>\n<h2><a name=\"api-terms\" class=\"anchor\" href=\"#api-terms\"><i class=\"linkify icon\"></i></a>API Terms</h2><p>Users may access their Service data via the Application Program Interface (&quot;<strong>API</strong>&quot;). Any use of the API, including use of the API through a third-party product that accesses the Service, is bound by the terms of this agreement plus the following specific terms:</p>\n<ol>\n<li>You expressly understand and agree that we shall not be liable for any damages or losses resulting from your use of the API or third-party products that access data via the API.</li>\n<li>Abuse or excessively frequent requests to the Service via the API may result in the temporary or permanent suspension of your account&#39;s access to the API. We, in its sole discretion, will determine abuse or excessive usage of the API. We will make a reasonable attempt via email to warn the account owner prior to suspension.</li>\n</ol>\n<h2><a name=\"cancellation-and-termination\" class=\"anchor\" href=\"#cancellation-and-termination\"><i class=\"linkify icon\"></i></a>Cancellation and Termination</h2><ol>\n<li>You are solely responsible for properly canceling your account. An email or phone request to cancel your account is not considered cancellation. You can cancel your account at any time by clicking on the Delete Account link in the account menu at the left of the screen which is shown after logging in.</li>\n<li>All of your content will be immediately be inaccessible from the Service upon cancellation. This information can not be recovered once it has been permanently deleted.</li>\n<li>If you cancel the Service before the end of your current paid up month, your cancellation will take effect immediately, and you will not be charged again.</li>\n<li>We, in its sole discretion, have the right to suspend or terminate your account and refuse any and all current or future use of the Service for any reason at any time. Such termination of the Service will result in the deactivation or deletion of your Account or your access to your Account, and the forfeiture and relinquishment of all content in your account. We reserve the right to refuse service to anyone for any reason at any time.</li>\n</ol>\n<h2><a name=\"modifications-to-the-service-and-prices\" class=\"anchor\" href=\"#modifications-to-the-service-and-prices\"><i class=\"linkify icon\"></i></a>Modifications to the Service and Prices</h2><ol>\n<li>We reserve the right at any time and from time to time to modify or discontinue, temporarily or permanently, any part of the Service with or without notice.</li>\n<li>Prices of all Services are subject to change upon 30 days notice from us. Such notice may be provided at any time by posting the changes to the <a href=\"https://www.inkdrop.info/\">Inkdrop site</a> or the Service itself.</li>\n<li>We shall not be liable to you or to any third party for any modification, price change, suspension or discontinuance of the Service.</li>\n</ol>\n<h2><a name=\"copyright-and-content-ownership\" class=\"anchor\" href=\"#copyright-and-content-ownership\"><i class=\"linkify icon\"></i></a>Copyright and Content Ownership</h2><ol>\n<li>All content posted on the Service is must comply with Japan copyright law.</li>\n<li>We claim no intellectual property rights over the material you provide to the Service. All materials uploaded remain yours.</li>\n<li>We do not pre-screen content, but reserves the right (but not the obligation) in their sole discretion to refuse or remove any content that is available via the Service.</li>\n<li>The look and feel of the Service is copyright© Takuya Matsuyama. All rights reserved. You may not duplicate, copy, or reuse any portion of the HTML, CSS, JavaScript, or visual design elements without express written permission from the Company.</li>\n</ol>\n<h2><a name=\"general-conditions\" class=\"anchor\" href=\"#general-conditions\"><i class=\"linkify icon\"></i></a>General Conditions</h2><ol>\n<li>Your use of the Service is at your sole risk. The service is provided on an “as is” and “as available” basis.</li>\n<li>Technical support is only provided via email.</li>\n<li>You understand that we use third party vendors and hosting partners to provide the necessary hardware, software, networking, storage, and related technology required to run the Service.</li>\n<li>You must not crack the Service.</li>\n<li>You agree not to reproduce, duplicate, copy, sell, resell or exploit any portion of the Service, use of the Service, or access to the Service without the express written permission by us.</li>\n<li>We may, but have no obligation to, remove content and accounts that we determine in our sole discretion are unlawful or violates any party’s intellectual property or these Terms of Service.</li>\n<li>Verbal, physical, written or other abuse (including threats of abuse or retribution) of any Service customer will result in immediate account termination.</li>\n<li>We reserve the right to temporarily disable your account if your usage significantly exceeds the average usage of other Service customers. Of course, we&#39;ll reach out to the account owner before taking any action except in rare cases where the level of use may negatively impact the performance of the Service for other customers.</li>\n<li>We do not warrant that (i) the service will meet your specific requirements, (ii) the service will be uninterrupted, timely, secure, or error-free, (iii) the results that may be obtained from the use of the service will be accurate or reliable, (iv) the quality of any products, services, information, or other material purchased or obtained by you through the service will meet your expectations, and (v) any errors in the Service will be corrected.</li>\n<li>You expressly understand and agree that we shall not be liable for any direct, indirect, incidental, special, consequential or exemplary damages, including but not limited to, damages for loss of profits, goodwill, use, data or other intangible losses (even if we have been advised of the possibility of such damages), resulting from: (i) the use or the inability to use the service; (ii) the cost of procurement of substitute goods and services resulting from any goods, data, information or services purchased or obtained or messages received or transactions entered into through or from the service; (iii) unauthorized access to or alteration of your transmissions or data; (iv) statements or conduct of any third party on the service; (v) or any other matter relating to the service.</li>\n<li>The failure of us to exercise or enforce any right or provision of the Terms of Service shall not constitute a waiver of such right or provision. The Terms of Service constitutes the entire agreement between you and us and govern your use of the Service, superceding any prior agreements between you and us (including, but not limited to, any prior versions of the Terms of Service).</li>\n<li>Questions about the Terms of Service should be sent to <a href=\"mailto:inkdrop@pkpk.info\">inkdrop@pkpk.info</a>.</li>\n</ol>\n<p>The end.</p>\n<h2><a name=\"notation-based-on-the-specified-commercial-transaction-act\" class=\"anchor\" href=\"#notation-based-on-the-specified-commercial-transaction-act\"><i class=\"linkify icon\"></i></a>Notation based on the Specified Commercial Transaction Act</h2><p>特定商取引法に基づく表記</p>\n<p><a href=\"/notation\">See here</a>.</p>\n";
 
 /***/ },
 /* 78 */
+/***/ function(module, exports) {
+
+  module.exports = require("history/lib/createBrowserHistory");
+
+/***/ },
+/* 79 */
+/***/ function(module, exports) {
+
+  module.exports = require("history/lib/createMemoryHistory");
+
+/***/ },
+/* 80 */
+/***/ function(module, exports) {
+
+  module.exports = require("history/lib/useQueries");
+
+/***/ },
+/* 81 */
 /***/ function(module, exports) {
 
   module.exports = require("react-dom");
