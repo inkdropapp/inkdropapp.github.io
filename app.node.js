@@ -3749,7 +3749,7 @@ module.exports =
                     _react2['default'].createElement(
                       'code',
                       { className: 'lang-markdown' },
-                      'Here\'s our logo (hover to see the title text):\n\nInline-style: ![alt text](http://doc.inkdrop.info/icon-w64.png "Logo Title Text 1")\n\nReference-style: ![alt text][logo]\n\n[logo]: http://doc.inkdrop.info/icon-w64.png "Logo Title Text 2"'
+                      'Here\'s our logo (hover to see the title text):\n\nInline-style: ![alt text](http://doc.inkdrop.info/icon_w64.png "Logo Title Text 1")\n\nReference-style: ![alt text][logo]\n\n[logo]: http://doc.inkdrop.info/icon_w64.png "Logo Title Text 2"'
                     )
                   )
                 ),
@@ -3765,13 +3765,13 @@ module.exports =
                     'p',
                     null,
                     'Inline-style: ',
-                    _react2['default'].createElement('img', { src: '/icon-w64.png', alt: 'alt text', title: 'Logo Title Text 1' })
+                    _react2['default'].createElement('img', { src: '/icon_w64.png', alt: 'alt text', title: 'Logo Title Text 1' })
                   ),
                   _react2['default'].createElement(
                     'p',
                     null,
                     'Reference-style: ',
-                    _react2['default'].createElement('img', { src: '/icon-w64.png', alt: 'alt text', title: 'Logo Title Text 2' })
+                    _react2['default'].createElement('img', { src: '/icon_w64.png', alt: 'alt text', title: 'Logo Title Text 2' })
                   ),
                   _react2['default'].createElement(
                     'p',
