@@ -4481,7 +4481,7 @@ module.exports =
               )
             ),
             _react2['default'].createElement(_reactDisqusThread2['default'], {
-              shortname: 'markdown-cheatsheet',
+              shortname: 'inkdrop-documentation',
               identifier: 'inkdrop-markdown-cheatsheet',
               title: ManualPage.title,
               url: 'http://doc.inkdrop.info/manual/markdown-cheatsheet',
