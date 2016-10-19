@@ -4478,6 +4478,16 @@ module.exports =
                   'markdown-here\'s documentation'
                 ),
                 '.'
+              ),
+              _react2['default'].createElement(
+                'p',
+                null,
+                'License: ',
+                _react2['default'].createElement(
+                  'a',
+                  { href: 'https://creativecommons.org/licenses/by/3.0/', target: '_blank' },
+                  'CC-BY'
+                )
               )
             ),
             _react2['default'].createElement(_reactDisqusThread2['default'], {
