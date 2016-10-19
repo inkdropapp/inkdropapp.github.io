@@ -4459,6 +4459,22 @@ module.exports =
                   )
                 )
               )
+            ),
+            _react2['default'].createElement('div', { className: 'ui divider' }),
+            _react2['default'].createElement(
+              'section',
+              null,
+              _react2['default'].createElement(
+                'p',
+                null,
+                'This cheatsheet is written based on ',
+                _react2['default'].createElement(
+                  'a',
+                  { href: '_blank', href: 'https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet' },
+                  'markdown-here\'s documentation'
+                ),
+                '.'
+              )
             )
           )
         );
