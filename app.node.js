@@ -65,7 +65,7 @@ module.exports =
 
   var _react2 = _interopRequireDefault(_react);
 
-  var _reactDom = __webpack_require__(92);
+  var _reactDom = __webpack_require__(93);
 
   var _reactDom2 = _interopRequireDefault(_reactDom);
 
@@ -3087,6 +3087,10 @@ module.exports =
 
   var _highlightJs2 = _interopRequireDefault(_highlightJs);
 
+  var _reactDisqusThread = __webpack_require__(92);
+
+  var _reactDisqusThread2 = _interopRequireDefault(_reactDisqusThread);
+
   var ManualPage = (function (_Component) {
     _inherits(ManualPage, _Component);
 
@@ -4475,7 +4479,14 @@ module.exports =
                 ),
                 '.'
               )
-            )
+            ),
+            _react2['default'].createElement(_reactDisqusThread2['default'], {
+              shortname: 'markdown-cheatsheet',
+              identifier: 'inkdrop-markdown-cheatsheet',
+              title: ManualPage.title,
+              url: 'http://doc.inkdrop.info/manual/markdown-cheatsheet',
+              category_id: 'manual'
+            })
           )
         );
       }
@@ -6110,6 +6121,12 @@ module.exports =
 
 /***/ },
 /* 92 */
+/***/ function(module, exports) {
+
+  module.exports = require("react-disqus-thread");
+
+/***/ },
+/* 93 */
 /***/ function(module, exports) {
 
   module.exports = require("react-dom");
