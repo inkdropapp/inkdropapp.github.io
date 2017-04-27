@@ -1712,7 +1712,7 @@ module.exports =
         { className: 'row' },
         _react2['default'].createElement(
           'a',
-          { href: 'https://inkdrop.info/', className: 'app--logo' },
+          { href: 'https://www.inkdrop.info/', className: 'app--logo' },
           _react2['default'].createElement('img', {
             src: '//inkdrop-prod.s3.amazonaws.com/site/header-logo@2x.png',
             width: '196',
@@ -1737,7 +1737,7 @@ module.exports =
             null,
             _react2['default'].createElement(
               'a',
-              { href: 'https://inkdrop.info/login' },
+              { href: 'https://www.inkdrop.info/login' },
               'Login'
             )
           )
