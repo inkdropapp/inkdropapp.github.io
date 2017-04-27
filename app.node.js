@@ -1715,7 +1715,7 @@ module.exports =
           { href: 'https://www.inkdrop.info/', className: 'app--logo' },
           _react2['default'].createElement('img', {
             src: '//inkdrop-prod.s3.amazonaws.com/site/header-logo@2x.png',
-            width: '196',
+            width: '186',
             height: '45',
             alt: 'logo'
           })
